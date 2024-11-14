@@ -1,6 +1,12 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-padding-top: var(--navBarHeight);
+    font-family: 'Signika Negative', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-padding-top: var(--navbar-height);
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .unselectable, img {

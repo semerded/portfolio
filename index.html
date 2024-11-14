@@ -3,17 +3,46 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Sem Van Broekhoven" />
         <meta
             name="description"
             content="Portfolio of Sem Van Broekhoven, a student at Thomas More. Passionate about programming, web-design, apps, databases and photography." />
         <title>Sem Van Broekhoven</title>
-
-        <head-import></head-import>
-       
-
+        <script
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            $(function () {
+                $("<div>").load("/widgets/head/head.html", function () {
+                    $("head").append($(this).html());
+                });
+            });
+        </script>
+        <script src="/js/hero_section_effect.js"></script>
+        <link rel="stylesheet" href="/index.css" />
     </head>
     <body>
         <app-navbar></app-navbar>
+
+        <div id="hero-section">
+            <header>
+                <h1 class="unselectable">Sem Van Broekhoven</h1>
+            </header>
+        </div>
+        <main>
+            <article>
+                <div>
+                    <p id="description-text">
+                        Hello! I am Sem I am studying my first year of 'Applied
+                        Computer Science' at Thomas More University Of Applied
+                        Sciences in Geel. My passion for technology drives me to
+                        experiment with programming languages such as Dart
+                        (with Flutter Framework), Python, HTML, JavaScript, SQL
+                        and Java. Besides my love for programming, I am also
+                        passionate about photography and music.
+                    </p>
+                </div>
+                <div id="bg-static-gap"></div>
+            </article>
+        </main>
     </body>
 </html>
