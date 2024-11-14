@@ -48,10 +48,27 @@ header {
     width: calc(100vw - 14px);
     padding-top: 30vh;
     text-align: center;
-    filter: brightness(var(--hero-section-bn))
-        drop-shadow(0px 0px var(--hero-section-ds) var(--bg_light))
-        sepia(var(--hero-section-sepia));
+    filter: brightness(var(--hero-section-bn)) sepia(var(--hero-section-sepia));
     box-shadow: 5px white;
+    animation: header-title-glow 3s infinite;
+}
+
+@keyframes header-title-glow {
+    0% {
+        filter: drop-shadow(0px 0px 30px var(--bg_light));
+    }
+    20% {
+        filter: drop-shadow(0px 0px 50px var(--bg_light));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 30px var(--bg_light));
+    }
+    70% {
+        filter: drop-shadow(0px 0px 30px var(--bg_light));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 30px var(--bg_light));
+    }
 }
 
 header > h1 {
@@ -114,5 +131,5 @@ article {
 @media screen and (min-width: 490px) {
     #bg-static-gap {
         height: 40dvh;
-        }
+    }
 }
