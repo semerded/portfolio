@@ -1,6 +1,6 @@
 const varName = ["--hero-section-bg-bn", "--hero-section-bn", "--hero-section-ds", "--hero-section-sepia"]
-const defaultValue = [0.15, 2, 40, 0.5]
-const maxValue = [1, 1, 0, 0]
+const defaultValue = [0.3, 1, 40, 0.5]
+const maxValue = [1, 0, 0, 0]
 const suffix = ["", "", "px", ""]
 
 window.addEventListener('scroll', function() {
