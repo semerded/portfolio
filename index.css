@@ -9,7 +9,7 @@ body {
     background-color: var(--bg);
 }
 
-#bg-static{
+#bg-static {
     width: 100dvw;
     height: 100dvh;
     background-image: url(/images/index/bg-static.jpg);
@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100dvh;
-}  
+}
 
 #hero-section::before {
     content: "";
@@ -64,13 +64,20 @@ header > h2 {
     padding: 20px 5vw;
 }
 
+header > button {
+    padding: 10px 40px;
+    opacity: var(--hero-section-bn);
+    background: var(--secondary);
+    border: 0px;
+    border-radius: 10px;
+}
+
 #description-text {
     font-size: 1em;
     padding: 20px 10vw;
     background-color: var(--bg);
     color: var(--text);
 }
-
 
 @media screen and (min-width: 490px) {
     header {
@@ -87,11 +94,10 @@ header > h2 {
     #hero-section {
         height: 100dvh;
         width: 100vw;
-        z-index:-1;
     }
 
     #description-text {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 }
 
@@ -101,6 +107,12 @@ article {
 }
 
 #bg-static-gap {
-    height: 50dvh;
+    height: 30dvh;
     background-color: rgba(0, 0, 0, 0.478);
+}
+
+@media screen and (min-width: 490px) {
+    #bg-static-gap {
+        height: 40dvh;
+        }
 }
