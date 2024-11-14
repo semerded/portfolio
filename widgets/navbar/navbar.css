@@ -1,0 +1,67 @@
+.fixed {
+    position: fixed;
+    z-index: 10;
+}
+
+#navbar-logo {
+    padding-left: 20px;
+    height: 50px;
+}
+
+
+#navbar-container {
+    text-align: center;
+    display: block;
+    width: 100dvw;
+    background-color: var(--nav);
+}
+
+#navbar-top {
+    display: flex;
+    width: 100dvw;
+    justify-content: space-between;
+}
+
+#navbar-links-container {
+    display: none;
+    margin-right: 12px;
+
+}
+
+.navButton,
+.navButton_active {
+    text-align: center;
+    font: normal 120% 'century gothic';
+    font-weight: bold;
+    color: var(--secondary);
+    background-color: var(--nav);
+    border: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.navButton_active {
+    text-decoration: underline;
+}
+
+#navbar-progress-bar-background {
+    margin-top: -20px;
+    width: 100dvw;
+    height: 40px;
+    background-color: var(--nav);
+}
+
+#navbar-progress-bar {
+    transition: 0ms;
+    position: fixed;
+    /* margin-top: -10px; */
+    height: 0px;
+    box-shadow: 0 0 10px 8px var(--secondary);
+}
+
+#navbar-hamburger-button {
+    align-self: center;
+    padding-right: 20px;
+}
