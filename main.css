@@ -3,6 +3,7 @@
     scroll-padding-top: var(--navbar-height);
     margin: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
