@@ -79,7 +79,15 @@ class Navbar extends HTMLElement {
 
 customElements.define("app-navbar", Navbar);
 
-
+window.addEventListener("scroll", function () {
+    let yPos = window.scrollY;
+    let siteHeight = document.body.scrollHeight - window.innerHeight;
+    let width = (yPos / siteHeight) * 100;
+    if (width > 100) {
+        width = 100;
+    }
+    document.getElementById("navbar-progress-bar").style.width = width + "vw";
+});
 
 // window.onscroll = function () {
 //     let yPos = window.scrollY;
