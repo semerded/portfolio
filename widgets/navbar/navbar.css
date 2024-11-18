@@ -1,13 +1,13 @@
 .fixed {
     position: fixed;
     z-index: 10;
+    align-items: end;
 }
 
 #navbar-logo {
     padding-left: 20px;
     height: 50px;
 }
-
 
 #navbar-container {
     text-align: center;
@@ -25,13 +25,12 @@
 #navbar-links-container {
     display: none;
     margin-right: 12px;
-
 }
 
 .navButton,
 .navButton_active {
     text-align: center;
-    font: normal 120% 'century gothic';
+    font: normal 120% "century gothic";
     font-weight: bold;
     color: var(--secondary);
     background-color: var(--nav);
