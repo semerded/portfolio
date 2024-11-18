@@ -1,0 +1,94 @@
+:root {
+    --prog-lang-html: #f06529;
+    --prog-lang-css: #2965f1;
+    --prog-lang-js: #f0db4f;
+    --prog-lang-py: #3572A5;
+    --prog-lang-java: #B07219;
+    --prog-lang-cpp: #F34B7D;
+    --prog-lang-cs: #178600;
+    --prog-lang-php: #4F5D95;
+    --prog-lang-go: #00ADD8;
+    --prog-lang-dart: #00B4AB;
+    --prog-lang-flutter: #02569B;
+    --prog-lang-sql: #E38C00;
+    --prog-lang-arduino: #00979D;
+}
+
+prog-lang {
+    color: var(--text);
+}
+
+prog-lang::before {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px var(--bg_light);;
+
+}
+
+prog-lang[type="html"]::before {
+    content: "HTML";
+    background-color: var(--prog-lang-html);
+}
+
+prog-lang[type="css"]::before {
+    content: "CSS";
+    background-color: var(--prog-lang-css);
+}
+
+prog-lang[type="js"]::before {
+    content: "JavaScript";
+    background-color: var(--prog-lang-js);
+}
+
+prog-lang[type="py"]::before {
+    content: "Python";
+    background-color: var(--prog-lang-py);
+}
+
+prog-lang[type="java"]::before {
+    content: "Java";
+    background-color: var(--prog-lang-java);
+}
+
+prog-lang[type="cpp"]::before {
+    content: "C++";
+    background-color: var(--prog-lang-cpp);
+}
+
+prog-lang[type="cs"]::before {
+    content: "C#";
+    background-color: var(--prog-lang-cs);
+}
+
+prog-lang[type="php"]::before {
+    content: "PHP";
+    background-color: var(--prog-lang-php);
+}
+
+prog-lang[type="go"]::before {
+    content: "Go";
+    background-color: var(--prog-lang-go);
+}
+
+prog-lang[type="dart"]::before {
+    content: "Dart";
+    background-color: var(--prog-lang-dart);
+}
+
+prog-lang[type="flutter"]::before {
+    content: "Flutter";
+    background-color: var(--prog-lang-flutter);
+}
+
+prog-lang[type="sql"]::before {
+    content: "SQL";
+    background-color: var(--prog-lang-sql);
+}
+
+prog-lang[type="arduino"]::before {
+    content: "Arduino";
+    background-color: var(--prog-lang-arduino);
+}
+
