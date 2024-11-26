@@ -30,18 +30,29 @@ body {
 
 #hero-section::before {
     content: "";
-    position: absolute;
+     position: absolute;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
+    clip-path: inset(0 0 0 0); 
     background-image: url(/images/index/pexels-krishna-irfany-234742892-12759764.jpg);
     background-position: center;
     transform: scale(var(--hero-section-scale));
     background-size: cover;
     z-index: -1;
     filter: brightness(var(--hero-section-bg-bn));
-    overflow-x: hidden;
+
+}
+
+#hero-section {
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
 
 }
 
