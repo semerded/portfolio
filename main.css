@@ -8,6 +8,7 @@
 
 body {
     overflow-x: hidden;
+    width: 100vw;
 }
 
 .unselectable, img {
@@ -31,4 +32,68 @@ button {
 ::-webkit-scrollbar-thumb {
     background: var(--primary); 
     border-radius: 10px;
+}
+
+/* elevated button */
+
+.elevated-button-primary, .elevated-button-secondary {
+    width: 150px;
+    height: 50px;
+    box-shadow: 4px 0px 13px 0px var(--text);;
+    border: 0;
+    border-radius: 25px;
+    padding: 15px 0px;
+    margin: 10px;
+
+    content: '';
+    display: inline-block;
+    background-size: auto 40px; 
+    background-repeat: no-repeat;
+    background-position: 5% ;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+.elevated-button-primary {
+    background-color: var(--primary_light);
+}
+
+.elevated-button-secondary {
+    background-color: var(--secondary_light);
+}
+
+/* github button */
+
+.button-github {
+    width: 150px;
+    height: 50px;
+    background-color: #2b3137;
+    box-shadow: 4px 0px 13px 0px var(--text);;
+    border: 0;
+    border-radius: 25px;
+    padding: 15px 0px;
+    margin: 10px;
+
+    content: '';
+    display: inline-block;
+    background-size: auto 40px; 
+    background-repeat: no-repeat;
+    background-position: 5% ;
+    text-decoration: none;
+
+    background-image: url(/images/common/logos/github.png);
+}
+
+.button-github::after {
+    margin-left: 60px;
+    color: white;
+    font-size: 1.2rem;
+    content: "Github";
+}
+
+/* prog lang */
+.prog-lang-container {
+    display: inline;
 }
