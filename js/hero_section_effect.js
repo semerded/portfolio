@@ -1,6 +1,6 @@
-const varName = ["--hero-section-bg-bn", "--hero-section-bn", "--hero-section-sepia"]
-const defaultValue = [0.3, 1, 0.5]
-const maxValue = [1, 0, 0]
+const varName = ["--hero-section-bg-bn", "--hero-section-bn", "--hero-section-sepia", "--hero-section-scale"]
+const defaultValue = [0.3, 1, 0.5, 1]
+const maxValue = [1, 0, 0, 1.3]
 
 window.addEventListener('scroll', function() {
     const scrollY = window.scrollY;
