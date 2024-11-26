@@ -2,7 +2,7 @@
     max-width: 350px;
     width: 80%;
     height: auto;
-    box-shadow: 0px 0px 10px 5px var(--primary);
+    box-shadow: 3px 3px 18px 0px var(--primary);
     margin: 16px;
     padding: 20px;
     display: flex;
@@ -34,5 +34,9 @@
 @media screen and (max-width: 1023px) {
     .project-img {
         display: none;
+    }
+
+    .project-container {
+        width: 300px;
     }
 }
