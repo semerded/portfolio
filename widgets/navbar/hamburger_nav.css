@@ -1,5 +1,6 @@
 app-hamburger-nav {
     position: fixed;
+    z-index: 10;
     top: var(--navbar-height);
     background-color: var(--nav);
     left: 100vw;
