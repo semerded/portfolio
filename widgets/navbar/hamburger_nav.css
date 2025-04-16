@@ -4,7 +4,7 @@ app-hamburger-nav {
     top: var(--navbar-height);
     background-color: var(--nav);
     left: 100vw;
-    width: 60vw;
+    width: 300px;
     height: calc(100vh - var(--navbar-height));
 }
 
@@ -24,11 +24,11 @@ app-hamburger-nav {
 }
 
 #body-shift-entry {
-    animation: body-shift-entry 600ms forwards ease-in-out;
+    animation: body-shift-entry 400ms forwards ease-in-out;
 }
 
 #body-shift-exit {
-    animation: body-shift-exit 300ms ease-in-out;
+    animation: body-shift-exit 200ms ease-in-out;
 }
 
 @keyframes body-shift-entry {
@@ -36,14 +36,14 @@ app-hamburger-nav {
         transform: translateX(0px);
     }
     to {
-        transform: translateX(-60vw);
+        transform: translateX(-300px);
     }
 }
 
 
 @keyframes body-shift-exit {
     from {
-        transform: translateX(-60vw);
+        transform: translateX(-300px);
     }
     to {
         transform: translateX(0px);

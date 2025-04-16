@@ -17,26 +17,34 @@
                 });
             });
         </script>
-        <script src="/js/hero_section_effect.js"></script>
         <link rel="stylesheet" href="/index.css" />
         <link rel="stylesheet" href="/css/widgets/project_card.css" />
     </head>
     <body>
-        <app-navbar></app-navbar>
-        <app-hamburger-nav></app-hamburger-nav>
+        <nav>
+            <app-navbar></app-navbar>
+            <app-hamburger-nav></app-hamburger-nav>
+        </nav>
         <back-to-top></back-to-top>
         <main>
+            <div id="hero-container">
+                <img src="/images/index/hero-section.jpg" />
+                <div id="hero-text">
+                    <h3>Situated in Belgium</h3>
+                    <h1 class="unselectable">Sem Van Broekhoven</h1>
+                    <h2>
+                        Student at Thomas More - Junior Full Stack Software
+                        Developer
+                    </h2>
+                </div>
+            </div>
+
             <div id="content">
                 <div id="bg-static"></div>
 
                 <div id="hero-container">
                     <div id="hero-section">
                         <header>
-                            <h1 class="unselectable">Sem Van Broekhoven</h1>
-                            <h2 class="unselectable">
-                                Student At Thomas More - Junior Full Stack
-                                Software Developer
-                            </h2>
                             <button onclick="location.href='#description-text'">
                                 Who am I?
                             </button>
@@ -70,59 +78,55 @@
                     <div id="projects-container">
                         <!-- PLNM -->
                         <div class="project-container">
-                            
-                                <img
-                                    class="project-img"
-                                    src="/images/projects/plnm.png"
-                                    alt="logo of PLNM" />
-                                <h3 class="project-title">PLNM</h3>
-                                <div class="prog-lang-container">
-                                    <prog-lang type="dart"></prog-lang>
-                                    <prog-lang type="flutter"></prog-lang>
-                                </div>
-                                <p class="project-description">
-                                    A user-friendly cross-platform planning app with
-                                    tons of features
-                                </p>
-                           
+                            <img
+                                class="project-img"
+                                src="/images/projects/plnm.png"
+                                alt="logo of PLNM" />
+                            <h3 class="project-title">PLNM</h3>
+                            <div class="prog-lang-container">
+                                <prog-lang type="dart"></prog-lang>
+                                <prog-lang type="flutter"></prog-lang>
+                            </div>
+                            <p class="project-description">
+                                A user-friendly cross-platform planning app with
+                                tons of features
+                            </p>
                         </div>
 
                         <!-- gFrame -->
                         <div class="project-container">
-                                <img
-                                    class="project-img"
-                                    src="/images/projects/gframe.png"
-                                    alt="logo of gFrame" />
-                                <h3 class="project-title">gFrame</h3>
-                                <div class="prog-lang-container">
-                                    <prog-lang type="py"></prog-lang>
-                                </div>
-                                <p class="project-description">
-                                    Built on top of the widely used Pygame library.
-                                    It aims for easier developing with pygame. The
-                                    library comes with tons of handy features and
-                                    premade widgets like buttons and textboxes.
-                                </p>
-                            
+                            <img
+                                class="project-img"
+                                src="/images/projects/gframe.png"
+                                alt="logo of gFrame" />
+                            <h3 class="project-title">gFrame</h3>
+                            <div class="prog-lang-container">
+                                <prog-lang type="py"></prog-lang>
+                            </div>
+                            <p class="project-description">
+                                Built on top of the widely used Pygame library.
+                                It aims for easier developing with pygame. The
+                                library comes with tons of handy features and
+                                premade widgets like buttons and textboxes.
+                            </p>
                         </div>
 
                         <!-- Insanthon -->
                         <div class="project-container">
-                                <img
-                                    class="project-img"
-                                    src="/images/projects/insanthon.png"
-                                    alt="logo of insanthon" />
-                                <h3 class="project-title">Insanthon</h3>
-                                <div class="prog-lang-container">
-                                    <prog-lang type="py"></prog-lang>
-                                </div>
-                                <p class="project-description">
-                                    A picture based story game with a long
-                                    playthrough and multiple endings. The images are
-                                    created by the Adobe Firefly (picture generative
-                                    AI)
-                                </p>
-                            
+                            <img
+                                class="project-img"
+                                src="/images/projects/insanthon.png"
+                                alt="logo of insanthon" />
+                            <h3 class="project-title">Insanthon</h3>
+                            <div class="prog-lang-container">
+                                <prog-lang type="py"></prog-lang>
+                            </div>
+                            <p class="project-description">
+                                A picture based story game with a long
+                                playthrough and multiple endings. The images are
+                                created by the Adobe Firefly (picture generative
+                                AI)
+                            </p>
                         </div>
                     </div>
                 </article>
@@ -130,4 +134,6 @@
             </div>
         </main>
     </body>
+    <script src="/js/change_background_color.js"></script>
+
 </html>
