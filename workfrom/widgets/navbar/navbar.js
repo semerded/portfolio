@@ -1,6 +1,7 @@
 class Navbar extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `<div class="fixed">
+        this.innerHTML = /*html*/ `
+        <div class="fixed">
         <div id="navbar-container">
             <div id="navbar-top">
                 <div id="navbar-logo-container">
@@ -86,7 +87,6 @@ window.addEventListener("scroll", function () {
     }
     document.getElementById("navbar-progress-bar").style.width = width + "vw";
 });
-
 
 // window.onresize = function () {
 //     if (

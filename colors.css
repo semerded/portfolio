@@ -1,13 +1,30 @@
 :root {
     /* CSS HEX */
 --primary: #ff7b00ff;
+--primary_dark: #ff7b00ff;
 --primary_light: #ffb570ff;
+
 --secondary: rgb(138, 207, 81);
+--secondary_dark: rgb(138, 207, 81);
 --secondary_light: #c9e6b3;
---bg_light: #ffe9d6ff;
---bg_dark: rgb(24, 26, 27);
+
 --nav: #1c2826ff;
+--nav_light: rgb(192, 233, 226); /* ? */
+--nav_dark: #1c2826ff;
+
+--card: rgb(33, 36, 38);
+--card_dark: rgb(33, 36, 38);
+--card_light: #c9e6b3;
 
 --bg: #181a1b;
+--bg_light: #ffe9d6ff;
+--bg_dark: rgb(24, 26, 27);
+
+--box-shadow: rgb(35, 52, 44);
+--box-shadow_light: #c9e6b3;
+--box-shadow_dark: rgb(35, 52, 44);
+
 --text: #ffe9d6ff;
+
+
 }

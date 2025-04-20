@@ -5,6 +5,7 @@
     --prog-lang-py: #3572A5;
     --prog-lang-java: #B07219;
     --prog-lang-cpp: #F34B7D;
+    --prog-lang-c: #555555;
     --prog-lang-cs: #178600;
     --prog-lang-php: #4F5D95;
     --prog-lang-go: #00ADD8;
@@ -20,7 +21,7 @@ prog-lang {
 
 prog-lang::before {
     padding: 4px 12px;
-    margin: 5px 10px;
+    margin: 5px 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 24px 0px gray;
 }
@@ -53,6 +54,11 @@ prog-lang[type="java"]::before {
 prog-lang[type="cpp"]::before {
     content: "C++";
     background-color: var(--prog-lang-cpp);
+}
+
+prog-lang[type="c"]::before {
+    content: "C";
+    background-color: var(--prog-lang-c);
 }
 
 prog-lang[type="cs"]::before {
