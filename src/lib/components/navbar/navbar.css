@@ -1,0 +1,44 @@
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--navbar-height);
+	background-color: var(--nav);
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	> a img {
+		padding-left: 20px;
+		height: 50px;
+		width: min-content;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	div {
+		display: block	;
+		a {
+			width: 130px;
+			display: inline-block;
+			color: var(--secondary);
+			text-decoration: none;
+			font-size: 1.2rem;
+			margin: 0 10px;
+			font-weight: 600;
+			transition: transform 300ms ease-in-out;
+
+			&.nav-active {
+				text-decoration: underline;
+			}
+
+			&:hover {
+				transform: translateY(-5px);
+			}
+		}
+	}
+}
