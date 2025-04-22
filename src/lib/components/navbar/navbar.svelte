@@ -1,26 +1,13 @@
 <script lang="ts">
-    import "./navbar.css";
-
-    import { onMount } from "svelte";
-
-    let currentPath = ''
-
-    onMount(() => {
-        currentPath = window.location.pathname
-    })
-
-    function isActive(path: string) {
-        return currentPath === path ? 'nav-active' : ''
-    }
-</script>
+	import './navbar.css';
+	import { page } from '$app/state';
+</script>   
 
 <nav>
-
-    <a href="/"><img src="/logo.webp" alt="logo"></a>
-    <div>
-        <a href="/about" class="{isActive('/about')}">About me</a>
-        <a href="/projects" class="{isActive('/projects')}">My projects</a>
-        <a href="/contact" class="{isActive('/contact')}">Contact</a>
-
-    </div>
+	<a href="/"><img src="/logo.webp" alt="logo" /></a>
+	<div>
+		<a href="/about"><span class:nav-active={page.url.pathname === '/about'}>About me</span></a>
+		<a href="/projects"><span class:nav-active={page.url.pathname === '/projects'}>My projects</span></a>
+		<a href="/contact"><span class:nav-active={page.url.pathname === '/contact'}>Contact</span></a>
+	</div>
 </nav>
