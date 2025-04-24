@@ -8,6 +8,7 @@
 
 body {
     margin-top: var(--navbar-height);
+    color: var(--text);
 }
 
 .unselectable,

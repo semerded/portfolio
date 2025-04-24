@@ -3,6 +3,17 @@
     --backgroundYPosition: 0px;
 }
 
+#background {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    background: var(--bg_gradient)
+}
+
 .hero-container {
     width: 100%;
     height: calc(100svh - var(--navbar-height));
@@ -41,4 +52,19 @@
             color: var(--secondary);
         }
     }
+}
+
+#about-me {
+    padding: 40px;
+
+    span {
+        background-color: var(--primary);
+        border-radius: 8px;
+        padding: 0 4px;
+        line-break: strict;
+    }
+}
+
+#card-container {
+    padding: 16px;
 }
