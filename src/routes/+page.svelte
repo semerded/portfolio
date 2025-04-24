@@ -49,8 +49,9 @@
 		<Card
 			title="PLNM"
 			description="A user-friendly cross-platform planning app with
-                                    tons of features. It includes a note page, task manager and a project manager."
+                                    tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive..."
 			image="projects/PLNM/logo.png"
+			href="/projects"
 		/>
 	</div>
 </Container>

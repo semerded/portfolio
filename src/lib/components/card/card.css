@@ -4,11 +4,18 @@
 	width: 400px;
 	height: 300px;
 	position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    color: var(--text);
+
 
 	.card-image {
 		display: flex;
 		justify-content: center;
 		width: 100%;
+
+        border-radius: 8px;
 		img {
 			transition: 400ms;
 			width: 200px;
@@ -22,8 +29,7 @@
 		background-color: rgb(59, 53, 53);
 		overflow: hidden;
 		box-shadow: 0 -6px 8px -6px rgb(59, 53, 53);
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
+		border-radius: 8px;
 
 		position: absolute;
 		bottom: 0;
@@ -62,15 +68,15 @@
 		}
 	}
 
-	&:hover > .card-content {
+	&:hover  .card-content {
 		height: 150px;
 	}
 
-	&:hover > .card-content p::after {
+	&:hover  .card-content p::after {
 		opacity: 0;
 	}
 
-	&:hover > .card-image img {
+	&:hover  .card-image img {
 		opacity: 0.5;
 	}
 }

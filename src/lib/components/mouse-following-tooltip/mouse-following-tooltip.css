@@ -1,0 +1,14 @@
+.tooltip {
+	position: fixed;
+	background: var(--secondary);
+	color: black;
+	padding: 0.5rem;
+	border-radius: 4px;
+	pointer-events: none;
+	transform: translate(10px, 10px);
+	font-size: 0.875rem;
+	white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 550;
+    z-index: 3;
+}
