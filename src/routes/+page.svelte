@@ -1,35 +1,16 @@
 <script lang="ts">
-	import { scrollRange } from '$lib/actions/change_background_color_linear';
+	import Hero from '$lib/components/hero/hero.svelte';
 	import Container from '$lib/components/container/container.svelte';
 	import '$lib/style/routes/index.css';
 	import Card from '$lib/components/card/card.svelte';
 </script>
 
-<div class="hero-container">
-	<img
-		src="images/index/hero.jpg"
-		alt="hero"
-		use:scrollRange={{
-			start: 0,
-			end: '100svh',
-			property: '--backgroundColorAlpha',
-			min: 0.5,
-			max: 1.005
-		}}
-		use:scrollRange={{
-			start: 0,
-			end: '100svh',
-			property: '--backgroundYPosition',
-			min: 1,
-			max: 1.1
-			// valueCSSunit: 'px'
-		}}
-	/>
-	<div id="hero-text">
-		<h1 class="unselectable">Sem Van Broekhoven</h1>
-		<h2>Student at Thomas More - Junior Full Stack Software Developer</h2>
-	</div>
-</div>
+<Hero 
+title="Sem Van Broekhoven"
+description="Student at Thomas More - Junior Full Stack Software Developer"
+leading='<i class="fa-solid fa-location-dot"></i> Belgium'
+image="images/index/hero.jpg"
+/>
 <Container>
 	<div id="background"></div>
 	<div>
@@ -51,7 +32,7 @@
 			description="A user-friendly cross-platform planning app with
                                     tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all." 
 			image="images/projects/PLNM/logo.png"
-			href="/projects"
+			href="/projects/PLNM"
 			progLangs={["dart", "flutter"]}
 		/>
 		<Card
@@ -68,7 +49,7 @@
 		title="Insanthon"
 		description="A picture based story game with a long playthrough and multiple endings."
 		image="images/projects/insanthon/logo.png"
-		href="/projects"
+		href="/projects/Insanthon"
 		progLangs={["py"]}
 		/>
 	</div>
