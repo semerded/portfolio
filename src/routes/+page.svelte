@@ -7,7 +7,7 @@
 
 <div class="hero-container">
 	<img
-		src="/index/hero.jpg"
+		src="images/index/hero.jpg"
 		alt="hero"
 		use:scrollRange={{
 			start: 0,
@@ -49,9 +49,27 @@
 		<Card
 			title="PLNM"
 			description="A user-friendly cross-platform planning app with
-                                    tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive..."
-			image="projects/PLNM/logo.png"
+                                    tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all." 
+			image="images/projects/PLNM/logo.png"
 			href="/projects"
+			progLangs={["dart", "flutter"]}
+		/>
+		<Card
+			title="Motra"
+			description="  A graphics library in python written on top of
+                                    the brand new C based SDL3 library. Pre-made
+                                    widgets with a lot of customization make
+                                    development easier."
+			image="images/projects/Motra/logo.png"
+			href="/projects"
+			progLangs={["py", "c"]}
+			/>
+		<Card 
+		title="Insanthon"
+		description="A picture based story game with a long playthrough and multiple endings."
+		image="images/projects/insanthon/logo.png"
+		href="/projects"
+		progLangs={["py"]}
 		/>
 	</div>
 </Container>

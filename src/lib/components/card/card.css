@@ -18,7 +18,11 @@
         border-radius: 8px;
 		img {
 			transition: 400ms;
-			width: 200px;
+			width: 100%;
+			height: 200px;
+			object-position: top;
+			object-fit: cover;
+			border-radius: 8px;
 		}
 		position: absolute;
 		top: 0;
@@ -50,9 +54,9 @@
 
 		p {
 			padding: 8px;
-			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: normal;
+            text-align: left;
 		}
 
 		p::after {
@@ -66,10 +70,18 @@
 			transition: opacity 400ms;
 			pointer-events: none;
 		}
+
+        .prog-lang-container {
+            display: flex;
+            padding: 4px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
 	}
 
 	&:hover  .card-content {
-		height: 150px;
+		height: 180px;
 	}
 
 	&:hover  .card-content p::after {
