@@ -4,7 +4,7 @@
 </script>   
 
 <nav>
-	<a href="/"><img src="/logo.webp" alt="logo" /></a>
+	<a href="/"><img src="logos/logo.webp" alt="logo" /></a>
 	<div>
 		<a href="/about"><span class:nav-active={page.url.pathname === '/about'}>About me</span></a>
 		<a href="/projects"><span class:nav-active={page.url.pathname === '/projects'}>My projects</span></a>
