@@ -1,24 +1,22 @@
 .card {
+	margin: 8px;
 	background-color: var(--card);
-	box-shadow: 0px 0px 24px 0 var(--box-shadow);
+	box-shadow: 2px 2px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent);
 	width: 400px;
 	height: 400px;
 	position: relative;
-    cursor: pointer;
-    border-radius: 8px;
-    border: none;
-    color: var(--text);
-
-
-
-
+	cursor: pointer;
+	border-radius: 8px;
+	/* border: 1px solid rgba(255, 255, 255, 0.2); */
+	border: none;
+	color: var(--text);
 
 	.card-image {
 		display: flex;
 		justify-content: center;
 		width: 100%;
 
-        border-radius: 8px;
+		border-radius: 8px;
 		img {
 			transition: 400ms;
 			width: 100%;
@@ -39,8 +37,8 @@
 		border-radius: 8px;
 
 		background-color: color-mix(in srgb, var(--bg) 70%, transparent);
-		backdrop-filter: blur(20px); 
-		-webkit-backdrop-filter: blur(20px); 
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -65,7 +63,7 @@
 			padding: 8px;
 			text-overflow: ellipsis;
 			white-space: normal;
-            text-align: left;
+			text-align: left;
 		}
 
 		p::after {
@@ -80,24 +78,24 @@
 			pointer-events: none;
 		}
 
-        .prog-lang-container {
-            display: flex;
-            padding: 4px;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-        }
+		.prog-lang-container {
+			display: flex;
+			padding: 4px;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
-	&:hover  .card-content {
-		height: 180px;
+	&:hover .card-content {
+		height: 240px;
 	}
 
-	&:hover  .card-content p::after {
+	&:hover .card-content p::after {
 		opacity: 0;
 	}
 
-	&:hover  .card-image img {
+	&:hover .card-image img {
 		opacity: 0.5;
 	}
 }

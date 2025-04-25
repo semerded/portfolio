@@ -3,14 +3,16 @@
 	import Container from '$lib/components/container/container.svelte';
 	import '$lib/style/routes/index.css';
 	import Card from '$lib/components/card/card.svelte';
+	import Fade from '$lib/components/fade/fade.svelte';
 </script>
 
-<Hero 
-title="Sem Van Broekhoven"
-description="Student at Thomas More - Junior Full Stack Software Developer"
-leading='<i class="fa-solid fa-location-dot"></i> Belgium'
-image="images/index/hero.jpg"
+<Hero
+	title="Sem Van Broekhoven"
+	description="Student at Thomas More - Junior Full Stack Software Developer"
+	leading="<i class='fa-solid fa-location-dot'></i> Belgium"
+	image="images/index/hero.jpg"
 />
+<Fade startColor="#000000" endColor="var(--bg)" />
 <Container>
 	<div id="background"></div>
 	<div>
@@ -24,33 +26,35 @@ image="images/index/hero.jpg"
 			to learn new ways to <span>improve my skills</span>. Besides my love for programming, I am
 			also passionate about <span>photography</span> and <span>music</span>.
 		</h2>
-		<h2>I've worked a vast variety of projects</h2>
-	</div>
-	<div id="card-container">
-		<Card
-			title="PLNM"
-			description="A user-friendly cross-platform planning app with
-                                    tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all." 
-			image="images/projects/PLNM/logo.png"
-			href="/projects/PLNM"
-			progLangs={["dart", "flutter"]}
-		/>
-		<Card
-			title="Motra"
-			description="  A graphics library in python written on top of
-                                    the brand new C based SDL3 library. Pre-made
-                                    widgets with a lot of customization make
-                                    development easier."
-			image="images/projects/Motra/logo.png"
-			href="/projects"
-			progLangs={["py", "c"]}
-			/>
-		<Card 
-		title="Insanthon"
-		description="A picture based story game with a long playthrough and multiple endings."
-		image="images/projects/insanthon/logo.png"
-		href="/projects/Insanthon"
-		progLangs={["py"]}
-		/>
 	</div>
 </Container>
+<h3>I've worked a vast variety of projects</h3>
+
+<h2>project highlight</h2>
+<div id="card-container">
+	<Card
+		title="PLNM"
+		description="A user-friendly cross-platform planning app with
+								tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all."
+		image="images/projects/PLNM/logo.png"
+		href="/projects/PLNM"
+		progLangs={['dart', 'flutter']}
+	/>
+	<Card
+		title="Motra"
+		description="  A graphics library in python written on top of
+								the brand new C based SDL3 library. Pre-made
+								widgets with a lot of customization make
+								development easier."
+		image="images/projects/Motra/logo.png"
+		href="/projects"
+		progLangs={['py', 'c']}
+	/>
+	<Card
+		title="Insanthon"
+		description="A picture based story game with a long playthrough and multiple endings."
+		image="images/projects/Insanthon/logo.png"
+		href="/projects/Insanthon"
+		progLangs={['py']}
+	/>
+</div>
