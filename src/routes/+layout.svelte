@@ -4,7 +4,7 @@
 	import '$lib/style/main.css';
 
     import Navbar from "$lib/components/navbar/navbar.svelte"
-	import BackToTop from '$lib/components/back-to-top/back-to-top.svelte';
+	import BackToTop from '$lib/back-to-top.svelte';
 </script>
 
 <svelte:head>

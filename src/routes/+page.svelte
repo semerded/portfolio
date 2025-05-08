@@ -3,7 +3,7 @@
 	import Container from '$lib/components/container/container.svelte';
 	import '$lib/style/routes/index.css';
 	import Card from '$lib/components/card/card.svelte';
-	import Fade from '$lib/components/fade/fade.svelte';
+	import Fade from '$lib/fade.svelte';
 	import SectionHeader from '$lib/components/section-header/section-header.svelte';
 	import Profile from '$lib/profile/profile.svelte';
 	import DynamicBackground from '$lib/dynamic-background.svelte';
