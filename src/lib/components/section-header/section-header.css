@@ -1,0 +1,12 @@
+.section-header-title {
+    text-align: center;
+    font-size: 4rem;
+    padding: 16px 0;
+
+}
+
+.section-header-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}

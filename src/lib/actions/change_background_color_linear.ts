@@ -32,7 +32,7 @@ export function scrollRange(
 		}
 		document.documentElement.style.setProperty(
 			params.property || '--scroll-progress',
-			`${value.toString()}${params.valueCSSunit ?? ''}`
+			`${value.toFixed(4)}${params.valueCSSunit ?? ''}`
 		);
 	};
 

@@ -1,0 +1,121 @@
+#profile-grid {
+    display: grid; 
+ 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    gap: 0px;
+    height: 70vh;
+    width: 100%;
+
+
+    color: black;
+
+    
+ }
+   
+ #profile-who {
+ 
+    background-color: #FEF995; 
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 4;
+    grid-column-end: 4;
+
+    img {
+        width: 80%;
+    }
+    
+ }
+ #profile-about {
+ 
+    background-color: #D7A5A5; 
+    grid-row-start: 4;
+    grid-column-start: 1;
+ 
+    grid-row-end: 6;
+    grid-column-end: 5;
+    
+ }
+ #profile-links {
+ 
+    background-color: #88A56D; 
+    grid-row-start: 6;
+    grid-column-start: 1;
+ 
+    grid-row-end: 7;
+    grid-column-end: 5;
+    
+ }
+ #profile-skills {
+ 
+    background-color: #8FFD5A; 
+    grid-row-start: 4;
+    grid-column-start: 5;
+ 
+    grid-row-end: 7;
+    grid-column-end: 10;
+    
+ }
+ #profile-hobbies {
+ 
+    background-color: #B6AFD8; 
+    grid-row-start: 6;
+    grid-column-start: 10;
+ 
+    grid-row-end: 7;
+    grid-column-end: 12;
+    
+ }
+ #profile-print {
+ 
+    background-color: #DDD6A6; 
+    grid-row-start: 6;
+    grid-column-start: 12;
+ 
+    grid-row-end: 7;
+    grid-column-end: 14;
+    
+ }
+ #profile-save {
+ 
+    background-color: #E77C5E; 
+    grid-row-start: 4;
+    grid-column-start: 10;
+ 
+    grid-row-end: 6;
+    grid-column-end: 14;
+    
+ }
+ #profile-experience {
+ 
+    background-color: #5B9577; 
+    grid-row-start: 1;
+    grid-column-start: 4;
+ 
+    grid-row-end: 3;
+    grid-column-end: 9;
+    
+ }
+ #profile-education {
+ 
+    background-color: #FBEF8A; 
+    grid-row-start: 1;
+    grid-column-start: 9;
+ 
+    grid-row-end: 4;
+    grid-column-end: 14;
+    
+ }
+
+ #profile-projects {
+
+    background-color: #5759B9; 
+    grid-row-start: 3;
+    grid-column-start: 4;
+ 
+    grid-row-end: 4;
+    grid-column-end: 9;
+    
+ }

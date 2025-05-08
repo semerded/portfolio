@@ -5,7 +5,7 @@
 </script>
 
 <div class="container-wrapper">
-	<div class="container">
+	<article class="container">
 		<slot />
-	</div>
+	</article>
 </div>

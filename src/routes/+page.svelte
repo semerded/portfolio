@@ -4,33 +4,35 @@
 	import '$lib/style/routes/index.css';
 	import Card from '$lib/components/card/card.svelte';
 	import Fade from '$lib/components/fade/fade.svelte';
+	import SectionHeader from '$lib/components/section-header/section-header.svelte';
+	import Profile from '$lib/profile/profile.svelte';
+	import DynamicBackground from '$lib/dynamic-background.svelte';
 </script>
 
+<DynamicBackground  image="/images/index/bg.jpg"/>
 <Hero
 	title="Sem Van Broekhoven"
 	description="Student at Thomas More - Junior Full Stack Software Developer"
 	leading="<i class='fa-solid fa-location-dot'></i> Belgium"
-	image="images/index/hero.jpg"
+	buttonText="View my profile"
+	buttonLink="#profile-grid"
 />
 <Fade startColor="#000000" endColor="var(--bg)" />
+<Profile />
 <Container>
-	<div id="background"></div>
-	<div>
-		<h2 id="about-me">
-			Hello 👋! I am Sem and I am <span>studying</span> my first year of
-			<span>'Applied Computer Science'</span>
-			at Thomas More University Of Applied Sciences in Geel. My <span>passion for technology</span>
-			drives me to
-			<span> experiment with programming languages </span>
-			such as Dart (with Flutter Framework), Python, HTML, JavaScript, SQL and Java. I'm always open
-			to learn new ways to <span>improve my skills</span>. Besides my love for programming, I am
-			also passionate about <span>photography</span> and <span>music</span>.
-		</h2>
-	</div>
+	<!-- <div id="background"></div> -->
+	<h2 id="about-me">
+		Hello 👋! I am Sem and I am <span>studying</span> my first year of
+		<span>'Applied Computer Science'</span>
+		at Thomas More University Of Applied Sciences in Geel. My <span>passion for technology</span>
+		drives me to
+		<span> experiment with programming languages </span>
+		such as Dart (with Flutter Framework), Python, HTML, JavaScript, SQL and Java. I'm always open to
+		learn new ways to <span>improve my skills</span>. Besides my love for programming, I am also
+		passionate about <span>photography</span> and <span>music</span>.
+	</h2>
 </Container>
-<h3>I've worked a vast variety of projects</h3>
-
-<h2>project highlight</h2>
+<SectionHeader title="Project Highlights" subtitle="Just the tip of the iceberg" />
 <div id="card-container">
 	<Card
 		title="PLNM"

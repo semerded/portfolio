@@ -7,7 +7,7 @@
 	export let href: string;
 	export let progLangs: string[];
 
-	import Tooltip from '$lib/components/mouse-following-tooltip/mouse-following-tooltip.svelte';
+	import Tooltip from '$lib/mouse-following-tooltip.svelte';
 	import '$lib/style/custom/prog-lang.css';
 
 	console.log(progLangs);
