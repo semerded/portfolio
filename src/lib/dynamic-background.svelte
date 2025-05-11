@@ -13,7 +13,7 @@
 			end: '100svh',
 			property: '--bg-opacity',
 			min: 0.5,
-			max: 0.88
+			max: 0.80
 		}}
 		use:scrollRange={{
 			start: 0,
