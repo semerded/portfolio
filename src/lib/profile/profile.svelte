@@ -10,7 +10,7 @@
 				<h3>My profile</h3>
 			</div>
 			<div id="profile-who" class="grid-flex">
-				<img src="/images/projects/PLNM/logo.png" alt="" />
+				<img src="/images/index/me.png" alt="" />
 				<h3>Sem Van Broekhoven</h3>
 				<p>Full Stack Software Developer</p>
 			</div>
@@ -54,10 +54,10 @@
 				education
 			</div>
 			<div id="profile-print">
-				<button>Print</button>
+				<button>Print&nbsp;<i class="fa-solid fa-print"></i></button>
 			</div>
 			<div id="profile-save">
-				<button>Save</button>
+				<button>Save&nbsp;<i class="fa-solid fa-download"></i></button>
 			</div>
 		</div>
 	</div>
