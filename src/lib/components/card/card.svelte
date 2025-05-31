@@ -9,6 +9,7 @@
 
 	import Tooltip from '$lib/mouse-following-tooltip.svelte';
 	import '$lib/style/custom/prog-lang.css';
+	import ProgLang from '../prog-lang.svelte';
 
 	console.log(progLangs);
 
@@ -47,7 +48,7 @@
 			<div class="prog-lang-container">
 				{#if progLangs.length > 0}
 					{#each progLangs as progLang}
-						<prog-lang type={progLang}></prog-lang>
+						<ProgLang name={progLang}></ProgLang>
 					{/each}
 				{/if}
 			</div>
