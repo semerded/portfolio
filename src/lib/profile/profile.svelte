@@ -1,16 +1,25 @@
 <script lang="ts">
 	import './profile.css';
 	import Container from '$lib/components/container/container.svelte';
+	import { intersectionObserver } from '$lib/animate-on-scroll';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		intersectionObserver?.observe(document.getElementById('profile-who-image-container')!);
+	});
 </script>
 
 <Container>
 	<div id="profile-container">
 		<div class="profile-column">
-			<div id="profile-title">
+			<div id="profile-title" class="grid-flex">
 				<h3>My profile</h3>
 			</div>
 			<div id="profile-who" class="grid-flex">
-				<img src="/images/index/me.png" alt="" />
+				<div id="profile-who-image-container" class="ob-infinite">
+					<img src="/images/index/me.png" alt="thats me!" />
+					<div></div>
+				</div>
 				<h3>Sem Van Broekhoven</h3>
 				<p>Full Stack Software Developer</p>
 			</div>
@@ -21,14 +30,41 @@
 					programming languages.
 				</p>
 			</div>
-			
 		</div>
 		<div class="profile-column">
-			
 			<div id="profile-skills">
+				<h3>My favorite tools</h3>
+				<div class="skill-wrapper">
+					<div class="skill">
+						<i class="devicon-python-plain"></i>
+						<span class="skill-name">Python</span>
+					</div>
+					<div class="skill">
+						<i class="devicon-svelte-plain"></i>
+						<span class="skill-name">Svelte</span>
+					</div>
+					<div class="skill">
+						<i class="devicon-dart-plain"></i>
+						<span class="skill-name">Dart</span>
+					</div>
+					<div class="skill">
+						<i class="devicon-flutter-plain"></i>
+						<span class="skill-name">Flutter</span>
+					</div>
+					<div class="skill">
+						<i class="devicon-mysql-plain"></i>
+						<span class="skill-name">MySQL</span>
+					</div>
+				</div>
+
+				<h3>Other tools</h3>
 				<div class="skill">
-					<div class="skill-name">HTML</div>
-					<i class="fa-brands fa-html5"></i>
+					<i class="devicon-java-plain"></i>
+					<span class="skill-name">Java</span>
+				</div>
+				<div class="skill">
+					<i class="devicon-arduino-plain"></i>
+					<span class="skill-name">Arduino</span>
 				</div>
 			</div>
 			<div id="profile-links">
@@ -47,12 +83,8 @@
 		</div>
 
 		<div class="profile-column">
-			<div id="profile-experience">
-				experience
-			</div>
-			<div id="profile-education">
-				education
-			</div>
+			<div id="profile-experience">experience</div>
+			<div id="profile-education">education</div>
 			<div id="profile-print">
 				<button>Print&nbsp;<i class="fa-solid fa-print"></i></button>
 			</div>
