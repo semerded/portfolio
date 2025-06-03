@@ -10,7 +10,7 @@
 	});
 </script>
 
-<Container>
+<Container minHeight="100svh">
 	<div id="profile-container">
 		<div class="profile-column">
 			<!-- -->

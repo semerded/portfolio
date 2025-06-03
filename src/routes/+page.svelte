@@ -22,7 +22,6 @@
 	buttonText="View my profile"
 	buttonLink="#profile-grid"
 />
-<Fade startColor="#000000" endColor="var(--bg)" />
 <Profile />
 <Container>
 	<!-- <div id="background"></div> -->
