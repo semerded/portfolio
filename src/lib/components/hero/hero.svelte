@@ -45,7 +45,7 @@
 			<h2>{description}</h2>
 		{/if}
 		{#if buttonText && buttonLink}
-		<Button href="#profile-grid" primary={true}>View my profile</Button>
+		<Button href="#profile-container" primary={true}>View my profile</Button>
 		{/if}
 		
 	</div>
