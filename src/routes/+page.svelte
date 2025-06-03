@@ -7,9 +7,14 @@
 	import SectionHeader from '$lib/components/section-header/section-header.svelte';
 	import Profile from '$lib/profile/profile.svelte';
 	import DynamicBackground from '$lib/dynamic-background.svelte';
+	import { darkMode } from '$lib/actions/light-dark-mode.store';
 </script>
 
-<DynamicBackground  image="/images/index/bg.jpg"/>
+{#if $darkMode}
+	<DynamicBackground image="/images/index/bg-dark.jpg" />
+{:else}
+	<DynamicBackground image="/images/index/bg-light.jpg" />
+{/if}
 <Hero
 	title="Sem Van Broekhoven"
 	description="Student at Thomas More - Junior Full Stack Software Developer"
@@ -43,14 +48,11 @@
 		progLangs={['dart', 'flutter']}
 	/>
 	<Card
-		title="Motra"
-		description="  A graphics library in python written on top of
-								the brand new C based SDL3 library. Pre-made
-								widgets with a lot of customization make
-								development easier."
-		image="images/projects/Motra/logo.png"
+		title="Pyrogine"
+		description="A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant."
+		image="images/projects/Pyrogine/logo.png"
 		href="/projects"
-		progLangs={['py', 'c']}
+		progLangs={['py', 'openGL']}
 	/>
 	<Card
 		title="Insanthon"
