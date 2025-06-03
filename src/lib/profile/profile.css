@@ -180,16 +180,13 @@
 	h3 {
 		margin: 16px;
 	}
-	.skill {
-		display: flex;
-		margin: 8px;
-		align-items: center;
 
-		i {
-			padding-right: 8px;
-			font-size: 2rem;
-		}
+	.skill-wrapper {
+		display: flex;
+		flex-wrap: wrap;
 	}
+	
+	
 }
 #profile-education {
 	grid-row: span 2;
