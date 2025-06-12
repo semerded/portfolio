@@ -3,7 +3,7 @@
 	export let size: number = 1;
 	export let boxShadow: boolean = false;
 
-	const languageData: Record<string, { deviconName: string; fullName: string; color: string }> = {
+	const languageData: Record<string, { deviconName: string; fullName: string; color: string; darkText?: boolean }> = {
 		html: {
 			deviconName: 'html5',
 			fullName: 'HTML',
@@ -17,7 +17,8 @@
 		js: {
 			deviconName: 'javascript',
 			fullName: 'JavaScript',
-			color: '#f0db4f' // JS yellow
+			color: '#f0db4f', // JS yellow
+			darkText: true
 		},
 		py: {
 			deviconName: 'python',
@@ -130,16 +131,21 @@
 		console.error('Given prog lang not in list: ', name);
 		name = 'unknown';
 	}
+	let bgColor = languageData[name]['color'];
+	let color = "darkText" in languageData[name] ? "black" : "white"; 
+	let iconName = languageData[name]['deviconName'];
+	let fullName = languageData[name]['fullName'];
+
 </script>
 
 <span
 	class="prog-lang"
 	class:box-shadow={boxShadow}
-	style="background-color: {languageData[name]['color']}; font-size: {size}rem"
+	style="background-color: {bgColor}; color: {color}; font-size: {size}rem"
 >
-	<i class="devicon-{languageData[name]['deviconName']}-plain"></i>
+	<i class="devicon-{iconName}-plain"></i>
 	<span>
-		{languageData[name]['fullName']}
+		{fullName}
 	</span>
 </span>
 
