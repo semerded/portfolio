@@ -17,7 +17,7 @@
 			<!-- header -->
 			<!-- -->
 			<div id="profile-title" class="grid-flex">
-				<h3>My profile</h3>
+				<h3>My digital profile</h3>
 			</div>
 			<div id="profile-who" class="grid-flex">
 				<!-- -->
@@ -46,7 +46,7 @@
 				<!-- -->
 				<!-- skills -->
 				<!-- -->
-				<h3>My favorite tools</h3>
+				<h3><i class="fa-solid fa-star"></i> My favorite tools</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="py"></ProgLang>
 					<ProgLang name="sql"></ProgLang>
@@ -56,21 +56,32 @@
 					<ProgLang name="ts"></ProgLang>
 				</div>
 
-				<h3>Other tools</h3>
+				<h3><i class="fa-solid fa-code"></i> Programming</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="js"></ProgLang>
 					<ProgLang name="html"></ProgLang>
 					<ProgLang name="css"></ProgLang>
-					<ProgLang name="java"></ProgLang>
 					<ProgLang name="php"></ProgLang>
+					<ProgLang name="angular"></ProgLang>
+					<ProgLang name="thymeleaf"></ProgLang>
+					<ProgLang name="java"></ProgLang>
 					<ProgLang name="cpp"></ProgLang>
 					<ProgLang name="go"></ProgLang>
-					<ProgLang name="arduino"></ProgLang>
-					<ProgLang name="angular"></ProgLang>
-					<ProgLang name="docker"></ProgLang>
-					<ProgLang name="thymeleaf"></ProgLang>
 					<ProgLang name="openGL"></ProgLang>
 					<ProgLang name="pygame"></ProgLang>
+					<ProgLang name="sql"></ProgLang>
+				</div>
+				<h3><i class="fa-solid fa-compact-disc"></i> OS</h3>
+				<div class="skill-wrapper">
+					<ProgLang name="linux"></ProgLang>
+					<ProgLang name="windows"></ProgLang>
+					<ProgLang name="archlinux"></ProgLang>
+					<ProgLang name="ubuntu"></ProgLang>
+				</div>
+				<h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+				<div class="skill-wrapper">
+					<ProgLang name="arduino"></ProgLang>
+					<ProgLang name="docker"></ProgLang>
 					<ProgLang name="vscode"></ProgLang>
 					<ProgLang name="raspberrypi"></ProgLang>
 				</div>
@@ -97,16 +108,41 @@
 			<!-- -->
 			<!-- experience -->
 			<!-- -->
-			<div id="profile-experience">experience</div>
+			<div id="profile-experience">
+				<h3>Experience</h3>
+				<ul>
+					<li>3+ years of programming</li>
+					<li>2+ years builder, programmer and driver with VEX Robotics</li>
+					<li>Internship at Philips Eindhoven</li>
+					<li>Excellent social skills</li>
+					<li>Scrum and team coordination</li>
+					<li>6 years member of STEAM-club, a national known science club at my school</li>
+				</ul>
+				<h3>Achievements</h3>
+				<ul>
+					<li>2 time National Champion in VEX Robotics</li>
+					<li>Competed at the World Championship in VEX Robotics in America</li>
+				</ul>
+			</div>
 			<!-- -->
 			<!-- education -->
 			<!-- -->
-			<div id="profile-education">education</div>
+			<div id="profile-education">
+				<h3>Highschool</h3>
+				<ul>
+					<li>Highschool diploma in Industrial IT</li>
+				</ul>
+				<h3>University</h3>
+				<ul>
+					<li>1st year at Thomas More University of Applied Sciences</li>
+					<li>Studying for a Bachelor in Applied Computer Science</li>
+				</ul>
+			</div>
 			<!-- -->
 			<!-- print -->
 			<!-- -->
 			<div id="profile-print">
-				<button>Print&nbsp;<i class="fa-solid fa-print"></i></button>
+				<a href="/misc/print-this-profile" >Print&nbsp;<i class="fa-solid fa-print"></i></a>
 			</div>
 			<!-- -->
 			<!-- save -->

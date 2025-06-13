@@ -9,6 +9,16 @@
 	align-items: center;
 }
 
+/* general layout for most grids */
+#profile-about, #profile-skills, #profile-education, #profile-experience {
+	padding: 16px;
+
+	h3 {
+		margin: 16px;
+		margin-bottom: 4px;
+	}
+}
+
 #profile-container {
 	display: grid;
 
@@ -121,7 +131,7 @@
 #profile-about {
 	grid-row: span 2;
 
-	padding: 8px;
+	padding: 16px;
 }
 #profile-links {
 	grid-row: span 1;
@@ -175,12 +185,6 @@
 }
 #profile-skills {
 	grid-row: span 5;
-	padding: 16px;
-
-	h3 {
-		margin: 16px;
-	}
-
 	.skill-wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -200,12 +204,16 @@
 	grid-column: span 2 !important;
 	grid-row: span 1;
 
-	button {
+	button, a {
+		all: unset;
+		cursor: pointer;
+		display: flex;
 		width: 100%;
 		height: 100%;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
 		background-color: transparent;
-		border: none;
 		color: white;
 		font-size: 1.2rem;
 
