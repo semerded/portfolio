@@ -120,6 +120,27 @@
 			fullName: 'Raspberry Pi',
 			color: '#C51A4A' // Raspberry Pi red
 		},
+		linux: {
+			deviconName: 'linux',
+			fullName: 'Linux',
+			color: '#FCC624', // Linux yellow
+			darkText: true
+		},
+		windows: {
+			deviconName: 'windows11',
+			fullName: 'Windows',
+			color: '#0078D6' // Windows blue
+		},
+		archlinux: {
+			deviconName: 'archlinux',
+			fullName: 'Arch Linux',
+			color: '#1793D1' // Arch Linux blue
+		},
+		ubuntu: {
+			deviconName: 'ubuntu',
+			fullName: 'Ubuntu',
+			color: '#E95420' // Ubuntu orange
+		},
 		unknown: {
 			deviconName: 'bub',
 			fullName: 'Unknown',
