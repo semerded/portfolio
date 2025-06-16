@@ -4,6 +4,7 @@
 	import { scrollRange } from '$lib/actions/change_background_color_linear';
 	import Button from '$lib/components/button.svelte';
 
+	export let id: string | null = null;
 	export let title: string;
 	export let description: string = '';
 	export let leading: string = '';
@@ -13,7 +14,7 @@
 	export let buttonLink: string = "";
 </script>
 
-<div class="hero-container">
+<div class="hero-container" id="{id}">
 	{#if image}
 	<img
 		src={image}
