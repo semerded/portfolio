@@ -4,7 +4,7 @@
 	import LightDarkModeSwitch from '$lib/light-dark-mode-switch.svelte';
 </script>   
 
-<nav>
+<nav class="navbar">
 	<a href="/"><img src="/logos/logo.webp" alt="logo" /></a>
 	<div>
 		<a href="/about"><span class:nav-active={page.url.pathname.toString().includes('/about')}>About me</span></a>
