@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-    import LinearBlur from './overlay/linear-blur.svelte';
 
 	interface Link {
 		name: string;
@@ -45,61 +44,86 @@
 	});
 </script>
 
-
 <nav class="sidebar">
 	{#each links as link, index}
-		<a class:active={index === activeIndex} href={link.link}>°<span>{link.name}</span></a><br />
+		<a class:active={index === activeIndex} href={link.link}
+			><span class="icon">&#9733;</span><span class="name">{link.name}</span></a
+		><br />
 	{/each}
 </nav>
 
+<input type="range" />
 
 <style>
+
+
 	nav.sidebar {
 		position: fixed;
 		height: calc(100svh - calc(var(--navbar-height)) * 3);
 		top: calc(var(--navbar-height) * 2);
-		left: 8px;
+		left: 0px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
-        /* align-items: center; */
-        padding-left: 4px;
+		/* align-items: center; */
 		width: 1rem;
 		z-index: 9;
-            transition: 500ms;
-            border-radius: 8px;
-            text-decoration: 0;
+		transition: 500ms;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		text-decoration: 0;
 
-            backdrop-filter: blur(10px);
-            background-color: color-mix(in srgb, var(--bg) 70%, transparent);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-
+		backdrop-filter: blur(3px);
+		background-color: color-mix(in srgb, var(--bg) 0%, transparent);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-left: 0px;
 
 		a {
-			&.active {
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			flex-wrap: nowrap;
+
+			&.active > span {
 				color: var(--primary);
-                transition: 500ms;
 			}
 
-            span {
-                width: 0px;
-                display: block;
-                opacity: 0;
-            }
+			span {
+				transition: 500ms;
+
+				color: white;
+				width: 100%;
+				width: 0px;
+				display: flex;
+				flex-wrap: nowrap;
+				white-space: nowrap;
+
+				&.name {
+					display: none;
+					opacity: 0;
+					width: 100%;
+					padding-left: 1rem;
+				}
+				&.icon {
+					width: 1rem;
+					text-align: center;
+				}
+			}
 		}
 
-        &:hover {
-            width: 150px;
-            a {
-                span {
-                    display: inline;
-                    width: 150px;
-                opacity: 1;
+		&:hover {
+			a {
+				span {
+					opacity: 1;
+					transition: 500ms;
 
-                }
-            }
-            transition: 500ms;
-            
-        }
+					&.name {
+						display: block;
+					}
+				}
+			}
+			transition: 500ms;
+		}
 	}
 </style>

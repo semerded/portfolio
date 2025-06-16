@@ -3,6 +3,8 @@
     --backgroundYPosition: 0px;
 }
 
+
+
 #background {
     z-index: -1;
     position: fixed;

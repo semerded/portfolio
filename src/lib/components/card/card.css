@@ -10,6 +10,8 @@
 	/* border: 1px solid rgba(255, 255, 255, 0.2); */
 	border: none;
 	color: var(--text);
+	overflow: hidden;
+
 
 	.card-image {
 		display: flex;
@@ -97,5 +99,6 @@
 
 	&:hover .card-image img {
 		opacity: 0.5;
+		scale: 1.1;
 	}
 }

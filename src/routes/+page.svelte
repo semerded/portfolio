@@ -9,6 +9,7 @@
 	import DynamicBackground from '$lib/dynamic-background.svelte';
 	import { darkMode } from '$lib/actions/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
+	import Offer from '$lib/components/offer.svelte';
 </script>
 
 <SideBar links={[{ name: 'Welcome', link: '#welcome' }, { name: 'My Profile', link: '#my-profile' }, { name: 'My projects', link: '#project-container'}]} />
@@ -28,19 +29,13 @@
 />
 <Profile />
 <Container>
-	<!-- <div id="background"></div> -->
-	<h2 id="about-me">
-		Hello 👋! I am Sem and I am <span>studying</span> my first year of
-		<span>'Applied Computer Science'</span>
-		at Thomas More University Of Applied Sciences in Geel. My <span>passion for technology</span>
-		drives me to
-		<span> experiment with programming languages </span>
-		such as Dart (with Flutter Framework), Python, HTML, JavaScript, SQL and Java. I'm always open to
-		learn new ways to <span>improve my skills</span>. Besides my love for programming, I am also
-		passionate about <span>photography</span> and <span>music</span>.
-	</h2>
+	<Offer 
+		title="Single Page Website"
+		price={100}
+		/>
+		
+
 </Container>
-<SectionHeader title="Project Highlights" subtitle="Just the tip of the iceberg" />
 <div id="project-container">
 	<Card
 		title="PLNM"
