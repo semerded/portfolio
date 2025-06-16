@@ -8,7 +8,10 @@
 	import Profile from '$lib/profile/profile.svelte';
 	import DynamicBackground from '$lib/dynamic-background.svelte';
 	import { darkMode } from '$lib/actions/light-dark-mode.store';
+	import SideBar from '$lib/components/sidebar.svelte';
 </script>
+
+<SideBar links={[{ name: 'Welcome', link: '#welcome' }, { name: 'My Profile', link: '#my-profile' }, { name: 'My projects', link: '#project-container'}]} />
 
 {#if $darkMode}
 	<DynamicBackground image="/images/index/bg-dark.jpg" />
@@ -20,7 +23,8 @@
 	description="Student at Thomas More - Junior Full Stack Software Developer"
 	leading="<i class='fa-solid fa-location-dot'></i> Belgium"
 	buttonText="View my profile"
-	buttonLink="#profile-grid"
+	buttonLink="#my-profile"
+	id="welcome"
 />
 <Profile />
 <Container>
@@ -37,7 +41,7 @@
 	</h2>
 </Container>
 <SectionHeader title="Project Highlights" subtitle="Just the tip of the iceberg" />
-<div id="card-container">
+<div id="project-container">
 	<Card
 		title="PLNM"
 		description="A user-friendly cross-platform planning app with
