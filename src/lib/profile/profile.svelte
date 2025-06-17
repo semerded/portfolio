@@ -1,5 +1,7 @@
 <script lang="ts">
 	import './profile.css';
+	import { t, json } from 'svelte-i18n';
+	import { get } from 'svelte/store';
 	import Container from '$lib/components/container/container.svelte';
 	import ProgLang from '$lib/components/prog-lang.svelte';
 	import { intersectionObserver } from '$lib/animate-on-scroll';
@@ -8,6 +10,11 @@
 	onMount(() => {
 		intersectionObserver?.observe(document.getElementById('profile-who-image-container')!);
 	});
+
+	$: experienceContent = $json('profile.experience.content') as string[];
+	$: achievementsContent = $json('profile.achievements.content') as string[];
+	$: hsContent = $json('profile.hs.content') as string[];
+	$: uniContent = $json('profile.uni.content') as string[];
 </script>
 
 <Container minHeight="100svh" id="my-profile">
@@ -17,7 +24,7 @@
 			<!-- header -->
 			<!-- -->
 			<div id="profile-title" class="grid-flex">
-				<h3>My digital profile</h3>
+				<h3>{$t('profile.title')}</h3>
 			</div>
 			<div id="profile-who" class="grid-flex">
 				<!-- -->
@@ -35,9 +42,7 @@
 			<!-- -->
 			<div id="profile-about" class="grid-flex">
 				<p>
-					I'm 18 years old and have found love in programming. I've been experimenting with
-					technology from a young age. Currently I like to make projects with a variety of
-					programming languages.
+					{$t('profile.description')}
 				</p>
 			</div>
 		</div>
@@ -46,7 +51,7 @@
 				<!-- -->
 				<!-- skills -->
 				<!-- -->
-				<h3><i class="fa-solid fa-star"></i> My favorite tools</h3>
+				<h3><i class="fa-solid fa-star"></i> {$t('profile.tools.fav')}</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="py"></ProgLang>
 					<ProgLang name="sql"></ProgLang>
@@ -56,7 +61,7 @@
 					<ProgLang name="ts"></ProgLang>
 				</div>
 
-				<h3><i class="fa-solid fa-code"></i> Programming</h3>
+				<h3><i class="fa-solid fa-code"></i> {$t('profile.tools.prog')}</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="js"></ProgLang>
 					<ProgLang name="html"></ProgLang>
@@ -71,14 +76,14 @@
 					<ProgLang name="pygame"></ProgLang>
 					<ProgLang name="sql"></ProgLang>
 				</div>
-				<h3><i class="fa-solid fa-compact-disc"></i> OS</h3>
+				<h3><i class="fa-solid fa-compact-disc"></i> {$t('profile.tools.os')}</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="linux"></ProgLang>
 					<ProgLang name="windows"></ProgLang>
 					<ProgLang name="archlinux"></ProgLang>
 					<ProgLang name="ubuntu"></ProgLang>
 				</div>
-				<h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+				<h3><i class="fa-solid fa-screwdriver-wrench"></i> {$t('profile.tools.tools')}</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="arduino"></ProgLang>
 					<ProgLang name="docker"></ProgLang>
@@ -109,46 +114,47 @@
 			<!-- experience -->
 			<!-- -->
 			<div id="profile-experience">
-				<h3>Experience</h3>
+				<h3>{$t('profile.experience.title')}</h3>
 				<ul>
-					<li>3+ years of programming</li>
-					<li>2+ years builder, programmer and driver with VEX Robotics</li>
-					<li>Internship at Philips Eindhoven</li>
-					<li>Excellent social skills</li>
-					<li>Scrum and team coordination</li>
-					<li>6 years member of STEAM-club, a national known science club at my school</li>
+					{#each experienceContent as content}
+						<li>{content}</li>
+					{/each}
 				</ul>
-				<h3>Achievements</h3>
+				<h3>{$t('profile.achievements.title')}</h3>
 				<ul>
-					<li>2 time National Champion in VEX Robotics</li>
-					<li>Competed at the World Championship in VEX Robotics in America</li>
+					{#each achievementsContent as content}
+						<li>{content}</li>
+					{/each}
 				</ul>
 			</div>
 			<!-- -->
 			<!-- education -->
 			<!-- -->
 			<div id="profile-education">
-				<h3>Highschool</h3>
+				<h3>{$t('profile.hs.title')}</h3>
 				<ul>
-					<li>Highschool diploma in Industrial IT</li>
+					{#each hsContent as content}
+						<li>{content}</li>
+					{/each}
 				</ul>
-				<h3>University</h3>
+				<h3>{$t('profile.uni.title')}</h3>
 				<ul>
-					<li>1st year at Thomas More University of Applied Sciences</li>
-					<li>Studying for a Bachelor in Applied Computer Science</li>
+					{#each uniContent as content}
+						<li>{content}</li>
+					{/each}
 				</ul>
 			</div>
 			<!-- -->
 			<!-- print -->
 			<!-- -->
 			<div id="profile-print">
-				<a href="/misc/print-this-profile" >Print&nbsp;<i class="fa-solid fa-print"></i></a>
+				<a href="/misc/print-this-profile">Print&nbsp;<i class="fa-solid fa-print"></i></a>
 			</div>
 			<!-- -->
 			<!-- save -->
 			<!-- -->
 			<div id="profile-save">
-				<button>Save&nbsp;<i class="fa-solid fa-download"></i></button>
+				<button>{$t('profile.save')}&nbsp;<i class="fa-solid fa-download"></i></button>
 			</div>
 		</div>
 	</div>

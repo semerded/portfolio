@@ -32,6 +32,13 @@ img {
 	user-select: none;
 }
 
+.tiled-container {
+	display: flex;
+	justify-content: space-evenly;
+
+
+}
+
 button {
 	cursor: pointer;
 }
