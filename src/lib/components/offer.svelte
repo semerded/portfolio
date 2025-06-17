@@ -1,13 +1,13 @@
 <script lang="ts">
 	export let title: string;
-	export let price: number;
+	export let price: string;
 	export let icon: string;
 	export let features: string[];
 </script>
 
 <div class="offer">
 	<h2>{title}</h2>
-	<span class="price">Starting from €{price}</span>
+	<span class="price">{price}</span>
 	<div class="features">
         <h3>Included features</h3>
 		{#each features as feature}

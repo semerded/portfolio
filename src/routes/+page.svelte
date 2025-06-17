@@ -38,16 +38,22 @@
 	<div class="tiled-container">
 		<Offer
 			title="Single Page Website"
-			price={100}
+			price="Starting from €100"
 			icon="single-page-website.svg"
 			features={['Responsive design', 'Easy navigable']}
 		/>
 		<Offer
 			title="Upgrade a Website"
-			price={150}
+			price="Starting from €150"
 			icon="upgrade-website.svg"
 			features={['Responsive design', 'Rebrand & modernization']}
 		/>
+		<Offer 
+			title="Custom Website"
+			price="Custom price"
+			icon="custom-website.svg"
+			features={['Custom design', 'Custom features', 'SEO optimized']}
+		 />
 	</div>
 </Container>
 <Container>
