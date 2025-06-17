@@ -1,0 +1,49 @@
+{
+	"hero": {
+		"country": "Belgium",
+		"subtitle": "Student at Thomas More - Junior Full Stack Software Developer",
+		"button": "View my profile"
+	},
+	"profile": {
+		"title": "My digital profile",
+		"description": "I'm 18 years old and have found love in programming. I've been experimenting with technology from a young age. Currently I like to make projects with a variety of programming languages.",
+        "tools": {
+            "fav": "My favorite tools",
+            "prog": "Programming",
+            "os": "Operating systems",
+            "tools": "Tools"
+        },
+        "experience": {
+            "title": "Experience",
+            "content": [
+                "3+ years of programming",
+                "2+ years builder, programmer and driver with VEX Robotics",
+                "Internship at Philips Eindhoven",
+                "Excellent social skills",
+                "Scrum and team coordination",
+                "6 years member of STEAM-club, a national known science club at my school"
+            ]
+        },
+        "achievements": {
+            "title": "Achievements",
+            "content": [
+                "2 time National Champion in VEX Robotics",
+                "Competed at the World Championship in VEX Robotics in America"
+            ]
+        },
+        "hs": {
+            "title": "High School",
+            "content": [
+                "High School diploma in Industrial IT"
+            ]
+        },
+        "uni": {
+            "title": "University",
+            "content": [
+                "1st year of Applied Computer Science at Thomas More",
+                "Studying for a Bachelor in Applied Computer Science"
+            ]
+        },
+        "save": "Save"
+	}
+}

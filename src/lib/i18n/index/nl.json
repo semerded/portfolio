@@ -1,0 +1,48 @@
+{
+	"hero": {
+		"country": "België",
+		"subtitle": "Student op Thomas More - Junior Full Stack Software Developer",
+		"button": "Bekijk mijn profiel"
+	},
+
+	"profile": {
+		"title": "Mijn digitale profiel",
+		"description": "Ik ben 18 jaar oud en heb mijn passie gevonden in programmeren. Ik experimenteer al van jongs af aan met technologie. Momenteel maak ik graag projecten met verschillende programmeertalen.",
+		"tools": {
+			"fav": "Mijn favoriete tools",
+			"prog": "Programmeren",
+			"os": "Besturingssystemen",
+			"tools": "Tools"
+		},
+		"experience": {
+			"title": "Ervaring",
+			"content": [
+				"3+ jaar programmeerervaring",
+				"2+ jaar bouwer, programmeur en bestuurder bij VEX Robotics",
+				"Stage bij Philips Eindhoven",
+				"Uitstekende sociale vaardigheden",
+				"Scrum en teamcoördinatie",
+				"6 jaar lid van STEAM-club, een landelijk bekende wetenschapsclub op mijn school"
+			]
+		},
+		"achievements": {
+			"title": "Prestaties",
+			"content": [
+				"2 keer Nederlands kampioen in VEX Robotics",
+				"Deelgenomen aan het wereldkampioenschap VEX Robotics in Amerika"
+			]
+		},
+		"hs": {
+			"title": "Middelbare school",
+			"content": ["Diploma behaald in Industriële ICT"]
+		},
+		"uni": {
+			"title": "Universiteit",
+			"content": [
+				"1e jaar Toegepaste Informatica aan Thomas More",
+				"Studerend voor een Bachelor in Toegepaste Informatica"
+			]
+		},
+		"save": "Opslaan"
+	}
+}
