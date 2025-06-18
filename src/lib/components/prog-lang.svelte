@@ -160,7 +160,7 @@
 </script>
 
 <span
-	class="prog-lang"
+	class="prog-lang unselectable"
 	class:box-shadow={boxShadow}
 	style="background-color: {bgColor}; color: {color}; font-size: {size}rem"
 >
