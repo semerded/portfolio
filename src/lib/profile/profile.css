@@ -28,7 +28,7 @@
 	height: 70vh;
 	width: 100%;
 
-	color: white;
+	color: var(--text);
 
 	> .profile-column {
 		display: grid;
@@ -146,7 +146,7 @@
 			opacity 500ms;
 		height: fit-content;
 		font-size: 36px;
-		color: white;
+		color: var(--text);
 		opacity: 1;
 
 		i {
@@ -214,7 +214,7 @@
 		align-items: center;
 		text-align: center;
 		background-color: transparent;
-		color: white;
+		color: var(--text);
 		font-size: 1.2rem;
 
 		i {

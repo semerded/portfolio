@@ -13,7 +13,7 @@
 			start: 0,
 			end: '100svh',
 			property: '--bg-opacity',
-			min: 0.5,
+			min: $darkMode ? 0.5 : 0.2,
 			max: $darkMode ? 0.8 : 0.1
 		}}
 		use:scrollRange={{
@@ -21,7 +21,7 @@
 			end: '100svh',
 			property: '--bg-scale',
 			min: 1,
-			max: 1.2
+			max: 1.3
 		}}
 	/>
 	<span></span>
