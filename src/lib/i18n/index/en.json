@@ -8,8 +8,8 @@
 		"title": "My digital profile",
 		"description": "I'm 18 years old and have found love in programming. I've been experimenting with technology from a young age. Currently I like to make projects with a variety of programming languages.",
 		"tools": {
-			"fav": "My favorite tools",
-			"prog": "Programming",
+			"fav": "My favorite languages",
+			"prog": "Programming languages",
 			"os": "Operating systems",
 			"tools": "Tools"
 		},
@@ -57,7 +57,7 @@
             "title": "What is always included?",
             "content": [
                 "Mobile phone optimization",
-                ""
+                "Full source code (provided on GitHub)"
             ]
         },
         "provide": {
@@ -71,11 +71,13 @@
         },
         "additional": {
             "title": "Additional packages that can be included for a small extra fee",
+			"info": "Fee is discussed during the first meeting",
             "content": [
                 "Logo design",
                 "On site photography",
                 "Non-free hosting setup",
-                "Domain name hunting"
+                "Domain name hunting",
+				"Multi-language support"
             ]
         }
     }

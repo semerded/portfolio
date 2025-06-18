@@ -82,10 +82,17 @@
 	<div class="tiled-container">
 		<Offer
 			title="Single Page Website"
-			price="Starting from €100"
+			price="Starting from €75"
 			icon="single-page-website.svg"
-			features={['Responsive design', 'Fast loading design', 'Free & Lightweight deployment*' ]}
-			benefits={['Direct call to action', 'Search engine optimized', 'Easy navigable', 'Low maintenance', 'Simple and effective', 'No security threats']}
+			features={['Responsive design', 'Fast loading design', 'Free & Lightweight deployment*']}
+			benefits={[
+				'Direct call to action',
+				'Search engine optimized',
+				'Easy navigable',
+				'Low maintenance',
+				'Simple and effective',
+				'No security threats'
+			]}
 		/>
 		<Offer
 			title="Dynamic Single Page Website"
@@ -99,14 +106,31 @@
 				'Custom database and API',
 				'Contact form'
 			]}
-			benefits={['Direct call to action', 'Easily and dynamically show content', 'Search engine optimized', 'Easy navigable', 'Low maintenance', 'Simple and effective']}
+			benefits={[
+				'Direct call to action',
+				'Easily and dynamically show content',
+				'Search engine optimized',
+				'Easy navigable',
+				'Low maintenance',
+				'Simple and effective'
+			]}
 		/>
 		<Offer
 			title="Upgrade a Website"
 			price="Custom price"
 			icon="upgrade-website.svg"
-			features={['Responsive design', 'Modernization of the layout', 'Improved performance', 'Search engine optimization']}
-			benefits={['Improved user experience', 'Mobile reach', 'Improved security', 'Brand trust & credibility']}
+			features={[
+				'Responsive design',
+				'Modernization of the layout',
+				'Improved performance',
+				'Search engine optimization'
+			]}
+			benefits={[
+				'Improved user experience',
+				'Mobile reach',
+				'Improved security',
+				'Brand trust & credibility'
+			]}
 		/>
 		<Offer
 			title="Multi-page Website"
@@ -127,25 +151,36 @@
 			price="Custom price"
 			icon="custom-website.svg"
 			features={['Custom design', 'Custom features', 'SEO optimized']}
-			benefits={['You decide what and how you want it', 'No fixed price']}
+			benefits={['Tailored to your needs', 'No fixed price']}
 		/>
-		<p>* Only available for small/medium scale websites</p>
+		<p style="color: white;">* Only available for small/medium scale websites</p>
 	</div>
 </Container>
 <Container id="qos">
-	<SectionHeader title="Quality of work" subtitle="My work is guaranteed to be of the highest quality" />
-	<div>
+	<SectionHeader
+		title="Additional info"
+		subtitle="My work is guaranteed to be of the highest quality"
+	/>
+	<div class="glossy-tile">
 		<h3>{$t('qos.included.title')}</h3>
-		{#each qosInclude as content}
-			<p>{content}</p>
-		{/each}
+		<ul>
+			{#each qosInclude as content}
+				<li>{content}</li>
+			{/each}
+		</ul>
 		<h3>{$t('qos.provide.title')}</h3>
-		{#each qosProvide as content}
-			<p>{content}</p>
-		{/each}
+		<ul>
+			{#each qosProvide as content}
+				<li>{content}</li>
+			{/each}
+		</ul>
 		<h3>{$t('qos.additional.title')}</h3>
-		{#each qosAdditional as content}
-			<p>{content}</p>	
-		{/each}
+		<i>{$t('qos.additional.info')}</i>
+		<ul>
+			{#each qosAdditional as content}
+				<li>{content}</li>
+			{/each}
+		</ul>
+		<img id="qos-icon" src="/icons/certified.svg" alt="certified icon">
 	</div>
 </Container>

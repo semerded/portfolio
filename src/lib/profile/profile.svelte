@@ -17,15 +17,15 @@
 </script>
 
 <Container minHeight="100svh" id="my-profile">
-	<div id="profile-container">
+	<div id="profile-container" >
 		<div class="profile-column">
 			<!-- -->
 			<!-- header -->
 			<!-- -->
-			<div id="profile-title" class="grid-flex">
+			<div id="profile-title" class="grid-flex glossy-tile" >
 				<h3>{$t('profile.title')}</h3>
 			</div>
-			<div id="profile-who" class="grid-flex">
+			<div id="profile-who" class="grid-flex glossy-tile">
 				<!-- -->
 				<!-- me -->
 				<!-- -->
@@ -39,14 +39,14 @@
 			<!-- -->
 			<!-- about me -->
 			<!-- -->
-			<div id="profile-about" class="grid-flex">
+			<div id="profile-about" class="grid-flex glossy-tile">
 				<p>
 					{$t('profile.description')}
 				</p>
 			</div>
 		</div>
 		<div class="profile-column">
-			<div id="profile-skills">
+			<div id="profile-skills" class="glossy-tile">
 				<!-- -->
 				<!-- skills -->
 				<!-- -->
@@ -58,13 +58,14 @@
 					<ProgLang name="dart"></ProgLang>
 					<ProgLang name="svelte"></ProgLang>
 					<ProgLang name="ts"></ProgLang>
+					<ProgLang name="css"></ProgLang>
+
 				</div>
 
 				<h3><i class="fa-solid fa-code"></i> {$t('profile.tools.prog')}</h3>
 				<div class="skill-wrapper">
 					<ProgLang name="js"></ProgLang>
 					<ProgLang name="html"></ProgLang>
-					<ProgLang name="css"></ProgLang>
 					<ProgLang name="php"></ProgLang>
 					<ProgLang name="angular"></ProgLang>
 					<ProgLang name="thymeleaf"></ProgLang>
@@ -73,7 +74,6 @@
 					<ProgLang name="go"></ProgLang>
 					<ProgLang name="openGL"></ProgLang>
 					<ProgLang name="pygame"></ProgLang>
-					<ProgLang name="sql"></ProgLang>
 				</div>
 				<h3><i class="fa-solid fa-compact-disc"></i> {$t('profile.tools.os')}</h3>
 				<div class="skill-wrapper">
@@ -93,7 +93,7 @@
 			<!-- -->
 			<!-- links -->
 			<!-- -->
-			<div id="profile-links">
+			<div id="profile-links" class="glossy-tile">
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href="https://github.com/semerded" target="_blank"><i class="fa-brands fa-github"></i></a
 				>
@@ -112,7 +112,7 @@
 			<!-- -->
 			<!-- experience -->
 			<!-- -->
-			<div id="profile-experience">
+			<div id="profile-experience" class="glossy-tile">
 				<h3>{$t('profile.experience.title')}</h3>
 				<ul>
 					{#each experienceContent as content}
@@ -129,7 +129,7 @@
 			<!-- -->
 			<!-- education -->
 			<!-- -->
-			<div id="profile-education">
+			<div id="profile-education" class="glossy-tile">
 				<h3>{$t('profile.hs.title')}</h3>
 				<ul>
 					{#each hsContent as content}
@@ -146,13 +146,13 @@
 			<!-- -->
 			<!-- print -->
 			<!-- -->
-			<div id="profile-print">
+			<div id="profile-print" class="glossy-tile">
 				<a href="/misc/print-this-profile">Print&nbsp;<i class="fa-solid fa-print"></i></a>
 			</div>
 			<!-- -->
 			<!-- save -->
 			<!-- -->
-			<div id="profile-save">
+			<div id="profile-save" class="glossy-tile">
 				<button>{$t('profile.save')}&nbsp;<i class="fa-solid fa-download"></i></button>
 			</div>
 		</div>

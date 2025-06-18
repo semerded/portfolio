@@ -37,3 +37,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+#qos-icon {
+    
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(20%, 20%) rotate(-10deg);
+    filter: invert(1);
+}
