@@ -7,43 +7,76 @@
 	"profile": {
 		"title": "My digital profile",
 		"description": "I'm 18 years old and have found love in programming. I've been experimenting with technology from a young age. Currently I like to make projects with a variety of programming languages.",
-        "tools": {
-            "fav": "My favorite tools",
-            "prog": "Programming",
-            "os": "Operating systems",
-            "tools": "Tools"
-        },
-        "experience": {
-            "title": "Experience",
+		"tools": {
+			"fav": "My favorite tools",
+			"prog": "Programming",
+			"os": "Operating systems",
+			"tools": "Tools"
+		},
+		"experience": {
+			"title": "Experience",
+			"content": [
+				"3+ years of programming",
+				"2+ years builder, programmer and driver with VEX Robotics",
+				"Internship at Philips Eindhoven",
+				"Excellent social skills",
+				"Scrum and team coordination",
+				"6 years member of STEAM-club, a national known science club at my school"
+			]
+		},
+		"achievements": {
+			"title": "Achievements",
+			"content": [
+				"2 time National Champion in VEX Robotics",
+				"Competed at the World Championship in VEX Robotics in America"
+			]
+		},
+		"hs": {
+			"title": "High School",
+			"content": ["High School diploma in Industrial IT"]
+		},
+		"uni": {
+			"title": "University",
+			"content": [
+				"1st year of Applied Computer Science at Thomas More",
+				"Studying for a Bachelor in Applied Computer Science"
+			]
+		},
+		"save": "Save"
+	},
+	"projects": {
+		"title": "My projects",
+		"subtitle": "Some of my best projects",
+		"button": "View all projects",
+		"PLNM": "A user-friendly cross-platform planning app with tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all.",
+		"Pyrogine": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
+		"Insanthon": "A picture based story game with a long playthrough and multiple endings."
+	},
+    "qos": {
+        "included": {
+            "title": "What is always included?",
             "content": [
-                "3+ years of programming",
-                "2+ years builder, programmer and driver with VEX Robotics",
-                "Internship at Philips Eindhoven",
-                "Excellent social skills",
-                "Scrum and team coordination",
-                "6 years member of STEAM-club, a national known science club at my school"
+                "Mobile phone optimization",
+                ""
             ]
         },
-        "achievements": {
-            "title": "Achievements",
+        "provide": {
+            "title": "What can you provide?",
             "content": [
-                "2 time National Champion in VEX Robotics",
-                "Competed at the World Championship in VEX Robotics in America"
+                "A registered domain name",
+                "A color scheme",
+                "A logo",
+                "Images to be used on the website"
             ]
         },
-        "hs": {
-            "title": "High School",
+        "additional": {
+            "title": "Additional packages that can be included for a small extra fee",
             "content": [
-                "High School diploma in Industrial IT"
+                "Logo design",
+                "On site photography",
+                "Non-free hosting setup",
+                "Domain name hunting"
             ]
-        },
-        "uni": {
-            "title": "University",
-            "content": [
-                "1st year of Applied Computer Science at Thomas More",
-                "Studying for a Bachelor in Applied Computer Science"
-            ]
-        },
-        "save": "Save"
-	}
+        }
+    }
 }
