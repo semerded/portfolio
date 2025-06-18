@@ -9,7 +9,7 @@
 	<h2>{title}</h2>
 	<span class="price">{price}</span>
 	<div class="features">
-        <h3>Included features</h3>
+		<h3>Included features</h3>
 		{#each features as feature}
 			<p>
 				<i class="fa-solid fa-circle-check"> </i>
@@ -24,9 +24,12 @@
 
 <style>
 	.offer {
+		margin: 8px;
+
 		overflow: hidden;
 		position: relative;
-		width: 400px;
+		width: 30%;
+		min-width: 300px;
 		height: 600px;
 		background-color: color-mix(in srgb, var(--bg) 40%, transparent);
 		backdrop-filter: blur(5px);
@@ -52,18 +55,17 @@
 		.features {
 			margin-top: 16px;
 
-            h3 {
-                margin: 8px 0px;
-            }
+			h3 {
+				margin: 8px 0px;
+			}
 
 			p {
-                margin: 8px 0px;
+				margin: 8px 0px;
 				margin-left: 8px;
 
-                i {
-                    transition: 500ms;
-
-                }
+				i {
+					transition: 500ms;
+				}
 			}
 		}
 
@@ -109,14 +111,14 @@
 				}
 			}
 
-            .features {
-                p {
-                    i {
-                        transition: 500ms;
-                        color: var(--secondary);
-                    }
-                }
-            }
+			.features {
+				p {
+					i {
+						transition: 500ms;
+						color: var(--secondary);
+					}
+				}
+			}
 
 			.price {
 				transition: transform 500ms;
