@@ -10,13 +10,15 @@
 	import { darkMode } from '$lib/actions/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
 	import Offer from '$lib/components/offer.svelte';
+	import SectionHeader from '$lib/components/section-header.svelte';
 </script>
 
 <SideBar
 	links={[
 		{ name: 'Welcome', link: '#welcome' },
 		{ name: 'My Profile', link: '#my-profile' },
-		{ name: 'My projects', link: '#project-container' }
+		{ name: 'My projects', link: '#my-projects' },
+		{ name: 'Website Offers', link: '#offers' }
 	]}
 />
 
@@ -29,34 +31,18 @@
 	title="Sem Van Broekhoven"
 	description={$t('hero.subtitle')}
 	leading="<i class='fa-solid fa-location-dot'></i> {$t('hero.country')}"
-	buttonText="{$t('hero.button')}"
+	buttonText={$t('hero.button')}
 	buttonLink="#my-profile"
 	id="welcome"
 />
 <Profile />
-<Container>
-	<div class="tiled-container">
-		<Offer
-			title="Single Page Website"
-			price="Starting from €100"
-			icon="single-page-website.svg"
-			features={['Responsive design', 'Easy navigable']}
-		/>
-		<Offer
-			title="Upgrade a Website"
-			price="Starting from €150"
-			icon="upgrade-website.svg"
-			features={['Responsive design', 'Rebrand & modernization']}
-		/>
-		<Offer 
-			title="Custom Website"
-			price="Custom price"
-			icon="custom-website.svg"
-			features={['Custom design', 'Custom features', 'SEO optimized']}
-		 />
-	</div>
-</Container>
-<Container>
+<Container minHeight="100svh" id="my-projects">
+	<SectionHeader
+		title="My projects"
+		subtitle="Some of my personal projects"
+		buttonText="View all projects"
+		href="/projects"
+	/>
 	<div id="project-container">
 		<Card
 			title="PLNM"
@@ -79,6 +65,58 @@
 			image="images/projects/Insanthon/logo.png"
 			href="/projects/Insanthon"
 			progLangs={['py']}
+		/>
+	</div>
+</Container>
+<Container id="offers">
+	<SectionHeader
+		title="Website Offers"
+		subtitle=""
+		buttonText="View all projects"
+		href="/projects"
+	/>
+	<div class="tiled-container">
+		<Offer
+			title="Single Page Website"
+			price="Starting from €100"
+			icon="single-page-website.svg"
+			features={['Responsive design', 'Easy navigable']}
+		/>
+		<Offer
+			title="Dynamic Single Page Website"
+			price="Starting from €150"
+			icon="dynamic-single-page-website.svg"
+			features={[
+				'Responsive design',
+				'Easy navigable',
+				'Dynamic content',
+				'Database connectable',
+				'Custom API'
+			]}
+		/>
+		<Offer
+			title="Upgrade a Website"
+			price="Starting from €150"
+			icon="upgrade-website.svg"
+			features={['Responsive design', 'Rebrand & modernization']}
+		/>
+		<Offer
+			title="Multi-page Website"
+			price="Starting from €200"
+			icon="multi-page-website.svg"
+			features={['Responsive design', 'Dynamic navigation']}
+		/>
+		<Offer
+			title="Dynamic Multi-page Website"
+			price="Starting from €250"
+			icon="dynamic-multi-page-website.svg"
+			features={['Responsive design', 'Dynamic navigation', 'Database connectable', 'Custom API']}
+		/>
+		<Offer
+			title="Custom Website"
+			price="Custom price"
+			icon="custom-website.svg"
+			features={['Custom design', 'Custom features', 'SEO optimized']}
 		/>
 	</div>
 </Container>
