@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '$lib/style/routes/index.css';
-	import { t } from 'svelte-i18n';
+	import { t, json } from 'svelte-i18n';
 
 	import Hero from '$lib/components/hero/hero.svelte';
 	import Container from '$lib/components/container/container.svelte';
@@ -11,6 +11,10 @@
 	import SideBar from '$lib/components/sidebar.svelte';
 	import Offer from '$lib/components/offer.svelte';
 	import SectionHeader from '$lib/components/section-header.svelte';
+
+	$: qosInclude = $json('qos.included.content') as string[];
+	$: qosProvide = $json('qos.provide.content') as string[];
+	$: qosAdditional = $json('qos.additional.content') as string[];
 </script>
 
 <SideBar
@@ -18,7 +22,8 @@
 		{ name: 'Welcome', link: '#welcome' },
 		{ name: 'My Profile', link: '#my-profile' },
 		{ name: 'My projects', link: '#my-projects' },
-		{ name: 'Website Offers', link: '#offers' }
+		{ name: 'Website Offers', link: '#offers' },
+		{ name: 'Quality of work', link: '#qos' }
 	]}
 />
 
@@ -38,41 +43,40 @@
 <Profile />
 <Container minHeight="100svh" id="my-projects">
 	<SectionHeader
-		title="My projects"
-		subtitle="Some of my personal projects"
-		buttonText="View all projects"
+		title={$t('projects.title')}
+		subtitle={$t('projects.subtitle')}
+		buttonText={$t('projects.button')}
 		href="/projects"
 	/>
 	<div id="project-container">
 		<Card
 			title="PLNM"
-			description="A user-friendly cross-platform planning app with
-									tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all."
+			description={$t('projects.PLNM')}
 			image="images/projects/PLNM/logo.png"
 			href="/projects/PLNM"
 			progLangs={['dart', 'flutter']}
 		/>
 		<Card
 			title="Pyrogine"
-			description="A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant."
+			description={$t('projects.Pyrogine')}
 			image="images/projects/Pyrogine/logo.png"
 			href="/projects"
 			progLangs={['py', 'openGL']}
 		/>
 		<Card
 			title="Insanthon"
-			description="A picture based story game with a long playthrough and multiple endings."
+			description={$t('projects.Insanthon')}
 			image="images/projects/Insanthon/logo.png"
 			href="/projects/Insanthon"
 			progLangs={['py']}
 		/>
 	</div>
 </Container>
-<Container id="offers">
+<Container id="offers" marginBottom="5rem">
 	<SectionHeader
 		title="Website Offers"
-		subtitle=""
-		buttonText="View all projects"
+		subtitle="Let me create a website for you!"
+		buttonText="More information"
 		href="/projects"
 	/>
 	<div class="tiled-container">
@@ -80,7 +84,8 @@
 			title="Single Page Website"
 			price="Starting from €100"
 			icon="single-page-website.svg"
-			features={['Responsive design', 'Easy navigable']}
+			features={['Responsive design', 'Fast loading design', 'Free & Lightweight deployment*' ]}
+			benefits={['Direct call to action', 'Search engine optimized', 'Easy navigable', 'Low maintenance', 'Simple and effective', 'No security threats']}
 		/>
 		<Offer
 			title="Dynamic Single Page Website"
@@ -88,35 +93,59 @@
 			icon="dynamic-single-page-website.svg"
 			features={[
 				'Responsive design',
-				'Easy navigable',
+				'Fast loading design',
+				'Free & Lightweight deployment*',
 				'Dynamic content',
-				'Database connectable',
-				'Custom API'
+				'Custom database and API',
+				'Contact form'
 			]}
+			benefits={['Direct call to action', 'Easily and dynamically show content', 'Search engine optimized', 'Easy navigable', 'Low maintenance', 'Simple and effective']}
 		/>
 		<Offer
 			title="Upgrade a Website"
-			price="Starting from €150"
+			price="Custom price"
 			icon="upgrade-website.svg"
-			features={['Responsive design', 'Rebrand & modernization']}
+			features={['Responsive design', 'Modernization of the layout', 'Improved performance', 'Search engine optimization']}
+			benefits={['Improved user experience', 'Mobile reach', 'Improved security', 'Brand trust & credibility']}
 		/>
 		<Offer
 			title="Multi-page Website"
 			price="Starting from €200"
 			icon="multi-page-website.svg"
 			features={['Responsive design', 'Dynamic navigation']}
+			benefits={['Direct call to action', 'Search engine optimized']}
 		/>
 		<Offer
 			title="Dynamic Multi-page Website"
 			price="Starting from €250"
 			icon="dynamic-multi-page-website.svg"
 			features={['Responsive design', 'Dynamic navigation', 'Database connectable', 'Custom API']}
+			benefits={['Direct call to action', 'Search engine optimized']}
 		/>
 		<Offer
 			title="Custom Website"
 			price="Custom price"
 			icon="custom-website.svg"
 			features={['Custom design', 'Custom features', 'SEO optimized']}
+			benefits={['You decide what and how you want it', 'No fixed price']}
 		/>
+		<p>* Only available for small/medium scale websites</p>
+	</div>
+</Container>
+<Container id="qos">
+	<SectionHeader title="Quality of work" subtitle="My work is guaranteed to be of the highest quality" />
+	<div>
+		<h3>{$t('qos.included.title')}</h3>
+		{#each qosInclude as content}
+			<p>{content}</p>
+		{/each}
+		<h3>{$t('qos.provide.title')}</h3>
+		{#each qosProvide as content}
+			<p>{content}</p>
+		{/each}
+		<h3>{$t('qos.additional.title')}</h3>
+		{#each qosAdditional as content}
+			<p>{content}</p>	
+		{/each}
 	</div>
 </Container>
