@@ -3,6 +3,7 @@
 	export let price: string;
 	export let icon: string;
 	export let features: string[];
+	export let benefits: string[];
 </script>
 
 <div class="offer">
@@ -14,6 +15,15 @@
 			<p>
 				<i class="fa-solid fa-circle-check"> </i>
 				{feature}
+			</p>
+		{/each}
+	</div>
+	<div class="benefits">
+		<h3>Why choose this option?</h3>
+		{#each benefits as benefit}
+			<p>
+				<i class="fa-solid fa-circle-check"> </i>
+				{benefit}
 			</p>
 		{/each}
 	</div>
@@ -52,7 +62,7 @@
 			transform: translateY(0px);
 		}
 
-		.features {
+		.features, .benefits {
 			margin-top: 16px;
 
 			h3 {
@@ -79,7 +89,7 @@
 			bottom: 0px;
 			right: 0px;
 			width: 200px;
-			height: 300px;
+			height: 200px;
 			border-radius: 8px;
 			border: 3px solid var(--text);
 
@@ -116,6 +126,15 @@
 					i {
 						transition: 500ms;
 						color: var(--secondary);
+					}
+				}
+			}
+
+			.benefits {
+				p {
+					i {
+						transition: 500ms;
+						color: var(--primary);
 					}
 				}
 			}
