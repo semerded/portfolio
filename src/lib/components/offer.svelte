@@ -6,7 +6,7 @@
 	export let benefits: string[];
 </script>
 
-<div class="offer">
+<div class="offer glossy-tile">
 	<h2>{title}</h2>
 	<span class="price">{price}</span>
 	<div class="features">
@@ -41,12 +41,9 @@
 		width: 30%;
 		min-width: 300px;
 		height: 600px;
-		background-color: color-mix(in srgb, var(--bg) 40%, transparent);
-		backdrop-filter: blur(5px);
-		border-radius: 8px;
+		
 		padding: 16px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		box-shadow: 2px 2px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent);
+		
 
 		h2 {
 			margin: 16px 0px;

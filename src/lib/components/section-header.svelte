@@ -5,7 +5,7 @@
 	export let href: string | null = null;
 </script>
 
-<div class="section-header">
+<div class="section-header glossy-tile">
 	<div class="button"></div>
 	<div class="section-header-text">
 		<h3 class="section-header-subtitle">{subtitle}</h3>
@@ -24,13 +24,8 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-
-		background-color: color-mix(in srgb, var(--bg) 50%, transparent);
-		backdrop-filter: blur(5px);
-		border-radius: 8px;
-		padding: 16px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		box-shadow: 2px 2px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent);
+		margin: 16px 0;
+		
 
 		.section-header-text {
 			text-align: center;

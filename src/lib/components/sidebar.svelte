@@ -42,17 +42,26 @@
 
 		return () => observer.disconnect();
 	});
+
+	function caretClick(direction: string) {
+		if (direction == "up") {
+			activeIndex = Math.max(0, activeIndex - 1);
+		} else {
+			activeIndex = Math.min(links.length - 1, activeIndex + 1);
+		}
+		location.href = links[activeIndex].link;
+	}
 </script>
 
 <nav class="sidebar">
+	<button on:click={() => caretClick("up")}>&#11165;</button>
 	{#each links as link, index}
 		<a class:active={index === activeIndex} href={link.link}
 			><span class="icon">&#9733;</span><span class="name">{link.name}</span></a
 		><br />
 	{/each}
+	<button on:click={() => caretClick("down")}>&#11167;</button>
 </nav>
-
-<input type="range" />
 
 <style>
 
@@ -64,9 +73,9 @@
 		left: 0px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		/* align-items: center; */
-		width: 1rem;
+		width: 2rem;
 		z-index: 9;
 		transition: 500ms;
 		border-top-right-radius: 8px;
@@ -78,7 +87,20 @@
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-left: 0px;
 
+		button {
+			all: unset;
+			color: white;
+			margin: 8px 0;
+			margin-left: 0.5rem;
+			
+			&:hover {
+				cursor: pointer;
+				color: var(--primary);
+			}
+		}
+
 		a {
+			padding-left: 0.5rem;
 			text-decoration: none;
 			display: flex;
 			align-items: center;
