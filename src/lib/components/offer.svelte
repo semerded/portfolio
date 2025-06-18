@@ -91,7 +91,7 @@
 			width: 200px;
 			height: 200px;
 			border-radius: 8px;
-			border: 3px solid var(--text);
+			border: 3px solid white;
 
 			transform: rotateZ(-20deg) translate(30px, 30px);
 
