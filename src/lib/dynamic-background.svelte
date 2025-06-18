@@ -2,6 +2,7 @@
 	export let image: string;
     export let alt: string = "...";
 	import { scrollRange } from '$lib/actions/change_background_color_linear';
+	import { darkMode } from './actions/light-dark-mode.store';
 </script>
 
 <div class="dynamic-background">
@@ -13,7 +14,7 @@
 			end: '100svh',
 			property: '--bg-opacity',
 			min: 0.5,
-			max: 0.80
+			max: $darkMode ? 0.8 : 0.1
 		}}
 		use:scrollRange={{
 			start: 0,
@@ -28,7 +29,7 @@
 
 <style>
 	:root {
-		--bg-opacity: 0.6;
+		--bg-opacity: 0.5;
 		--bg-scale: 1;
 	}
 
