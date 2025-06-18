@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './profile.css';
 	import { t, json } from 'svelte-i18n';
-	import { get } from 'svelte/store';
 	import Container from '$lib/components/container/container.svelte';
 	import ProgLang from '$lib/components/prog-lang.svelte';
 	import { intersectionObserver } from '$lib/animate-on-scroll';
