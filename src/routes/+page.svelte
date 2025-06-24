@@ -79,7 +79,7 @@
 		buttonText="More information"
 		href="/projects"
 	/>
-	<div class="tiled-container">
+	<div class="tilled-container">
 		<Offer
 			title="Single Page Website"
 			price="Starting from €75"

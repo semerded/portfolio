@@ -5,20 +5,20 @@
 	import { darkMode } from './actions/light-dark-mode.store';
 </script>
 
-<div class="dynamic-background">
+<div class="dynamic-background unselectable">
 	<img
 		src={image}
 		alt={alt}
 		use:scrollRange={{
 			start: 0,
-			end: '100svh',
+			end: '100lvh',
 			property: '--bg-opacity',
 			min: $darkMode ? 0.5 : 0.2,
 			max: $darkMode ? 0.8 : 0.1
 		}}
 		use:scrollRange={{
 			start: 0,
-			end: '100svh',
+			end: '100lvh',
 			property: '--bg-scale',
 			min: 1,
 			max: 1.3
@@ -37,7 +37,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		height: 100%;
+		height: 100lvh;
 
         img {
             width: 100%;

@@ -20,6 +20,7 @@
 		src={image}
 		alt="hero for {title}"
 		style={imageStyle}
+		class="unselectable"
 		use:scrollRange={{
 			start: 0,
 			end: '100svh',

@@ -29,7 +29,7 @@
 				<!-- -->
 				<!-- me -->
 				<!-- -->
-				<div id="profile-who-image-container" class="ob-infinite">
+				<div id="profile-who-image-container" class="ob-infinite unselectable">
 					<img src="/images/index/me.png" alt="thats me!" />
 					<div></div>
 				</div>
