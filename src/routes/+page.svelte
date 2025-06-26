@@ -12,9 +12,9 @@
 	import Offer from '$lib/components/offer.svelte';
 	import SectionHeader from '$lib/components/section-header.svelte';
 
-	$: qosInclude = $json('qos.included.content') as string[];
 	$: qosProvide = $json('qos.provide.content') as string[];
 	$: qosAdditional = $json('qos.additional.content') as string[];
+	$: qosExpect = $json('qos.expect.content') as string[];
 </script>
 
 <SideBar
@@ -77,9 +77,9 @@
 		title="Website Offers"
 		subtitle="Let me create a website for you!"
 		buttonText="More information"
-		href="/projects"
+		href="/website-offers"
 	/>
-	<div class="tilled-container">
+	<div class="tiled-container">
 		<Offer
 			title="Single Page Website"
 			price="Starting from €75"
@@ -158,29 +158,36 @@
 </Container>
 <Container id="qos">
 	<SectionHeader
-		title="Additional info"
+		title="What to expect?"
 		subtitle="My work is guaranteed to be of the highest quality"
 	/>
-	<div class="glossy-tile">
-		<h3>{$t('qos.included.title')}</h3>
-		<ul>
-			{#each qosInclude as content}
-				<li>{content}</li>
-			{/each}
-		</ul>
-		<h3>{$t('qos.provide.title')}</h3>
-		<ul>
-			{#each qosProvide as content}
-				<li>{content}</li>
-			{/each}
-		</ul>
-		<h3>{$t('qos.additional.title')}</h3>
-		<i>{$t('qos.additional.info')}</i>
-		<ul>
-			{#each qosAdditional as content}
-				<li>{content}</li>
-			{/each}
-		</ul>
-		<img id="qos-icon" src="/icons/certified.svg" alt="certified icon">
+	<div class="tiled-container">
+		<div class="glossy-tile">
+			<h3>{$t('qos.expect.title')}</h3>
+			<ul>
+				{#each qosExpect as content}
+					<li>{content}</li>
+				{/each}
+			</ul>
+			<h3>{$t('qos.provide.title')}</h3>
+			<ul>
+				{#each qosProvide as content}
+					<li>{content}</li>
+				{/each}
+			</ul>
+			<img class="qos-icon" src="/icons/certified.svg" alt="certified icon">
+
+		</div>
+		<div class="glossy-tile">
+			<h3>{$t('qos.additional.title')}</h3>
+			<i>{$t('qos.additional.info')}</i>
+			<ul>
+				{#each qosAdditional as content}
+					<li>{content}</li>
+				{/each}
+			</ul>
+			<a class="button" href="/additional-packages">{$t('qos.additional.button')}</a>
+		</div>
 	</div>
+	
 </Container>

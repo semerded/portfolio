@@ -49,21 +49,6 @@
 			padding: 8px;
 		}
 
-		a {
-			transition: 500ms;
-			background-color: var(--primary);
-			height: 40px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 8px;
-			color: white;
-			text-decoration: none;
-
-			&:hover {
-				transition: 500ms;
-				background-color: var(--secondary);
-			}
-		}
+		
 	}
 </style>

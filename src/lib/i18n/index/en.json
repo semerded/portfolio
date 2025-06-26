@@ -50,16 +50,24 @@
 		"button": "View all projects",
 		"PLNM": "A user-friendly cross-platform planning app with tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all.",
 		"Pyrogine": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
-		"Insanthon": "A picture based story game with a long playthrough and multiple endings."
+		"Insanthon": "A picture based story game with a long walkthrough and multiple endings."
 	},
     "qos": {
-        "included": {
-            "title": "What is always included?",
-            "content": [
-                "Mobile phone optimization",
-                "Full source code (provided on GitHub)"
-            ]
-        },
+		"expect": {
+			"title": "What can you expect?",
+			"content": [
+				"A high quality website, customized to your needs",
+				"Support for all major browsers",
+				"Optimized for mobile devices",
+				"Access to the source code"
+			]
+		},
+		"delivery": {
+			"title": "What will be delivered?",
+			"content": [
+				
+			]
+		},
         "provide": {
             "title": "What can you provide?",
             "content": [
@@ -70,15 +78,16 @@
             ]
         },
         "additional": {
-            "title": "Additional packages that can be included for a small extra fee",
-			"info": "Fee is discussed during the first meeting",
+            "title": "Additional packages for a small extra fee",
+			"info": "Extra fee is discussed during the first meeting. The price depends on the requirements of the client",
             "content": [
                 "Logo design",
                 "On site photography",
                 "Non-free hosting setup",
                 "Domain name hunting",
 				"Multi-language support"
-            ]
+            ],
+			"button": "Discover more"
         }
     }
 }
