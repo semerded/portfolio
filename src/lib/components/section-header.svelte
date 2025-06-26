@@ -51,4 +51,30 @@
 
 		
 	}
+
+	@media screen and (max-width: 1024px) {
+		.section-header {
+			flex-direction: column;
+			div.button {
+				height: 0px;
+				margin: 0px;
+				padding: 0px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.section-header {
+			.section-header-text {
+				.section-header-title {
+					font-size: 8vw;
+				}
+
+				.section-header-subtitle {
+					font-size: 4vw;
+				}
+			}
+		}
+		
+	}
 </style>
