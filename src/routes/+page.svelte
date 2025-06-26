@@ -2,12 +2,12 @@
 	import '$lib/style/routes/index.css';
 	import { t, json } from 'svelte-i18n';
 
-	import Hero from '$lib/components/hero/hero.svelte';
+	import Hero from '$lib/components/hero.svelte';
 	import Container from '$lib/components/container/container.svelte';
 	import Card from '$lib/components/card/card.svelte';
-	import Profile from '$lib/profile/profile.svelte';
-	import DynamicBackground from '$lib/dynamic-background.svelte';
-	import { darkMode } from '$lib/actions/light-dark-mode.store';
+	import Profile from '$lib/components/profile/profile.svelte';
+	import DynamicBackground from '$lib/components/dynamic-background.svelte';
+	import { darkMode } from '$lib/store/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
 	import Offer from '$lib/components/offer.svelte';
 	import SectionHeader from '$lib/components/section-header.svelte';

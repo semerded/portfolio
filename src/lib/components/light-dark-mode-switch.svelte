@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toggleTheme } from '$lib/actions/light-dark-mode.store';
+	import { toggleTheme } from '$lib/store/light-dark-mode.store';
 
     
 

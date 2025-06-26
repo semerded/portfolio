@@ -3,7 +3,7 @@
 	import { t, json } from 'svelte-i18n';
 	import Container from '$lib/components/container/container.svelte';
 	import ProgLang from '$lib/components/prog-lang.svelte';
-	import { intersectionObserver } from '$lib/animate-on-scroll';
+	import { intersectionObserver } from '$lib/actions/animate-on-scroll';
 	import { onMount } from 'svelte';
 
 	onMount(() => {

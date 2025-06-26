@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './navbar.css';
 	import { page } from '$app/state';
-	import LightDarkModeSwitch from '$lib/light-dark-mode-switch.svelte';
+	import LightDarkModeSwitch from '$lib/components/light-dark-mode-switch.svelte';
 </script>   
 
 <nav class="navbar">
