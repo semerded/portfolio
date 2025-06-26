@@ -72,7 +72,7 @@
 		/>
 	</div>
 </Container>
-<Container id="offers" marginBottom="5rem">
+<Container id="offers" marginBottom="5rem" containerFrom={768}>
 	<SectionHeader
 		title="Website Offers"
 		subtitle="Let me create a website for you!"
