@@ -12,6 +12,12 @@
 	import Offer from '$lib/components/offer.svelte';
 	import SectionHeader from '$lib/components/section-header.svelte';
 
+	$: offers = $json('website-offers.offers') as {
+		title: string;
+		price: string;
+		features: string[];
+		benefits: string[];
+	}[];
 	$: qosProvide = $json('qos.provide.content') as string[];
 	$: qosAdditional = $json('qos.additional.content') as string[];
 	$: qosExpect = $json('qos.expect.content') as string[];
@@ -80,80 +86,15 @@
 		href="/website-offers"
 	/>
 	<div class="tiled-container">
-		<Offer
-			title="Single Page Website"
-			price="Starting from €75"
-			icon="single-page-website.svg"
-			features={['Responsive design', 'Fast loading design', 'Free & Lightweight deployment*']}
-			benefits={[
-				'Direct call to action',
-				'Search engine optimized',
-				'Easy navigable',
-				'Low maintenance',
-				'Simple and effective',
-				'No security threats'
-			]}
-		/>
-		<Offer
-			title="Dynamic Single Page Website"
-			price="Starting from €150"
-			icon="dynamic-single-page-website.svg"
-			features={[
-				'Responsive design',
-				'Fast loading design',
-				'Free & Lightweight deployment*',
-				'Dynamic content',
-				'Custom database and API',
-				'Contact form'
-			]}
-			benefits={[
-				'Direct call to action',
-				'Easily and dynamically show content',
-				'Search engine optimized',
-				'Easy navigable',
-				'Low maintenance',
-				'Simple and effective'
-			]}
-		/>
-		<Offer
-			title="Upgrade a Website"
-			price="Custom price"
-			icon="upgrade-website.svg"
-			features={[
-				'Responsive design',
-				'Modernization of the layout',
-				'Improved performance',
-				'Search engine optimization'
-			]}
-			benefits={[
-				'Improved user experience',
-				'Mobile reach',
-				'Improved security',
-				'Brand trust & credibility'
-			]}
-		/>
-		<Offer
-			title="Multi-page Website"
-			price="Starting from €200"
-			icon="multi-page-website.svg"
-			features={['Responsive design', 'Dynamic navigation']}
-			benefits={['Direct call to action', 'Search engine optimized']}
-		/>
-		<Offer
-			title="Dynamic Multi-page Website"
-			price="Starting from €250"
-			icon="dynamic-multi-page-website.svg"
-			features={['Responsive design', 'Dynamic navigation', 'Database connectable', 'Custom API']}
-			benefits={['Direct call to action', 'Search engine optimized']}
-		/>
-		<Offer
-			title="Custom Website"
-			price="Custom price"
-			icon="custom-website.svg"
-			features={['Custom design', 'Custom features', 'SEO optimized']}
-			benefits={['Tailored to your needs', 'No fixed price']}
-		/>
-		<p style="color: white;">* Only available for small/medium scale websites</p>
+		{#each offers as offer}
+			<Offer
+				title={offer.title}
+				price={offer.price}
+				features={offer.features}
+				benefits={offer.benefits}
+			/>
+		{/each}
+		<p style="color: white;">* {$t('website-offers.additional')}</p>
 	</div>
 </Container>
 <Container id="qos">
@@ -175,19 +116,17 @@
 					<li>{content}</li>
 				{/each}
 			</ul>
-			<img class="qos-icon" src="/icons/certified.svg" alt="certified icon">
-
+			<img class="qos-icon" src="/icons/certified.svg" alt="certified icon" />
 		</div>
 		<div class="glossy-tile">
 			<h3>{$t('qos.additional.title')}</h3>
-			<i>{$t('qos.additional.info')}</i>
 			<ul>
 				{#each qosAdditional as content}
 					<li>{content}</li>
 				{/each}
 			</ul>
+			<blockquote>{$t('qos.additional.info')}</blockquote>
 			<a class="button" href="/additional-packages">{$t('qos.additional.button')}</a>
 		</div>
 	</div>
-	
 </Container>

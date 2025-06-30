@@ -52,6 +52,110 @@
 		"Pyrogine": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
 		"Insanthon": "A picture based story game with a long walkthrough and multiple endings."
 	},
+	"website-offers": {
+		"title": "Website offers",
+		"subtitle": "Let me create a website for you!",
+		"button": "Tell me more!",
+		"offer-structure": {
+			"features": "Included features",
+			"benefits": "Why choose this option?"
+		},
+		"offers": [
+			{
+				"title": "Single Page Website",
+				"price": "Starting from €75",
+				"features": [
+					"Fast loading design",
+					"Free & Lightweight deployment*"
+				],
+				"benefits": [
+					"A direct call to action",
+					"Low maintenance",
+					"No security threats",
+					"Simple and effective"
+				]
+			},
+			{
+				"title": "Dynamic Single Page Website",
+				"price": "Starting from €150",
+				"features": [
+					"Fast loading design",
+					"Free & Lightweight deployment*",
+					"Dynamic content",
+					"Customer friendly contact form",
+					"Free database and API*"
+				],
+				"benefits": [
+					"A direct call to action",
+					"Low maintenance",
+					"Simple and effective",
+					"Dynamically show content"
+				]
+			},
+			{
+				"title": "Upgrade a website",
+				"price": "Custom price",
+				"features": [
+					"Modernization of an existing website",
+					"Improved performance",
+					"New customized features"
+				],
+				"benefits": [
+					"Tailored to your needs",
+					"Improved user experience",
+					"Brand trust & credibility",
+					"Improve the outreach of your website"
+				]
+			},
+			{
+				"title": "Multi-page Website",
+				"price": "Starting from €150",
+				"features": [
+					"Modern navigation menu",
+					"Fast loading design",
+					"Free & Lightweight deployment*"
+				],
+				"benefits": [
+					"Highlight projects, articles and more",
+					"Improve the outreach of your website",
+					"Industry standard"
+				]
+			},
+			{
+				"title": "Dynamic Multi-page Website",
+				"price": "Starting from €250",
+				"features": [
+					"Modern navigation menu",
+					"Fast loading design",
+					"Free & Lightweight deployment*",
+					"Dynamic content",
+					"Customer friendly contact form",
+					"Free database and API*"
+				],
+				"benefits": [
+					"Highlight projects, articles and more",
+					"Improve the outreach of your website",
+					"Industry standard",
+					"Dynamically show content"
+				]
+			},
+			{
+				"title": "Custom Website",
+				"price": "Custom price",
+				"features": [
+					"Custom design",
+					"Custom features",
+					"Custom price based on your needs"
+				],
+				"benefits": [
+					"Tailored to your needs"
+				]
+			}
+		],
+		"additional": "Only available for small/medium scale websites"
+
+		
+	},
     "qos": {
 		"expect": {
 			"title": "What can you expect?",
@@ -87,7 +191,7 @@
                 "Domain name hunting",
 				"Multi-language support"
             ],
-			"button": "Discover more"
+			"button": "Tell me more"
         }
     }
 }

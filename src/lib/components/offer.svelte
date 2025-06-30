@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let title: string;
 	export let price: string;
-	export let icon: string;
 	export let features: string[];
 	export let benefits: string[];
+
+	let icon: string = title.split(' ').join('-').toLowerCase() + '.svg';
 </script>
 
 <div class="offer glossy-tile">
@@ -41,9 +42,8 @@
 		width: 30%;
 		min-width: 300px;
 		height: 600px;
-		
+
 		padding: 16px;
-		
 
 		h2 {
 			margin: 16px 0px;
@@ -59,7 +59,8 @@
 			transform: translateY(0px);
 		}
 
-		.features, .benefits {
+		.features,
+		.benefits {
 			margin-top: 16px;
 
 			h3 {
