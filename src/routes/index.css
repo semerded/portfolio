@@ -3,6 +3,12 @@
 	--backgroundYPosition: 0px;
 }
 
+blockquote {
+    margin: 8px 16px;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
 #background {
 	z-index: -1;
 	position: fixed;

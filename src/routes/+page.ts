@@ -1,4 +1,4 @@
-import { loadTranslations } from '$lib/i18n/loader';
+import { loadTranslations } from '../i18n/loader';
 
 export function load() {
 	loadTranslations('en', 'index');

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '$lib/style/routes/index.css';
+	import './index.css';
 	import { t, json } from 'svelte-i18n';
 
 	import Hero from '$lib/components/hero.svelte';

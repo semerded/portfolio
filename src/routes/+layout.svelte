@@ -1,7 +1,7 @@
 <script>
-	import '$lib/style/colors.css';
-	import '$lib/style/vars.css';
-	import '$lib/style/main.css';
+	import '../style/colors.css';
+	import '../style/vars.css';
+	import '../style/main.css';
 
     import Navbar from "$lib/components/navbar/navbar.svelte"
 	import BackToTop from '$lib/components/back-to-top.svelte';
