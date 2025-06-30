@@ -11,17 +11,17 @@
 		alt={alt}
 		use:scrollRange={{
 			start: 0,
-			end: '100lvh',
+			end: '100vh',
 			property: '--bg-opacity',
 			min: $darkMode ? 0.5 : 0.2,
 			max: $darkMode ? 0.8 : 0.1
 		}}
 		use:scrollRange={{
 			start: 0,
-			end: '100lvh',
+			end: 'pageHeight',	
 			property: '--bg-scale',
 			min: 1,
-			max: 1.3
+			max: 1.6
 		}}
 	/>
 	<span></span>

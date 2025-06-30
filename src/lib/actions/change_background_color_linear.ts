@@ -48,11 +48,14 @@ export function scrollRange(
 
 function parseValue(value: number | string): number {
 	if (typeof value === 'number') return value;
-	if (value.endsWith('svh')) {
+	if (value.endsWith('vh')) {
 		return (parseFloat(value) / 100) * window.innerHeight;
 	}
-    else if (value.endsWith('svw')) {
+    else if (value.endsWith('vw')) {
         return (parseFloat(value) / 100) * window.innerWidth;
     }
+	else if (value === "pageHeight") {
+		return document.body.scrollHeight;
+	}
 	return parseFloat(value); // fallback
 }
