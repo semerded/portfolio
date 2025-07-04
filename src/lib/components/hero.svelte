@@ -46,7 +46,7 @@
 			<h2>{description}</h2>
 		{/if}
 		{#if buttonText && buttonLink}
-			<Button href="#profile-container" primary={true}>{buttonText}</Button>
+			<Button href="{buttonLink}" primary={true}>{buttonText}</Button>
 		{/if}
 	</div>
 </div>
