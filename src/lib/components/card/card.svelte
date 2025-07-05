@@ -10,8 +10,6 @@
 	import Tooltip from '$lib/components/mouse-following-tooltip.svelte';
 	import ProgLang from '../prog-lang.svelte';
 
-	console.log(progLangs);
-
 	let showTooltip = false;
 	let mouseX = 0;
 	let mouseY = 0;
