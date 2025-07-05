@@ -24,20 +24,29 @@
 	buttonLink="#offers"
 />
 
-<Container id="offers">
-	{#each offers as offer}
-		<div class="offer-tile">
-			<div class="offer-tile-tile">
-				<Offer
-					title={offer.title}
-					price={offer.price}
-					features={offer.features}
-					benefits={offer.benefits}
-				/>
+<main>
+	<Container id="offers">
+		{#each offers as offer}
+			<div class="offer-tile">
+				<div class="offer-tile-tile">
+					<Offer
+						title={offer.title}
+						price={offer.price}
+						features={offer.features}
+						benefits={offer.benefits}
+					/>
+				</div>
+				<div class="offer-tile-description">
+					<h1></h1>
+				</div>
 			</div>
-			<div class="offer-tile-description">
-				<h1></h1>
-			</div>
-		</div>
-	{/each}
-</Container>
+		{/each}
+	</Container>
+</main>
+
+<style>
+	main {
+		position: relative;
+		z-index: 1;
+	}
+</style>

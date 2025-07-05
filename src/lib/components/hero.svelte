@@ -58,7 +58,7 @@
 
 	.hero-container {
 		width: 100%;
-		height: calc(100svh - var(--navbar-height));
+		height: 100lvh;
 		position: relative;
 		overflow: hidden;
 

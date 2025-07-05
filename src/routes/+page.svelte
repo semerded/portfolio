@@ -38,7 +38,8 @@
 {:else}
 	<DynamicBackground image="/images/index/bg-light.jpg" />
 {/if}
-<Hero
+<main>
+	<Hero
 	title="Sem Van Broekhoven"
 	description={$t('hero.subtitle')}
 	leading="<i class='fa-solid fa-location-dot'></i> {$t('hero.country')}"
@@ -130,3 +131,11 @@
 		</div>
 	</div>
 </Container>
+</main>
+
+<style>
+	main {
+			position: relative;
+		z-index: 1;
+	}
+</style>
