@@ -24,12 +24,14 @@ nav.navbar {
 		display: flex;
 		a {
 			text-align: center;
-			display: inline-block;
+			display: flex;
+			align-items: center;
 			color: var(--secondary);
 			font-size: 1.2rem;
 			margin: 0 10px;
 			padding: 0 8px;
 			font-weight: 600;
+			text-decoration: none;
 
 			
 			span {
@@ -47,8 +49,12 @@ nav.navbar {
 			}
 		}
 
-		div {
-			display: inline;
+		> div {
+			height: var(--navbar-height);
+			margin-right: 8px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
 		}
 	}
 }
