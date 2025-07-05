@@ -7,7 +7,7 @@
 	import Card from '$lib/components/card/card.svelte';
 	import Profile from '$lib/components/profile/profile.svelte';
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
-	import { darkMode } from '$lib/store/light-dark-mode.store';
+	import { darkMode } from '../stores/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
 	import Offer from '$lib/components/offer.svelte';
 	import SectionHeader from '$lib/components/section-header.svelte';

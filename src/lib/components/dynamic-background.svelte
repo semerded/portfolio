@@ -2,7 +2,7 @@
 	export let image: string;
     export let alt: string = "...";
 	import { scrollRange } from '$lib/actions/change_background_color_linear';
-	import { darkMode } from '$lib/store/light-dark-mode.store';
+	import { darkMode } from '../../stores/light-dark-mode.store';
 </script>
 
 <div class="dynamic-background unselectable">

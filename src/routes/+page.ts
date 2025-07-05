@@ -1,6 +1,11 @@
 import { loadTranslations } from '../i18n/loader';
+import { lang } from '$stores/lang.store';
+
+
 
 export function load() {
-	loadTranslations('en', 'index');
+  lang.subscribe(value => {
+    loadTranslations(value, 'index');
+  });
   return {};
 }

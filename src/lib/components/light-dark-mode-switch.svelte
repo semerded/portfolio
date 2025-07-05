@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { toggleTheme } from '$lib/store/light-dark-mode.store';
-
+	import { toggleTheme } from '../../stores/light-dark-mode.store';
+	import ToggleSwitch from './ToggleSwitch.svelte';
     
 
 	let timeOutPointer: number | null = null;
@@ -18,20 +18,11 @@
 	}
 </script>
 
-<button on:click={toggleThemeGradually} aria-label="Toggle dark mode">
-	<i class="fa-solid fa-moon"></i>
-	<i class="fa-solid fa-sun"></i>
-</button>
 
-<style>
-	button {
-		width: 60px;
-		height: 30px;
-		border: none;
-		margin: 8px;
-		border-radius: 8px;
-		display: inline-flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-</style>
+<ToggleSwitch on:change={toggleThemeGradually} >
+	<i slot="left" class="fa-solid fa-moon"></i>
+	<i slot="right" class="fa-solid fa-sun"></i>
+
+
+</ToggleSwitch>
+

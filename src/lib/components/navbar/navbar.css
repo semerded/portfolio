@@ -20,8 +20,8 @@ nav.navbar {
 		}
 	}
 
-	div {
-		display: block;
+	> div {
+		display: flex;
 		a {
 			text-align: center;
 			display: inline-block;
@@ -45,6 +45,10 @@ nav.navbar {
 			&:hover > span {
 				transform: translateY(-5px);
 			}
+		}
+
+		div {
+			display: inline;
 		}
 	}
 }
