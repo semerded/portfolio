@@ -4,7 +4,6 @@
 		"subtitle": "Student op Thomas More - Junior Full Stack Software Developer",
 		"button": "Bekijk mijn profiel"
 	},
-
 	"profile": {
 		"title": "Mijn digitale profiel",
 		"description": "Ik ben 18 jaar oud en heb mijn passie gevonden in programmeren. Ik experimenteer al van jongs af aan met technologie. Momenteel maak ik graag projecten met verschillende programmeertalen.",
@@ -34,7 +33,9 @@
 		},
 		"hs": {
 			"title": "Middelbare school",
-			"content": ["Diploma behaald in Industriële ICT"]
+			"content": [
+				"Diploma behaald in Industriële ICT"
+			]
 		},
 		"uni": {
 			"title": "Universiteit",
@@ -44,5 +45,153 @@
 			]
 		},
 		"save": "Opslaan"
+	},
+	"projects": {
+		"title": "Mijn projecten",
+		"subtitle": "Enkele van mijn beste projecten",
+		"button": "Bekijk alle projecten",
+		"PLNM": "Een gebruiksvriendelijke cross-platform planning app met veel functies. Het bevat een notitiepagina, taakbeheer en projectbeheer. Alles wordt opgeslagen in de cloud via het Google Drive-account van de gebruiker voor maximale privacy en zonder kosten.",
+		"Pyrogine": "Een zeer geoptimaliseerde en snelle 2D-game-engine geschreven in Python. Het biedt een high-level API om apps en games te maken met minimale code en hoge prestaties.",
+		"Insanthon": "Een op afbeeldingen gebaseerd verhalenspel, een lange speeltijd en meerdere verrassende eindes."
+	},
+	"website-offers": {
+		"title": "Website-aanbiedingen",
+		"subtitle": "Laat mij een website voor je maken!",
+		"button": "Vertel me meer!",
+		"offer-structure": {
+			"features": "Wat je krijgt",
+			"benefits": "Waarom voor deze optie kiezen?"
+		},
+		"offers": [
+			{
+				"title": "Éénpaginawebsite",
+				"price": "Vanaf €75",
+				"features": [
+					"Snel ladend ontwerp",
+					"Gratis & Lichtgewicht deployment*"
+				],
+				"benefits": [
+					"Een directe call-to-action",
+					"Weinig onderhoud",
+					"Geen beveiligingsrisico's",
+					"Eenvoudig en doeltreffend"
+				]
+			},
+			{
+				"title": "Dynamische Éénpaginawebsite",
+				"price": "Vanaf €150",
+				"features": [
+					"Snel ladend ontwerp",
+					"Gratis & Lichtgewicht deployment*",
+					"Dynamische inhoud",
+					"Gebruiksvriendelijk contactformulier",
+					"Gratis database en API*"
+				],
+				"benefits": [
+					"Een directe call-to-action",
+					"Weinig onderhoud",
+					"Eenvoudig en doeltreffend",
+					"Toon dynamisch inhoud"
+				]
+			},
+			{
+				"title": "Bestaande Website Upgraden",
+				"price": "Prijs op maat",
+				"features": [
+					"Modernisering van een bestaande website",
+					"Verbeterde prestaties",
+					"Nieuwe aangepaste functies"
+				],
+				"benefits": [
+					"Aangepast aan jouw wensen",
+					"Verbeterde gebruikerservaring",
+					"Vertrouwen en geloofwaardigheid van het merk",
+					"Verbeter het bereik van je website"
+				]
+			},
+			{
+				"title": "Meerpaginawebsite",
+				"price": "Vanaf €150",
+				"features": [
+					"Modern navigatiemenu",
+					"Snel ladend ontwerp",
+					"Gratis & Lichtgewicht deployment*"
+				],
+				"benefits": [
+					"Projecten, artikelen en meer uitlichten",
+					"Verbeter het bereik van je website",
+					"Standaard in de industrie"
+				]
+			},
+			{
+				"title": "Dynamische Meerpaginawebsite",
+				"price": "Vanaf €250",
+				"features": [
+					"Modern navigatiemenu",
+					"Snel ladend ontwerp",
+					"Gratis & Lichtgewicht deployment*",
+					"Dynamische inhoud",
+					"Gebruiksvriendelijk contactformulier",
+					"Gratis database en API*"
+				],
+				"benefits": [
+					"Projecten, artikelen en meer uitlichten",
+					"Verbeter het bereik van je website",
+					"Standaard in de industrie",
+					"Toon dynamisch inhoud"
+				]
+			},
+			{
+				"title": "Aangepaste Website",
+				"price": "Prijs op maat",
+				"features": [
+					"Aangepast ontwerp",
+					"Aangepaste functies",
+					"Prijs op maat op basis van jouw wensen"
+				],
+				"benefits": [
+					"Aangepast aan jouw wensen"
+				]
+			}
+		],
+		"additional": "Alleen beschikbaar voor kleine/middelgrote websites"
+	},
+	"qos": {
+		"title": "Wat kun je verwachten?",
+		"subtitle": "Mijn werk is gegarandeer van de hoogste kwaliteit",
+		"expect": {
+			"title": "Wat kun je verwachten?",
+			"content": [
+				"Een hoogwaardige website, aangepast aan jouw wensen",
+				"Ondersteuning voor alle grote browsers",
+				"Geoptimaliseerd voor mobiele apparaten",
+				"Toegang tot de broncode"
+			]
+		},
+		"delivery": {
+			"title": "Wat wordt er geleverd?",
+			"content": []
+		},
+		"provide": {
+			"title": "Wat kun je voorzien?",
+			"content": [
+				"Een geregistreerde domeinnaam",
+				"Een kleurenschema",
+				"Een logo",
+				"Afbeeldingen voor op de website"
+			]
+		},
+		"additional": {
+			"title": "Extra pakketten tegen een kleine meerprijs",
+			"info": "De meerprijs wordt besproken tijdens de eerste afspraak. De prijs hangt af van de wensen van de klant.",
+			"content": [
+				"Logo ontwerp",
+				"Fotografie op locatie",
+				"Niet-gratis hosting setup",
+				"Domeinnaam zoeken",
+				"Meertalige ondersteuning"
+			],
+			"button": "Vertel me meer!"
+		}
 	}
 }

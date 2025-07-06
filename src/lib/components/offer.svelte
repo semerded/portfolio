@@ -3,15 +3,24 @@
 	export let price: string;
 	export let features: string[];
 	export let benefits: string[];
+	export let index: number;
+	import { _ } from "svelte-i18n";
 
-	let icon: string = title.split(' ').join('-').toLowerCase() + '.svg';
+	let icons: string[] = [
+		"single-page-website.svg",
+		"dynamic-single-page-website.svg",
+		"upgrade-a-website.svg",
+		"multi-page-website.svg",
+		"dynamic-multi-page-website.svg",
+		"custom-website.svg"
+	]
 </script>
 
 <div class="offer glossy-tile">
 	<h2>{title}</h2>
 	<span class="price">{price}</span>
 	<div class="features">
-		<h3>Included features</h3>
+		<h3>{$_('website-offers.offer-structure.features')}</h3>
 		{#each features as feature, i (i)}
 			<p>
 				<i class="fa-solid fa-circle-check"> </i>
@@ -20,7 +29,7 @@
 		{/each}
 	</div>
 	<div class="benefits">
-		<h3>Why choose this option?</h3>
+		<h3>{$_('website-offers.offer-structure.benefits')}</h3>
 		{#each benefits as benefit, i (i)}
 			<p>
 				<i class="fa-solid fa-circle-check"> </i>
@@ -29,7 +38,7 @@
 		{/each}
 	</div>
 	<span class="icon-holder">
-		<img src="/icons/offers/{icon}" alt="icon" />
+		<img src="/icons/offers/{icons[index]}" alt="icon" />
 	</span>
 </div>
 

@@ -81,18 +81,19 @@
 </Container>
 <Container id="offers" marginBottom="5rem" containerFrom={768}>
 	<SectionHeader
-		title="Website Offers"
-		subtitle="Let me create a website for you!"
-		buttonText="More information"
+		title={$t('website-offers.title')}
+		subtitle={$t('website-offers.subtitle')}
+		buttonText={$t('website-offers.button')}
 		href="/website-offers"
 	/>
 	<div class="tiled-container">
-		{#each offers as offer}
+		{#each offers as offer, index}
 			<Offer
 				title={offer.title}
 				price={offer.price}
 				features={offer.features}
 				benefits={offer.benefits}
+				{index}
 			/>
 		{/each}
 		<p style="color: white;">* {$t('website-offers.additional')}</p>
@@ -100,8 +101,8 @@
 </Container>
 <Container id="qos">
 	<SectionHeader
-		title="What to expect?"
-		subtitle="My work is guaranteed to be of the highest quality"
+		title={$t('qos.title')}
+		subtitle={$t('qos.subtitle')}
 	/>
 	<div class="tiled-container">
 		<div class="glossy-tile">

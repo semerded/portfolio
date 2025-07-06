@@ -157,6 +157,8 @@
 		
 	},
     "qos": {
+		"title": "What can you expect?",
+		"subtitle": "My work is guaranteed to be of the highest quality",
 		"expect": {
 			"title": "What can you expect?",
 			"content": [
@@ -191,7 +193,7 @@
                 "Domain name hunting",
 				"Multi-language support"
             ],
-			"button": "Tell me more"
+			"button": "Tell me more!"
         }
     }
 }
