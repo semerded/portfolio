@@ -7,7 +7,8 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
-			$stores: path.resolve('./src/stores')
+			$stores: path.resolve('./src/stores'),
+			$func: path.resolve('./src/lib/func')
 		}
 	}
 });

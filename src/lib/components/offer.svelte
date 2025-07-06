@@ -12,7 +12,7 @@
 	<span class="price">{price}</span>
 	<div class="features">
 		<h3>Included features</h3>
-		{#each features as feature}
+		{#each features as feature, i (i)}
 			<p>
 				<i class="fa-solid fa-circle-check"> </i>
 				{feature}
@@ -21,7 +21,7 @@
 	</div>
 	<div class="benefits">
 		<h3>Why choose this option?</h3>
-		{#each benefits as benefit}
+		{#each benefits as benefit, i (i)}
 			<p>
 				<i class="fa-solid fa-circle-check"> </i>
 				{benefit}
