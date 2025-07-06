@@ -9,7 +9,7 @@
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import { darkMode } from '../stores/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
-	import Offer from '$lib/components/offer.svelte';
+	import OfferTile from '$lib/components/offers/OfferTile.svelte';
 	import SectionHeader from '$lib/components/section-header.svelte';
 
 	$: offers = $json('website-offers.offers') as {
@@ -88,7 +88,7 @@
 	/>
 	<div class="tiled-container">
 		{#each offers as offer, index}
-			<Offer
+			<OfferTile
 				title={offer.title}
 				price={offer.price}
 				features={offer.features}
