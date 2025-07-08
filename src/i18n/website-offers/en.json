@@ -1,0 +1,85 @@
+{
+    "title": "Website Offers",
+    "subtitle": "Let me create a website for you!",
+    "button": "View my offers",
+    "offers": [
+        {
+            "title": "Single Page Website",
+            "price": "Starting from €75",
+            "description": "A single-page website is a sleek, modern solution that delivers everything your visitors need—all in one place. Instead of navigating through multiple pages, users scroll through clearly defined sections (like About, Services, Contact), creating a smooth and engaging experience.",
+            "why": {
+                "Faster loading times": "Keep your visitors engaged and reduce bounce rates.",
+                "Mobile-friendly by design": "Looks great on phones and tablets without extra work.",
+                "Focused messaging": "Guide your visitors through a clear story, ending in action.",
+                "Cost-effective": "Less complex to build and maintain than multi-page sites."
+            },
+            "perfectFor": "Perfect for small businesses, personal brands, or product showcases.",
+            "slot": "Whether you're launching a new brand, promoting a service, or simply want a strong online presence without the clutter, a single-page website is a smart, stylish, and efficient choice."
+        },
+        {
+            "title": "Dynamic Single Page Website",
+            "price": "Starting from €100",
+            "description": "A dynamic single-page website takes the elegance of a one-page layout and supercharges it with live content, interactivity, and flexibility. Everything responds instantly, creating an app-like experience—all without leaving the page.",
+            "why": {
+                "Real-time updates": "Show live content like blog posts, availability, or prices directly on the page.",
+                "Lightning-fast navigation": "No page reloads; everything responds instantly.",
+                "Modern UX": "Smooth transitions, interactive elements, and instant feedback keep users engaged.",
+                "Connects to APIs and databases": "Easily pull in dynamic content from your services or tools."
+            },
+            "perfectFor": "Ideal for growing businesses, tech-savvy brands, or anyone who wants a smarter, more interactive site.",
+            "slot": "Whether you want to impress visitors, convert leads faster, or keep content fresh automatically—a dynamic single-page website is a powerful, future-ready solution."
+        },
+        {
+            "title": "Website Upgrade",
+            "price": "Custom price",
+            "description": "Already have a website, but it's outdated, slow, or missing features? A website upgrade modernizes your existing site with improved speed, design, content, and functionality—without starting from scratch.",
+            "why": {
+                "Better performance": "Speed up loading times and improve the overall user experience.",
+                "Modern design refresh": "Give your site a clean, professional look that matches current trends.",
+                "New features": "Add contact forms, galleries, integrations, or dynamic content.",
+                "SEO & mobile improvements": "Make your site easier to find and better to use on any device."
+            },
+            "perfectFor": "Perfect for businesses that already have a site but want to stay competitive and up-to-date.",
+            "slot": "Whether it's a small refresh or a major overhaul, upgrading your website is a smart investment that keeps your online presence strong and effective."
+        },
+        {
+            "title": "Multi-Page Website",
+            "price": "Starting from €120",
+            "description": "A multi-page website separates content across individual pages like Home, About, Services, and Contact. This classic structure gives each topic its own space and is ideal for businesses with more detailed offerings.",
+            "why": {
+                "Clear structure": "Each page focuses on a specific topic, making navigation intuitive.",
+                "Better SEO potential": "Multiple pages allow for targeted keywords and improved search visibility.",
+                "Scalable": "Easy to expand with new pages as your business grows.",
+                "Professional appearance": "Gives a complete and organized impression to visitors."
+            },
+            "perfectFor": "Perfect for businesses with multiple services, detailed information, or a need for structured navigation.",
+            "slot": "If your business needs room to grow or more content separation, a multi-page website is a reliable and professional choice."
+        },
+        {
+            "title": "Dynamic Multi-Page Website",
+            "price": "Starting from €175",
+            "description": "A dynamic multi-page website combines the structure of traditional websites with the power of real-time content, interactive features, and smart integrations. Each page can pull in live data, respond to user actions, and connect seamlessly to APIs and databases.",
+            "why": {
+                "Live, dynamic content": "Display real-time updates across multiple pages, like blog feeds, availability, or customer reviews.",
+                "Advanced integrations": "Connect your site to booking systems, CRMs, forms, or custom APIs.",
+                "Flexible and scalable": "Easily grow your site and update content without full redesigns.",
+                "Improved user experience": "Interactive elements keep users engaged and help drive conversions."
+            },
+            "perfectFor": "Perfect for growing businesses, web apps, or service providers that need rich functionality across multiple pages.",
+            "slot": "If you need a powerful and flexible website that grows with your business and delivers a seamless, data-driven experience—this is it."
+        },
+        {
+            "title": "Custom Website",
+            "price": "Custom price",
+            "description": "A custom website is built entirely around your vision, brand, and specific business needs. From design to functionality, every element is tailored—offering maximum flexibility, originality, and control.",
+            "why": {
+                "Tailored to your brand": "Unique design and structure that reflect your business identity.",
+                "Unlimited possibilities": "From custom animations to advanced features—whatever you need, we build it.",
+                "Fully scalable": "Designed to grow with your business, with no template limitations.",
+                "Stand out from the crowd": "Make a strong impression with a one-of-a-kind online presence."
+            },
+            "perfectFor": "Perfect for businesses or individuals who need something truly unique or have specific functional or design requirements.",
+            "slot": "If you want a website that doesn't just fit your brand but defines it—a custom-built website gives you full creative and technical freedom."
+        }
+    ]
+}
