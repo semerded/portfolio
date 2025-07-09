@@ -30,7 +30,8 @@
 	let transitioning = false;
 	let oldContent: HTMLElement | null = null;
 	let currentPath = $page.url.pathname;
-
+	
+	
 	beforeNavigate(({ from }) => {
 		if (from) {
 			oldContent = document.getElementById('current-content')?.cloneNode(true) as HTMLElement;
@@ -40,8 +41,8 @@
 			}
 		}
 	});
-
-	$: {
+	
+	$: {		
 		if ($page.url.pathname !== currentPath) {
 			const currentIndex = navRoutes.indexOf($page.url.pathname);
 			const prevIndex = navRoutes.indexOf(currentPath);
@@ -52,6 +53,8 @@
 				transitioning = false;
 				oldContent = null;
 			}, transitionSpeed);
+		} else {
+			transitioning = false;
 		}
 	}
 </script>
