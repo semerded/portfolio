@@ -2,9 +2,12 @@
     "title": "Website Offers",
     "subtitle": "Let me create a website for you!",
     "button": "View my offers",
+    "offer-structure": {
+        "why": "Why businesses love"
+    },
     "offers": [
         {
-            "title": "Single Page Website",
+            "title": "Single-Page Website",
             "price": "Starting from €75",
             "description": "A single-page website is a sleek, modern solution that delivers everything your visitors need—all in one place. Instead of navigating through multiple pages, users scroll through clearly defined sections (like About, Services, Contact), creating a smooth and engaging experience.",
             "why": {
@@ -17,7 +20,7 @@
             "slot": "Whether you're launching a new brand, promoting a service, or simply want a strong online presence without the clutter, a single-page website is a smart, stylish, and efficient choice."
         },
         {
-            "title": "Dynamic Single Page Website",
+            "title": "Dynamic Single-Page Website",
             "price": "Starting from €100",
             "description": "A dynamic single-page website takes the elegance of a one-page layout and supercharges it with live content, interactivity, and flexibility. Everything responds instantly, creating an app-like experience—all without leaving the page.",
             "why": {

@@ -28,8 +28,8 @@
 
 <main>
 	<Container id="offers">
-		{#each offers as offer}
-			<OfferExt {...offer} />
+		{#each offers as offer, index}
+			<OfferExt {...offer} {index} />
 		{/each}
 	</Container>
 </main>

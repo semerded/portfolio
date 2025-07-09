@@ -6,17 +6,18 @@
 	export let index: number;
 	import { _ } from "svelte-i18n";
 
-	let icons: string[] = [
-		"single-page-website.svg",
-		"dynamic-single-page-website.svg",
-		"upgrade-a-website.svg",
-		"multi-page-website.svg",
-		"dynamic-multi-page-website.svg",
-		"custom-website.svg"
+
+	let ids: string[] = [
+		'single-page-website',
+		'dynamic-single-page-website',
+		'upgrade-a-website',
+		'multi-page-website',
+		'dynamic-multi-page-website',
+		'custom-website'
 	]
 </script>
 
-<div class="offer glossy-tile">
+<a class="offer glossy-tile" href="/website-offers#{ids[index]}">
 	<h2>{title}</h2>
 	<span class="price">{price}</span>
 	<div class="features">
@@ -38,12 +39,14 @@
 		{/each}
 	</div>
 	<span class="icon-holder">
-		<img src="/icons/offers/{icons[index]}" alt="icon" />
+		<img src="/icons/offers/{ids[index]}.svg" alt="icon" />
 	</span>
-</div>
+</a>
 
 <style>
-	.offer {
+	a.offer {
+		text-decoration: none;
+		color: var(--text);
 		margin: 8px;
 
 		overflow: hidden;
