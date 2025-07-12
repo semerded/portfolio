@@ -46,7 +46,7 @@
 		if ($page.url.pathname !== currentPath) {
 			const currentIndex = navRoutes.indexOf($page.url.pathname);
 			const prevIndex = navRoutes.indexOf(currentPath);
-			direction = currentIndex > prevIndex ? 'right' : 'left';
+			direction = currentIndex > prevIndex ? 'left' : 'right';
 			currentPath = $page.url.pathname;
 
 			setTimeout(() => {
