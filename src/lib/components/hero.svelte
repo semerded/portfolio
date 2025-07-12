@@ -10,6 +10,7 @@
 	export let imageStyle: string = '';
 	export let buttonText: string[] = [];
 	export let buttonLink: string[] = [];
+	export let primaryButton: number = 0;
 
 	if (buttonText.length !== buttonLink.length) {
 		throw new Error('buttonText and buttonLink must be the same length');
@@ -50,7 +51,11 @@
 		{/if}
 		<div class="button-container">
 			{#each buttonText as buttonText, index}
+				{#if index === primaryButton}
 				<Button href={buttonLink[index]} primary={true}>{buttonText}</Button>
+				{:else}
+				<Button href={buttonLink[index]}>{buttonText}</Button>
+				{/if}
 			{/each}
 		</div>
 	</div>

@@ -31,7 +31,7 @@
 				<div>
 
 					<p>{slot}</p>
-					<a href=""><span>I choose this one!</span></a>
+					<button on:click={() => {}}><span>{$_('offer-structure.button')}</span></button>
 				</div>
 			</div>
 			<img src={`/icons/offers/${ids[index]}.svg`} alt="icon" />
@@ -121,7 +121,9 @@
 					min-height: 0;
 					width: 70%;
 
-					a {
+					button {
+						all: unset;
+						cursor: pointer;
 						background-color: var(--primary);
 						color: white;
 						padding: 8px 16px;

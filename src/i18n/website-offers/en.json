@@ -1,9 +1,10 @@
 {
-    "title": "Website Offers",
-    "subtitle": "Let me create a website for you!",
-    "button": "View my offers",
+    "title": "Which website fits you best?",
+    "subtitle": "Every business is unique — pick what fits your goals.",
+    "button": "Pick your offer",
     "offer-structure": {
-        "why": "Why businesses love"
+        "why": "Why businesses love",
+        "button": "This one fits me best"
     },
     "offers": [
         {
@@ -84,5 +85,13 @@
             "perfectFor": "Perfect for businesses or individuals who need something truly unique or have specific functional or design requirements.",
             "slot": "If you want a website that doesn't just fit your brand but defines it—a custom-built website gives you full creative and technical freedom."
         }
-    ]
+    ],
+    "cant-choose": {
+        "title": "Can't decide?",
+        "subtitle": "We can discuss the fitting package at our first meeting.",
+        "button": "Book a meeting"
+    },
+    "wyg": {
+        "title": "What You Get"
+    }
 }

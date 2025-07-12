@@ -2,8 +2,9 @@
 	import Container from '$lib/components/container/container.svelte';
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import Hero from '$lib/components/hero.svelte';
-	import OfferOverlay from '$lib/components/OfferOverlay.svelte';
 	import OfferExt from '$lib/components/offers/OfferExt.svelte';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
+	import SideBar from '$lib/components/sidebar.svelte';
 	import './website-offers.css';
 
 	import { json, t } from 'svelte-i18n';
@@ -20,13 +21,19 @@
 
 <DynamicBackground image="images/website-offers/bg-dark.jpg" alt="website offers" />
 
-<OfferOverlay />
+<SideBar
+	links={[
+		{ name: 'Pick an offer', link: '#offers' },
+		{ name: 'What you get', link: '#wyg' },
+		{ name: 'Fill in the form', link: '#form' }
+	]}
+/>
 
 <Hero
 	title={$t('title')}
 	description={$t('subtitle')}
-	buttonText={$t('button')}
-	buttonLink="#offers"
+	buttonText={[$t('button'), $t('cant-choose.button')]}
+	buttonLink={["#offers", "#form"]}
 />
 
 <main>
@@ -34,6 +41,15 @@
 		{#each offers as offer, index}
 			<OfferExt {...offer} {index} />
 		{/each}
+		<SectionHeader title={$t('cant-choose.title')} subtitle={$t('cant-choose.subtitle')} buttonText={$t('cant-choose.button')} href="#form" titleFirst={true}/>
+
+	</Container>
+	<Container id="wyg">
+		<SectionHeader title={$t('wyg.title')} subtitle="" />
+
+	</Container>
+	<Container id="form">
+		Container
 	</Container>
 </main>
 

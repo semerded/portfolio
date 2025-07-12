@@ -2,7 +2,8 @@
 	"hero": {
 		"country": "Belgium",
 		"subtitle": "Student at Thomas More - Junior Full Stack Software Developer",
-		"button": "View my profile"
+		"button": "View my profile",
+		"offer-button": "Let me create a website for you!"
 	},
 	"profile": {
 		"title": "My digital profile",
