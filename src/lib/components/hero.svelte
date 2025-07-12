@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	import { scrollRange } from '$lib/actions/change_background_color_linear';
 	import Button from '$lib/components/button.svelte';
 
@@ -9,8 +8,12 @@
 	export let leading: string = '';
 	export let image: string = '';
 	export let imageStyle: string = '';
-	export let buttonText: string = '';
-	export let buttonLink: string = '';
+	export let buttonText: string[] = [];
+	export let buttonLink: string[] = [];
+
+	if (buttonText.length !== buttonLink.length) {
+		throw new Error('buttonText and buttonLink must be the same length');
+	}
 </script>
 
 <div class="hero-container" {id}>
@@ -37,7 +40,7 @@
 			}}
 		/>
 	{/if}
-	<div id="hero-text">
+	<div class="hero-text">
 		{#if leading}
 			<h3>{@html leading}</h3>
 		{/if}
@@ -45,9 +48,11 @@
 		{#if description}
 			<h2>{description}</h2>
 		{/if}
-		{#if buttonText && buttonLink}
-			<Button href="{buttonLink}" primary={true}>{buttonText}</Button>
-		{/if}
+		<div class="button-container">
+			{#each buttonText as buttonText, index}
+				<Button href={buttonLink[index]} primary={true}>{buttonText}</Button>
+			{/each}
+		</div>
 	</div>
 </div>
 
@@ -71,7 +76,7 @@
 			position: fixed;
 		}
 
-		#hero-text {
+		.hero-text {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -92,12 +97,18 @@
 				font-size: 2rem;
 				color: var(--secondary);
 			}
+
+			.button-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 	}
 
 	@media screen and (max-width: 768px) {
 		.hero-container {
-			#hero-text {
+			.hero-text {
 				h1 {
 					font-size: 8svw;
 				}
