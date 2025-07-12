@@ -10,7 +10,7 @@
 	import { darkMode } from '../stores/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
 	import OfferTile from '$lib/components/offers/OfferTile.svelte';
-	import SectionHeader from '$lib/components/section-header.svelte';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
 
 	$: offers = $json('website-offers.offers') as {
 		title: string;
@@ -43,8 +43,9 @@
 	title="Sem Van Broekhoven"
 	description={$t('hero.subtitle')}
 	leading="<i class='fa-solid fa-location-dot'></i> {$t('hero.country')}"
-	buttonText={$t('hero.button')}
-	buttonLink="#my-profile"
+	buttonText={[$t('hero.button'), $t('hero.offer-button')]}
+	buttonLink={["#my-profile", "/website-offers"]}
+
 	id="welcome"
 />
 <Profile />
