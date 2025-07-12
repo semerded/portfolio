@@ -28,7 +28,11 @@
 		<div class="body">
 			<div class="description">
 				<p>{description}</p>
-				<p>{slot}</p>
+				<div>
+
+					<p>{slot}</p>
+					<a href=""><span>I choose this one!</span></a>
+				</div>
 			</div>
 			<img src={`/icons/offers/${ids[index]}.svg`} alt="icon" />
 		</div>
@@ -116,6 +120,17 @@
 					flex: 1 1 0;
 					min-height: 0;
 					width: 70%;
+
+					a {
+						background-color: var(--primary);
+						color: white;
+						padding: 8px 16px;
+						border-radius: 8px;
+						display: inline-block;
+						margin: 8px 0px;
+						text-decoration: none;
+						font-weight: bold;
+					}
 				}
 			}
 

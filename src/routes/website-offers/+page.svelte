@@ -2,6 +2,7 @@
 	import Container from '$lib/components/container/container.svelte';
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import Hero from '$lib/components/hero.svelte';
+	import OfferOverlay from '$lib/components/OfferOverlay.svelte';
 	import OfferExt from '$lib/components/offers/OfferExt.svelte';
 	import './website-offers.css';
 
@@ -18,6 +19,8 @@
 </script>
 
 <DynamicBackground image="images/website-offers/bg-dark.jpg" alt="website offers" />
+
+<OfferOverlay />
 
 <Hero
 	title={$t('title')}
