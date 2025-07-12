@@ -3,13 +3,19 @@
 	export let subtitle: string;
 	export let buttonText: string | null = null;
 	export let href: string | null = null;
+	export let titleFirst: boolean = false;
 </script>
 
 <div class="section-header glossy-tile">
 	<div class="button"></div>
 	<div class="section-header-text">
+		{#if titleFirst}
+		<h2 class="section-header-title">{title}</h2>
+		<h3 class="section-header-subtitle">{subtitle}</h3>
+		{:else}
 		<h3 class="section-header-subtitle">{subtitle}</h3>
 		<h2 class="section-header-title">{title}</h2>
+		{/if}
 	</div>
 	{#if buttonText && href}
 		<a class="button" {href}>{buttonText}</a>
