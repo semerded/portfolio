@@ -18,9 +18,7 @@
 		features: string[];
 		benefits: string[];
 	}[];
-	$: qosProvide = $json('qos.provide.content') as string[];
-	$: qosAdditional = $json('qos.additional.content') as string[];
-	$: qosExpect = $json('qos.expect.content') as string[];
+
 </script>
 
 <SideBar
@@ -100,39 +98,7 @@
 		<p style="color: white;">* {$t('website-offers.additional')}</p>
 	</div>
 </Container>
-<Container id="qos">
-	<SectionHeader
-		title={$t('qos.title')}
-		subtitle={$t('qos.subtitle')}
-	/>
-	<div class="tiled-container">
-		<div class="glossy-tile">
-			<h3>{$t('qos.expect.title')}</h3>
-			<ul>
-				{#each qosExpect as content}
-					<li>{content}</li>
-				{/each}
-			</ul>
-			<h3>{$t('qos.provide.title')}</h3>
-			<ul>
-				{#each qosProvide as content}
-					<li>{content}</li>
-				{/each}
-			</ul>
-			<img class="qos-icon" src="/icons/certified.svg" alt="certified icon" />
-		</div>
-		<div class="glossy-tile">
-			<h3>{$t('qos.additional.title')}</h3>
-			<ul>
-				{#each qosAdditional as content}
-					<li>{content}</li>
-				{/each}
-			</ul>
-			<blockquote>{$t('qos.additional.info')}</blockquote>
-			<a class="button" href="/additional-packages">{$t('qos.additional.button')}</a>
-		</div>
-	</div>
-</Container>
+
 </main>
 
 <style>

@@ -17,6 +17,10 @@
 		why: {[key: string]: string };
 		slot: string;
 	}[];
+
+	$: wygProvide = $json('wyg.provide.content') as string[];
+	$: wygAdditional = $json('wyg.additional.content') as string[];
+	$: wygExpect = $json('wyg.expect.content') as string[];
 </script>
 
 <DynamicBackground image="images/website-offers/bg-dark.jpg" alt="website offers" />
@@ -46,7 +50,41 @@
 	</Container>
 	<Container id="wyg">
 		<SectionHeader title={$t('wyg.title')} subtitle="" />
+		
+	</Container>
 
+	<Container id="wyg">
+		<SectionHeader
+			title={$t('wyg.title')}
+			subtitle={$t('wyg.subtitle')}
+		/>
+		<div class="tiled-container">
+			<div class="glossy-tile">
+				<h3>{$t('wyg.expect.title')}</h3>
+				<ul>
+					{#each wygExpect as content}
+						<li>{content}</li>
+					{/each}
+				</ul>
+				<h3>{$t('wyg.provide.title')}</h3>
+				<ul>
+					{#each wygProvide as content}
+						<li>{content}</li>
+					{/each}
+				</ul>
+				<img class="wyg-icon" src="/icons/certified.svg" alt="certified icon" />
+			</div>
+			<div class="glossy-tile">
+				<h3>{$t('wyg.additional.title')}</h3>
+				<ul>
+					{#each wygAdditional as content}
+						<li>{content}</li>
+					{/each}
+				</ul>
+				<blockquote>{$t('wyg.additional.info')}</blockquote>
+				<a class="button" href="/additional-packages">{$t('wyg.additional.button')}</a>
+			</div>
+		</div>
 	</Container>
 	<Container id="form">
 		Container
