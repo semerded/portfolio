@@ -8,6 +8,7 @@
 	export let perfectFor: string;
 	export let slot: string;
 	export let index: number;
+	export let buttonCallback: () => void;
 
 	let ids: string[] = [
 		'single-page-website',
@@ -31,7 +32,7 @@
 				<div>
 
 					<p>{slot}</p>
-					<button on:click={() => {}}><span>{$_('offer-structure.button')}</span></button>
+					<button on:click={() => buttonCallback()}><span>{$_('offer-structure.button')}</span></button>
 				</div>
 			</div>
 			<img src={`/icons/offers/${ids[index]}.svg`} alt="icon" />

@@ -5,6 +5,7 @@
 	import OfferExt from '$lib/components/offers/OfferExt.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import SideBar from '$lib/components/sidebar.svelte';
+	import { onMount } from 'svelte';
 	import './website-offers.css';
 
 	import { json, t } from 'svelte-i18n';
@@ -22,12 +23,16 @@
 	$: wygAdditional = $json('wyg.additional.content') as string[];
 	$: wygExpect = $json('wyg.expect.content') as string[];
 
-	const selectOffer = document.getElementById('select-offer') as HTMLSelectElement;
+	let selectOffer: HTMLSelectElement | null = null;
+
+	onMount(() => {
+		selectOffer = document.getElementById('select-offer') as HTMLSelectElement;
+	});
 	function setOffer(index: number) {
 		if (selectOffer && index >= 0 && index < selectOffer.options.length) {
 			selectOffer.selectedIndex = index;
 		} else {
-			throw new RangeError('selected offer is not in the range of the options');
+			throw new RangeError('selected offer is not in the range of the options: ' + index);
 		}
 	}
 </script>
@@ -52,7 +57,14 @@
 <main>
 	<Container id="offers">
 		{#each offers as offer, index}
-			<OfferExt {...offer} {index} />
+			<OfferExt
+				{...offer}
+				{index}
+				buttonCallback={() => {
+					document.getElementById('form')!.scrollIntoView();
+					setOffer(index + 1);
+				}}
+			/>
 		{/each}
 		<div class="glossy-tile" id="cant-choose">
 			<h2>{$t('cant-choose.title')}</h2>
@@ -61,7 +73,8 @@
 			<button
 				class="button"
 				on:click={() => {
-					window.location.hash = '#form';
+					document.getElementById('form')!.scrollIntoView();
+					setOffer(selectOffer!.options.length - 1);
 				}}>{$t('cant-choose.button')}</button
 			>
 		</div>
