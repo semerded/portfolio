@@ -30,6 +30,9 @@
 
 <style>
 	#back-to-top {
+		all: unset;
+		cursor: pointer;
+		color: var(--text-light);
 		position: fixed;
 		display: none;
 		right: 24px;
