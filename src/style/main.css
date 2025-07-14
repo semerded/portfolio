@@ -54,14 +54,16 @@ body {
 }
 
 button {
+	all: unset;
 	cursor: pointer;
 }
 
-a.button {
+a.button, button {
+	cursor: pointer;
 	transition: 500ms;
 	background-color: var(--primary);
-	height: 40px;
 	display: flex;
+	padding: 8px 16px;
 	justify-content: center;
 	align-items: center;
 	border-radius: 8px;
