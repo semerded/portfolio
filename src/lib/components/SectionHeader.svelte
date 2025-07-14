@@ -4,9 +4,10 @@
 	export let buttonText: string | null = null;
 	export let href: string | null = null;
 	export let titleFirst: boolean = false;
+	export let marginTop: string = '0';
 </script>
 
-<div class="section-header glossy-tile">
+<div class="section-header glossy-tile" style="margin-top: {marginTop};">
 	<div class="button"></div>
 	<div class="section-header-text">
 		{#if titleFirst}

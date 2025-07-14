@@ -89,7 +89,7 @@
     "cant-choose": {
         "title": "Can't decide?",
         "subtitle": "We can discuss your needs and find the fitting package at our first meeting.",
-        "button": "Book a meeting"
+        "button": "Plan our first meeting"
     },
 
     "wyg": {
@@ -101,7 +101,8 @@
 				"A high quality website, customized to your needs",
 				"Support for all major browsers",
 				"Optimized for mobile devices",
-				"Access to the source code"
+				"Access to the source code",
+                "Free error correction for 6 months"
 			]
 		},
 		"delivery": {
@@ -121,7 +122,7 @@
         },
         "additional": {
             "title": "Additional packages for a small extra fee",
-			"info": "Extra fee is discussed during the first meeting. The price depends on the requirements of the client",
+			"info": "Extra fees are discussed during the first meeting. The price depends on the requirements of the client",
             "content": [
                 "Logo design",
                 "On site photography",
@@ -131,5 +132,23 @@
             ],
 			"button": "Tell me more!"
         }
+    },
+    "form": {
+        "title": "Plan our first meeting",
+        "subtitle": "Fill out the form and I will contact you as soon as possible",
+        "button": "Send",
+        "placeholder": {
+            "name": "Your name",
+            "email": "Your email",
+            "offer": "Pick an offer",
+            "message": "Optional message"
+        },
+        "cant-decide": "I can't decide yet",
+        "error": {
+            "name": "Please enter a name",
+            "email": "Please enter a valid email",
+            "offer": "Please select an offer"
+        }
     }
+
 }
