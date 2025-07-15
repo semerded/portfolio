@@ -22,6 +22,8 @@
 	import { beforeNavigate } from '$app/navigation';
 
 	import { navRoutes } from '$lib/routes';
+	import { darkMode } from '$stores/light-dark-mode.store';
+	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 
 	// Configurable transition speed (in milliseconds)
 	const transitionSpeed = 200; // Change this value to adjust speed
@@ -72,6 +74,12 @@
 
 <Navbar />
 <BackToTop />
+
+{#if $darkMode}
+	<DynamicBackground image="/images/bg/bg-dark.jpg" />
+{:else}
+	<DynamicBackground image="/images/bg/bg-light.jpg" />
+{/if}
 
 <div class="transition-container">
 	<!-- Old content layer -->

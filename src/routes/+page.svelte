@@ -6,8 +6,6 @@
 	import Container from '$lib/components/container/container.svelte';
 	import Card from '$lib/components/card/card.svelte';
 	import Profile from '$lib/components/profile/profile.svelte';
-	import DynamicBackground from '$lib/components/dynamic-background.svelte';
-	import { darkMode } from '../stores/light-dark-mode.store';
 	import SideBar from '$lib/components/sidebar.svelte';
 	import OfferTile from '$lib/components/offers/OfferTile.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
@@ -31,11 +29,7 @@
 	]}
 />
 
-{#if $darkMode}
-	<DynamicBackground image="/images/index/bg-dark.jpg" />
-{:else}
-	<DynamicBackground image="/images/index/bg-light.jpg" />
-{/if}
+
 <main>
 	<Hero
 	title="Sem Van Broekhoven"

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Container from '$lib/components/container/container.svelte';
-	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import OfferExt from '$lib/components/offers/OfferExt.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
@@ -37,7 +36,6 @@
 	}
 </script>
 
-<DynamicBackground image="images/website-offers/bg-dark.jpg" alt="website offers" />
 
 <SideBar
 	links={[
