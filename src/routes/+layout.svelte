@@ -81,6 +81,10 @@
 	<DynamicBackground image="/images/bg/bg-light.jpg" />
 {/if}
 
+<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
+	Photo by Daniel Cid from Pexels
+</a>
+
 <div class="transition-container">
 	<!-- Old content layer -->
 	{#if transitioning && oldContent}
@@ -106,6 +110,15 @@
 <style>
 	:global(body) {
 		overflow-x: hidden;
+	}
+
+	.bg-credits {
+		position: fixed;
+		bottom: 10px;
+		left: 10px;
+		color: #fff;
+		font-size: 10px;
+		z-index: 100;
 	}
 
 	.transition-container {

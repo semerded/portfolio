@@ -58,6 +58,10 @@ button {
 	cursor: pointer;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 a.button, button {
 	cursor: pointer;
 	transition: 500ms;

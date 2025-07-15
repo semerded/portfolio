@@ -8,7 +8,9 @@
 </script>
 
 <div class="section-header glossy-tile" style="margin-top: {marginTop};">
+	{#if buttonText && href}
 	<div class="button"></div>
+	{/if}
 	<div class="section-header-text">
 		{#if titleFirst}
 		<h2 class="section-header-title">{title}</h2>
@@ -20,8 +22,6 @@
 	</div>
 	{#if buttonText && href}
 		<a class="button" {href}>{buttonText}</a>
-	{:else}
-		<div class="button"></div>
 	{/if}
 </div>
 
