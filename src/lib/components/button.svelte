@@ -6,7 +6,7 @@
 
 <a
 	{href}
-	target={newTab ? '_blank' : '_self'}
+	target={newTab ? '_blank' : ''}
 	class="button"
 	class:primary
 	rel="noopener noreferrer"
