@@ -1,6 +1,6 @@
 .card {
 	margin: 8px;
-	background-color: var(--card);
+	background: var(--gradient);
 	box-shadow: 2px 2px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent);
 	width: 400px;
 	height: 400px;
