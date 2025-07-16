@@ -1,0 +1,19 @@
+{
+    "projects": [
+        {
+            "title": "PLNM",
+            "img": "images/projects/PLNM/logo.png",
+            "description": "A user-friendly cross-platform planning app with tons of features."
+        }, 
+        {
+            "title": "Pyrogine",
+            "img": "images/projects/Pyrogine/logo.png",
+            "description": "A highly optimized and fast 2D game engine written in Python."
+        }, 
+        {
+            "title": "Insanthon",
+            "img": "images/projects/Insanthon/logo.png",
+            "description": "A picture based story game with a long walkthrough and multiple endings."
+        }
+    ]
+}
