@@ -2,18 +2,72 @@
     "projects": [
         {
             "title": "PLNM",
+            "description": "A user-friendly cross-platform planning app with tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all.",
             "img": "images/projects/PLNM/logo.png",
-            "description": "A user-friendly cross-platform planning app with tons of features."
-        }, 
+            "proglang": [
+                "dart",
+                "flutter"
+            ]
+        },
         {
             "title": "Pyrogine",
+            "description": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
             "img": "images/projects/Pyrogine/logo.png",
-            "description": "A highly optimized and fast 2D game engine written in Python."
-        }, 
+            "proglang": [
+                "py",
+                "openGL"
+            ]
+        },
         {
             "title": "Insanthon",
+            "description": "A picture based story game with a long walkthrough and multiple endings.",
             "img": "images/projects/Insanthon/logo.png",
-            "description": "A picture based story game with a long walkthrough and multiple endings."
+            "proglang": [
+                "py"
+            ]
+        },
+        {
+            "title": "Philips BLE robot",
+            "description": "",
+            "img": "images/projects/Philips-BLE-robot/logo.png",
+            "proglang": [
+                "dart", 
+                "flutter",
+                "cpp"
+            ]
+        },
+        {
+            "title": "Smart-Jack",
+            "description": "",
+            "img": "images/projects/Smart-jack/logo.jpg",
+            "proglang": [
+                "raspberrypi", 
+                "py",
+                "pygame"
+            ]
+        },
+        {
+            "title": "Bella Cucina",
+            "description": "",
+            "img": "images/projects/Bella-cucina/logo.png",
+            "proglang": [
+                "html", 
+                "css",
+                "js",
+                "sql"
+            ]
+        },
+        {
+            "title": "The Smart Barn",
+            "description": "",
+            "img": "images/projects/Smart-barn/logo.png",
+            "proglang": [
+                "py",
+                "html", 
+                "css",
+                "js"
+                
+            ]
         }
     ]
 }

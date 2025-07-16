@@ -6,6 +6,7 @@
 	export let image: string;
 	export let href: string;
 	export let progLangs: string[];
+	export let maxWidth: string = '400px';
 
 	import Tooltip from '$lib/components/mouse-following-tooltip.svelte';
 	import ProgLang from '../prog-lang.svelte';
@@ -34,6 +35,8 @@
 	on:mouseleave={handleMouseLeave}
 	on:mousemove={handleMouseMove}
 	on:click={() => (window.location.href = href)}
+
+	style="max-width: {maxWidth}"
 >
 	<div>
 		<div class="card-image">
