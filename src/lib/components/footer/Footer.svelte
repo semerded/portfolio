@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { t } from 'svelte-i18n';
 	import Button from '../button.svelte';
+
+	import { page } from '$app/stores';
+
+	$: isContactPage = $page.url.pathname === '/contact';
 </script>
 
 <footer>
@@ -8,22 +12,25 @@
 		<p>{$t('footer.copyright')}</p>
 		<p>{$t('footer.credits')} <a href="/about-me">Sem Van Broekhoven</a></p>
 	</div>
-	<div class="contact">
-		<Button href="/contact">{$t('footer.email')}</Button>
-		<div class="socials">
-			<a href="https://github.com/dotsem" aria-label="Github"><i class="fa-brands fa-github"></i></a
-			>
-			<a href="https://www.linkedin.com/in/sem-van-broekhoven/" aria-label="LinkedIn"
-				><i class="fa-brands fa-linkedin"></i></a
-			>
-			<a href="https://www.instagram.com/sem_van_broekhoven/" aria-label="Instagram"
-				><i class="fa-brands fa-instagram"></i></a
-			>
-			<a href="https://www.facebook.com/profile.php?id=100089528472654" aria-label="Facebook"
-				><i class="fa-brands fa-facebook"></i></a
-			>
+	{#if !isContactPage}
+		<div class="contact">
+			<Button href="/contact">{$t('footer.email')}</Button>
+			<div class="socials">
+				<a href="https://github.com/dotsem" target="_blank" aria-label="Github"
+					><i class="fa-brands fa-github"></i></a
+				>
+				<a href="https://www.linkedin.com/in/sem-van-broekhoven/" target="_blank" aria-label="LinkedIn"
+					><i class="fa-brands fa-linkedin"></i></a
+				>
+				<a href="https://www.instagram.com/sem_van_broekhoven/" target="_blank" aria-label="Instagram"
+					><i class="fa-brands fa-instagram"></i></a
+				>
+				<a href="https://www.facebook.com/profile.php?id=100089528472654" target="_blank" aria-label="Facebook"
+					><i class="fa-brands fa-facebook"></i></a
+				>
+			</div>
 		</div>
-	</div>
+	{/if}
 </footer>
 
 <style>
@@ -32,7 +39,7 @@
 		width: 100%;
 		background: var(--nav);
 		display: flex;
-        flex-wrap: wrap-reverse;
+		flex-wrap: wrap-reverse;
 		justify-content: space-evenly;
 		align-items: center;
 
@@ -41,12 +48,12 @@
 			align-items: center;
 			justify-content: center;
 			flex-wrap: wrap;
-            width: fit-content;
+			width: fit-content;
 
 			&.copyright {
 				display: flex;
 				flex-direction: column;
-                text-align: center;
+				text-align: center;
 
 				p {
 					padding: 4px 0;
@@ -55,7 +62,7 @@
 				a {
 					transition: color 500ms;
 					color: var(--secondary);
-                    font-weight: 800;
+					font-weight: 800;
 
 					&:hover {
 						transition: color 500ms;

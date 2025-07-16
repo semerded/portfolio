@@ -94,17 +94,18 @@
 			<!-- links -->
 			<!-- -->
 			<div id="profile-links" class="glossy-tile">
-				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="https://github.com/semerded" target="_blank"><i class="fa-brands fa-github"></i></a
+				<a href="https://github.com/dotsem" target="_blank" aria-label="Github"
+					><i class="fa-brands fa-github"></i></a
 				>
-				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="https://www.linkedin.com/in/sem-van-broekhoven/" target="_blank"
+				<a href="https://www.linkedin.com/in/sem-van-broekhoven/" target="_blank" aria-label="LinkedIn"
 					><i class="fa-brands fa-linkedin"></i></a
 				>
-				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
-				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="" target="_blank"><i class="fa-brands fa-steam"></i></a>
+				<a href="https://www.instagram.com/sem_van_broekhoven/" target="_blank" aria-label="Instagram"
+					><i class="fa-brands fa-instagram"></i></a
+				>
+				<a href="https://www.facebook.com/profile.php?id=100089528472654" target="_blank" aria-label="Facebook"
+					><i class="fa-brands fa-facebook"></i></a
+				>
 			</div>
 		</div>
 
