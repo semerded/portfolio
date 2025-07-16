@@ -15,7 +15,7 @@
 	import '../style/vars.css';
 	import '../style/main.css';
 
-	import Navbar from '$lib/components/navbar/navbar.svelte';
+	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import BackToTop from '$lib/components/back-to-top.svelte';
 
 	import { page } from '$app/stores';
@@ -24,6 +24,7 @@
 	import { navRoutes } from '$lib/routes';
 	import { darkMode } from '$stores/light-dark-mode.store';
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
+	import Footer from '$lib/components/footer/Footer.svelte';
 
 	// Configurable transition speed (in milliseconds)
 	const transitionSpeed = 200; // Change this value to adjust speed
@@ -106,6 +107,8 @@
 		<slot />
 	</div>
 </div>
+
+<Footer />
 
 <style>
 	:global(body) {
