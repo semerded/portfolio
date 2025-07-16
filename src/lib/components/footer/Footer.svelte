@@ -30,7 +30,7 @@
 	footer {
 		padding: 48px 2rem;
 		width: 100%;
-		background-color: var(--nav);
+		background: var(--nav);
 		display: flex;
         flex-wrap: wrap-reverse;
 		justify-content: space-evenly;
@@ -54,7 +54,8 @@
 
 				a {
 					transition: color 500ms;
-					color: var(--primary);
+					color: var(--secondary);
+                    font-weight: 800;
 
 					&:hover {
 						transition: color 500ms;

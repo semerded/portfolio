@@ -22,7 +22,7 @@ function setThemeMode(isDarkMode: boolean, root?: HTMLElement): void {
     ];
 
     // Update CSS variables
-    targetRoot.style.setProperty('--bg-gradient', `var(--bg-gradient-${mode})`);
+    targetRoot.style.setProperty('--gradient', `var(--gradient-${mode})`);
     
     colorVariables.forEach(variable => {
         const computedValue = getComputedStyle(targetRoot)

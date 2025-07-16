@@ -78,13 +78,17 @@
 
 {#if $darkMode}
 	<DynamicBackground image="/images/bg/bg-dark.jpg" />
+	<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
+		Photo by Daniel Cid from Pexels
+	</a>
 {:else}
 	<DynamicBackground image="/images/bg/bg-light.jpg" />
+	<a class="bg-credits" href="https://www.pexels.com/photo/verkoudheid-verkoudheidsvirus-koud-kou-11011919/">
+		Photo by Josh Meeder from Pexels 
+	</a>
 {/if}
 
-<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
-	Photo by Daniel Cid from Pexels
-</a>
+
 
 <div class="transition-container">
 	<!-- Old content layer -->

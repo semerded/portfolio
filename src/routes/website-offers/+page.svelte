@@ -76,6 +76,7 @@
 				}}>{$t('cant-choose.button')}</button
 			>
 		</div>
+		<p class="price-info">* {$t('price-info')}</p>
 	</Container>
 
 	<Container id="wyg">
@@ -131,6 +132,12 @@
 	main {
 		position: relative;
 		z-index: 1;
+
+		p.price-info {
+			margin: auto;
+			text-align: center;
+			width: 60%;
+		}
 	}
 
 	.wyg-additional {
