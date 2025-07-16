@@ -1,0 +1,13 @@
+{
+    "navbar": {
+        "offers": "Aanbiedingen",
+        "about": "Over mij",
+        "projects": "Mijn projecten",
+        "contact": "Contact"
+    },
+    "footer": {
+        "email": "Contacteer mij via e-mail",
+        "copyright": "Auteursrecht © 2025 Sem Van Broekhoven - Alle rechten voorbehouden",
+        "credits": "Een website door"
+    }
+}
