@@ -8,9 +8,9 @@
 --secondary-dark: rgb(138, 207, 81);
 --secondary-light: #b3f084;
 
---nav: #1c2826ff;
+--nav: rgb(26, 23, 23);
 --nav-light: #857470; /* ? */
---nav-dark: #1c2826ff;
+--nav-dark: rgb(26, 23, 23);
 
 --card: rgb(33, 36, 38);
 --card-dark: rgb(33, 36, 38);
