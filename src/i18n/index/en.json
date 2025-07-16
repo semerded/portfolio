@@ -45,13 +45,30 @@
 		},
 		"save": "Save"
 	},
-	"projects": {
+	"projects-highlight": {
 		"title": "My projects",
 		"subtitle": "Some of my best projects",
 		"button": "View all projects",
-		"PLNM": "A user-friendly cross-platform planning app with tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all.",
-		"Pyrogine": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
-		"Insanthon": "A picture based story game with a long walkthrough and multiple endings."
+		"content": [
+			{
+				"title": "PLNM",
+				"description": "A user-friendly cross-platform planning app with tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all.",
+				"img": "images/projects/PLNM/logo.png",
+				"proglang": ["dart", "flutter"]
+			},
+			{
+				"title": "Pyrogine",
+				"description": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
+				"img": "images/projects/Pyrogine/logo.png",
+				"proglang": ["py", "openGL"]
+			}, 
+			{
+				"title": "Insanthon",
+				"description": "A picture based story game with a long walkthrough and multiple endings.",
+				"img": "images/projects/Insanthon/logo.png",
+				"proglang": ["py"]
+			}
+		]
 	},
 	"website-offers": {
 		"title": "Website offers",

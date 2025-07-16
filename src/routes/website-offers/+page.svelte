@@ -114,13 +114,13 @@
 		</div>
 	</Container>
 	<Container id="form">
-		<SectionHeader title={$t('form.title')} subtitle={$t('form.subtitle')} marginTop="200px" />
+		<SectionHeader title={$t('offer-form.title')} subtitle={$t('offer-form.subtitle')} marginTop="200px" />
 		<div class="glossy-tile" id="offer-form">
 			<div>
-				<p class="bold">{$t('form.bold-description')}</p>
-				<p>{$t('form.description')}</p>
-				<p>{$t('form.optional')}</p>
-				<p>{$t('form.note')}</p>
+				<p class="bold">{$t('offer-form.bold-description')}</p>
+				<p>{$t('offer-form.description')}</p>
+				<p>{$t('offer-form.optional')}</p>
+				<p>{$t('offer-form.note')}</p>
 			</div>
 
 			<OfferForm {offers} />

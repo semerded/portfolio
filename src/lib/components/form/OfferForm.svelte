@@ -28,7 +28,7 @@
         <input
             type="text"
             bind:value={name}
-            placeholder={$t('form.placeholder.name')}
+            placeholder={$t('offer-form.placeholder.name')}
             required
             on:input={() => validateName(name)}
         />
@@ -44,7 +44,7 @@
         <input
             type="text"
             bind:value={email}
-            placeholder={$t('form.placeholder.email')}
+            placeholder={$t('offer-form.placeholder.email')}
             required
             on:input={() => validateEmail(email)}
         />
@@ -66,11 +66,11 @@
             bind:value={offer}
             on:change={() => validateOffer(offer)}
         >
-            <option value={-1} disabled selected hidden>{$t('form.placeholder.offer')}</option>
+            <option value={-1} disabled selected hidden>{$t('offer-form.placeholder.offer')}</option>
             {#each offers as offer, index}
                 <option value={index}>{offer.title}</option>
             {/each}
-            <option value={-2}>{$t('form.cant-decide')}</option>
+            <option value={-2}>{$t('offer-form.cant-decide')}</option>
         </select>
         <i
             class="fa-solid form-checkmark"
@@ -81,7 +81,7 @@
     </div>
 
     <div>
-        <textarea name="" placeholder={$t('form.placeholder.message')} id="form-message"
+        <textarea name="" placeholder={$t('offer-form.placeholder.message')} id="form-message"
         ></textarea>
     </div>
 
@@ -91,7 +91,7 @@
             disabled={!validForm}
             on:click={() => {
                 console.log('send data');
-            }}>{$t('form.button')}</button
+            }}>{$t('offer-form.button')}</button
         >
     </div>
 </form>

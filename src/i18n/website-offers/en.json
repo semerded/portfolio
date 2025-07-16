@@ -132,7 +132,7 @@
 			"button": "Tell me more!"
 		}
 	},
-	"form": {
+	"offer-form": {
 		"title": "Plan our first meeting",
 		"subtitle": "Fill out the form and I will contact you as soon as possible",
 		"button": "Send",

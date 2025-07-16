@@ -17,6 +17,14 @@
 		benefits: string[];
 	}[];
 
+	$: projectsHighlight = $json('projects-highlight.content') as {
+		title: string;
+		description: string;
+		img: string;
+		proglang: string[];
+	}[];
+	
+
 </script>
 
 <SideBar
@@ -43,33 +51,21 @@
 <Profile />
 <Container minHeight="100svh" id="my-projects">
 	<SectionHeader
-		title={$t('projects.title')}
-		subtitle={$t('projects.subtitle')}
-		buttonText={$t('projects.button')}
+		title={$t('projects-highlight.title')}
+		subtitle={$t('projects-highlight.subtitle')}
+		buttonText={$t('projects-highlight.button')}
 		href="/projects"
 	/>
 	<div id="project-container">
-		<Card
-			title="PLNM"
-			description={$t('projects.PLNM')}
-			image="images/projects/PLNM/logo.png"
-			href="/projects/PLNM"
-			progLangs={['dart', 'flutter']}
-		/>
-		<Card
-			title="Pyrogine"
-			description={$t('projects.Pyrogine')}
-			image="images/projects/Pyrogine/logo.png"
-			href="/projects"
-			progLangs={['py', 'openGL']}
-		/>
-		<Card
-			title="Insanthon"
-			description={$t('projects.Insanthon')}
-			image="images/projects/Insanthon/logo.png"
-			href="/projects/Insanthon"
-			progLangs={['py']}
-		/>
+		{#each projectsHighlight as project}
+			<Card
+				title={project.title}
+				description={project.description}
+				image={project.img}
+				href="/projects/{project.title}"
+				progLangs={project.proglang}
+			/>
+		{/each}
 	</div>
 </Container>
 <Container id="offers" marginBottom="5rem" containerFrom={768}>
