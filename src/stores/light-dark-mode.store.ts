@@ -18,7 +18,8 @@ function setThemeMode(isDarkMode: boolean, root?: HTMLElement): void {
         'card',
         'bg',
         'box-shadow',
-        'text'
+        'text',
+        'text-placeholder'
     ];
 
     // Update CSS variables

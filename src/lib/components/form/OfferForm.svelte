@@ -146,7 +146,7 @@
 				color: var(--text);
 
 				&::placeholder, &.placeholder {
-					color: rgb(184, 180, 180);
+					color: var(--text-placeholder);
 					font-style: italic;
 				}
 

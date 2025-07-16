@@ -76,4 +76,8 @@
 	--text: #ffe9d6ff;
 	--text-light: #000000;
 	--text-dark: #ffe9d6ff;
+
+    --text-placeholder: rgb(184, 180, 180);
+    --text-placeholder-light: #696867;
+    --text-placeholder-dark:  rgb(184, 180, 180);
 }
