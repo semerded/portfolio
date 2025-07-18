@@ -11,13 +11,24 @@
 	export let buttonText: string[] = [];
 	export let buttonLink: string[] = [];
 	export let primaryButton: number = 0;
+	export let height: string = '100lvh';
+
+	let foreignLink: boolean[] = [];
+
+	buttonLink.forEach((link) => {
+		if (link.startsWith('http')) {
+			foreignLink.push(true);
+		} else {
+			foreignLink.push(false);
+		}
+	})
 
 	if (buttonText.length !== buttonLink.length) {
 		throw new Error('buttonText and buttonLink must be the same length');
 	}
 </script>
 
-<div class="hero-container" {id}>
+<div class="hero-container" {id} style="height: {height}">
 	{#if image}
 		<img
 			src={image}
@@ -52,7 +63,7 @@
 		<div class="button-container">
 			{#each buttonText as buttonText, index}
 				{#if index === primaryButton}
-				<Button href={buttonLink[index]} primary={true}>{buttonText}</Button>
+				<Button href={buttonLink[index]} primary={true} newTab={foreignLink[index]} >{buttonText}</Button>
 				{:else}
 				<Button href={buttonLink[index]}>{buttonText}</Button>
 				{/if}
@@ -68,7 +79,6 @@
 
 	.hero-container {
 		width: 100%;
-		height: 100lvh;
 		position: relative;
 		overflow: hidden;
 

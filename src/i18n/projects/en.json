@@ -1,4 +1,8 @@
 {
+    "title": "My projects",
+    "description": "Click on the cards to learn more about them",
+    "leading": "Code available on GitHub",
+    "button": "Visit my GitHub",
     "projects": [
         {
             "title": "PLNM",

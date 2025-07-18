@@ -13,7 +13,7 @@
 	}[];
 </script>
 
-<Hero title="My Projects" />
+<Hero title={$t('title')} description={$t('description')} leading="{$t('leading')}" buttonText={[$t('button')]} buttonLink={['https://github.com/dotsem?tab=repositories']} height="50lvh" />
 
 <Container>
 	<main class="tiled-container">
