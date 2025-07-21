@@ -1,0 +1,17 @@
+{
+    "about": {
+        "title": "About me",
+        "description": "I'm an 18 year old programmer who has found love in programming. I've been experimenting with technology from a young age. Currently I like to make projects with a variety of programming languages.",
+        "hobbies": "Apart from programming, I like to play the guitar & listen to music. I'm a scuba diver & ex-competitive swimmer."
+    },
+    "programming": {
+        "title": "Programming",
+        "description": "I've been programming for 3 years. I've been experimenting with a wide range of programming languages.",
+        "button": "View my WakaTime profile"
+    },
+    "photography": {
+        "title": "Photography",
+        "description": "I'm an amateur photographer who likes to take photographs of nature and urban scenes.",
+        "button": "View my Pexels profile"
+    }
+}

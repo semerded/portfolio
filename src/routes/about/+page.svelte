@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/components/container/container.svelte';
+
+	import { t } from 'svelte-i18n';
 </script>
 
 <Container>
@@ -12,6 +14,41 @@
 			<div class="image-container unselectable"><img src="/images/about/me.jpg" alt="me" /></div>
 		</div>
 	</div>
+	<article id="about-container" class="tiled-container">
+		<section class="glossy-tile">
+			<i class="fa-solid fa-user"></i>
+			<div>
+				<h3>{$t('about.title')}</h3>
+				<p class="short">
+					{$t('about.description')}
+				</p>
+				<p>
+					{$t('about.hobbies')}
+				</p>
+			</div>
+			
+		</section>
+		<section class="glossy-tile">
+			<i class="fa-solid fa-code"></i>
+			<div>
+				<h3>{$t('programming.title')}</h3>
+				<p class="short">
+					{$t('programming.description')}
+				</p>
+			</div>
+			
+			<a class="button" href="https://wakatime.com/@sem" target="_blank">{$t('programming.button')}</a>
+		</section>
+		<section class="glossy-tile">
+			<i class="fa-solid fa-camera"></i>
+			<div>
+
+				<h3>{$t('photography.title')}</h3>
+				<p class="short">{$t('photography.description')}</p>
+			</div>
+			<a class="button" href="https://www.pexels.com/nl-nl/@sem-van-broekhoven-1851543463/" target="_blank">{$t('photography.button')}</a>
+		</section>
+	</article>
 </Container>
 
 <style>
@@ -71,6 +108,58 @@
 				}
 				}
 				
+			}
+		}
+	}
+
+
+	article#about-container {
+		section {
+			width: 500px;
+			min-height: 400px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			h3 {
+				transition: color 500ms;
+				color: var(--secondary);
+				padding: 8px 0;
+			}
+			
+			i {
+				transition: 500ms;
+				color: var(--text);
+				position: absolute;
+				top: -10px;
+				right: -30px;
+				font-size: 12rem;
+				overflow: hidden;
+				transform: rotateZ(20deg);
+			}
+
+			p {
+				width: 100%;
+				padding: 4px 0px;
+				margin-bottom: 16px;
+
+				&.short {
+					width: 280px;
+				}
+			}
+
+			&:hover {
+				i {
+					color: var(--primary);
+					transition: 500ms;
+					transform: rotateZ(15deg);
+				}
+
+				h3 {
+					transition: color 500ms;
+					color: var(--primary);
+				}
 			}
 		}
 	}
