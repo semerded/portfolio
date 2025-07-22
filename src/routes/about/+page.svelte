@@ -19,34 +19,38 @@
 			<i class="fa-solid fa-user"></i>
 			<div>
 				<h3>{$t('about.title')}</h3>
-				<p class="short">
+				<p>
 					{$t('about.description')}
 				</p>
 				<p>
 					{$t('about.hobbies')}
 				</p>
 			</div>
-			
 		</section>
 		<section class="glossy-tile">
 			<i class="fa-solid fa-code"></i>
 			<div>
 				<h3>{$t('programming.title')}</h3>
-				<p class="short">
+				<p>
 					{$t('programming.description')}
 				</p>
 			</div>
-			
-			<a class="button" href="https://wakatime.com/@sem" target="_blank">{$t('programming.button')}</a>
+
+			<a class="button" href="https://wakatime.com/@sem" target="_blank"
+				>{$t('programming.button')}</a
+			>
 		</section>
 		<section class="glossy-tile">
 			<i class="fa-solid fa-camera"></i>
 			<div>
-
 				<h3>{$t('photography.title')}</h3>
-				<p class="short">{$t('photography.description')}</p>
+				<p>{$t('photography.description')}</p>
 			</div>
-			<a class="button" href="https://www.pexels.com/nl-nl/@sem-van-broekhoven-1851543463/" target="_blank">{$t('photography.button')}</a>
+			<a
+				class="button"
+				href="https://www.pexels.com/nl-nl/@sem-van-broekhoven-1851543463/"
+				target="_blank">{$t('photography.button')}</a
+			>
 		</section>
 	</article>
 </Container>
@@ -55,7 +59,7 @@
 	.hero {
 		display: flex;
 		margin: 20lvh 0;
-        
+
 		height: 60lvh;
 		justify-content: center;
 		align-items: center;
@@ -77,7 +81,6 @@
 			}
 
 			h1 {
-				/* width: fit-content; */
 				font-size: 4rem;
 				color: var(--primary);
 			}
@@ -92,7 +95,7 @@
 				overflow: hidden;
 				position: relative;
 				pointer-events: all;
-                border-radius: 9999px;
+				border-radius: 9999px;
 
 				img {
 					transition: transform 500ms;
@@ -102,21 +105,20 @@
 					border-radius: 9999px;
 					transform: scale(1);
 
-                    &:hover {
-					transition: transform 500ms;
-					transform: scale(1.1);
+					&:hover {
+						transition: transform 500ms;
+						transform: scale(1.1);
+					}
 				}
-				}
-				
 			}
 		}
 	}
 
-
 	article#about-container {
 		section {
-			width: 500px;
-			min-height: 400px;
+			width: 40%;
+			min-width: 400px;
+			min-height: 300px;
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -127,7 +129,7 @@
 				color: var(--secondary);
 				padding: 8px 0;
 			}
-			
+
 			i {
 				transition: 500ms;
 				color: var(--text);
@@ -140,13 +142,13 @@
 			}
 
 			p {
-				width: 100%;
+				width: calc(100% - 12rem);
 				padding: 4px 0px;
 				margin-bottom: 16px;
+			}
 
-				&.short {
-					width: 280px;
-				}
+			a {
+				max-width: fit-content;
 			}
 
 			&:hover {
@@ -160,6 +162,99 @@
 					transition: color 500ms;
 					color: var(--primary);
 				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.hero {
+			height: 40lvh;
+
+			> div {
+				h1 {
+					font-size: 3rem;
+				}
+
+				h2 {
+					font-size: 1.8vw;
+				}
+
+				
+			}
+		}
+
+		article#about-container {
+			section {
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.hero {
+			> div {
+				h1 {
+					font-size: 6vw;
+				}
+			}
+		}
+		
+	}
+
+	@media screen and (max-width: 640px) {
+		.hero {
+			height: auto;
+			margin: 15lvh auto;
+			width: 100%;
+			flex-direction: column-reverse;
+
+			> div {
+				text-align: center;
+				padding: 8px;
+				&:first-child {
+				align-self: center;
+			}
+
+				h1 {
+					font-size: 10vw;
+				}
+				h2 {
+					font-size: 4vw;
+				}
+
+				div.image-container {
+					width: 100%;
+					height: auto;
+
+					img {
+						width: 100%;
+						height: auto;
+
+						&:hover {
+							transform: unset;
+						}
+					}
+				}
+			}
+		}
+
+		article#about-container {
+			section {
+				min-width: fit-content;
+				i {
+					color: rgba(128, 128, 128, 0.39);
+				}
+
+				p {
+					width: 100%;
+				}
+
+				&:hover {
+					i {
+						color: rgba(128, 128, 128, 0.39);
+					}
+				}
+
 			}
 		}
 	}

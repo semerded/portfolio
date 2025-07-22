@@ -1,4 +1,4 @@
-.visuallyHidden {
+.visually-hidden {
     position: absolute; 
     overflow: hidden; 
     clip: rect(0 0 0 0); 
@@ -72,28 +72,28 @@
     
 }
 
-.hamburgerCheckBox:checked + label > .hamburger4 > .bar1{
+.hamburger-checkbox:checked + label > .hamburger4 > .bar1{
     top: 13.5px;
     background-color: transparent;
 }
 
-.hamburgerCheckBox:checked + label > .hamburger4 > .bar2{
+.hamburger-checkbox:checked + label > .hamburger4 > .bar2{
     left: 0px;
     width: 30px;
     transform: rotate(45deg);
 }
 
-.hamburgerCheckBox:checked + label > .hamburger4 > .bar3{
+.hamburger-checkbox:checked + label > .hamburger4 > .bar3{
     left: 0;
     width: 30px;
     transform: rotate(-45deg);
 }
 
-.hamburgerCheckBox:checked + label > .hamburger4 > .bar4{
+.hamburger-checkbox:checked + label > .hamburger4 > .bar4{
     background-color: transparent;
 }
 
-.hamburgerCheckBox:checked + label > .hamburger4 > .bar5{
+.hamburger-checkbox:checked + label > .hamburger4 > .bar5{
     bottom: 13.5px;
     background-color: transparent; 
 }
