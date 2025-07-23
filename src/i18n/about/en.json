@@ -11,7 +11,12 @@
     },
     "photography": {
         "title": "Photography",
-        "description": "I'm an amateur photographer who likes to take photographs of nature and urban scenes.",
+        "description": "I'm an amateur photographer who likes to take photographs of nature and urban scenes. I use a professional camera to take high quality photos. I prefer cameras above phone cameras because the quality is just so much better.",
         "button": "View my Pexels profile"
+    },
+    "tools": {
+        "title": "My computer setup",
+        "description": "I'm a casual Linux user. I like to \"rice\" my computer to look nice but still be very productive. I frequently update public dot files on GitHub. As my programming IDE, I use Visual Studio Code.",
+        "button": "Check out my dot files"
     }
 }

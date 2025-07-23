@@ -5,7 +5,7 @@
 </script>
 
 <Container>
-	<div class="hero glossy-tile">
+	<div class="hero">
 		<div>
 			<h1>Hi! I'm Sem</h1>
 			<h2>Software Developer & Tech Enthusiast</h2>
@@ -51,6 +51,14 @@
 				href="https://www.pexels.com/nl-nl/@sem-van-broekhoven-1851543463/"
 				target="_blank">{$t('photography.button')}</a
 			>
+		</section>
+		<section class="glossy-tile">
+			<i class="fa-solid fa-computer"></i>
+			<div>
+				<h3>{$t('tools.title')}</h3>
+				<p>{$t('tools.description')}</p>
+			</div>
+			<a class="button" target="_blank" href="https://github.com/dotsem/.config">{$t('tools.button')}</a>
 		</section>
 	</article>
 </Container>
