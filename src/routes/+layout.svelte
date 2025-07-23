@@ -26,6 +26,10 @@
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 
+
+	export let data;
+	darkMode.set(data.theme === 'dark');
+
 	// Configurable transition speed (in milliseconds)
 	const transitionSpeed = 200; // Change this value to adjust speed
 
@@ -33,7 +37,10 @@
 	let transitioning = false;
 	let oldContent: HTMLElement | null = null;
 	let currentPath = $page.url.pathname;
-	
+
+
+
+	$: theme = $darkMode ? 'dark' : 'light';
 	
 	beforeNavigate(({ from }) => {
 		if (from) {
@@ -76,7 +83,7 @@
 <Navbar />
 <BackToTop />
 
-{#if $darkMode}
+{#if theme === 'dark'}
 	<DynamicBackground image="/images/bg/bg-dark.jpg" />
 	<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
 		Photo by Daniel Cid from Pexels

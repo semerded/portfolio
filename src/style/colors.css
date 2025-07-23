@@ -1,13 +1,6 @@
-:root {
-	/* CSS HEX */
+[data-theme='dark'] {
 	--primary: #ff7b00ff;
-	--primary-dark: #ff7b00ff;
-	--primary-light: rgb(255, 152, 56);
-
 	--secondary: #8acf51;
-	--secondary-dark: rgb(138, 207, 81);
-	--secondary-light: #b3f084;
-
 	--nav: linear-gradient(
 		to right,
 		rgb(37, 30, 24),
@@ -16,24 +9,6 @@
 		rgb(19, 32, 19),
 		rgb(26, 25, 23)
 	);
-
-	--nav-light: linear-gradient(
-		to right,
-		rgb(180, 148, 100),
-		rgb(184, 176, 164),
-		rgb(151, 177, 151),
-		rgb(151, 177, 151),
-		rgb(184, 176, 164)
-	);
-	--nav-dark: linear-gradient(
-		to right,
-		rgb(37, 30, 24),
-		rgb(26, 25, 23),
-		rgb(19, 32, 19),
-		rgb(19, 32, 19),
-		rgb(26, 25, 23)
-	);
-
 	--gradient: linear-gradient(
 		70deg,
 		rgba(37, 30, 24, 0.4),
@@ -42,8 +17,25 @@
 		rgba(19, 32, 19, 0.4),
 		rgba(26, 25, 23, 0.4)
 	);
+	--card: rgb(33, 36, 38);
+	--bg: rgb(24, 26, 27);
+	--box-shadow: rgb(35, 52, 44);
+	--text: #ffe9d6ff;
+	--text-placeholder: rgb(184, 180, 180);
+}
 
-	--gradient-light: linear-gradient(
+[data-theme='light'] {
+	--primary: rgb(255, 152, 56);
+	--secondary: #b3f084;
+	--nav: linear-gradient(
+		to right,
+		rgb(180, 148, 100),
+		rgb(184, 176, 164),
+		rgb(151, 177, 151),
+		rgb(151, 177, 151),
+		rgb(184, 176, 164)
+	);
+	--gradient: linear-gradient(
 		70deg,
 		rgba(253, 215, 157, 0.4),
 		rgba(248, 241, 231, 0.4),
@@ -51,33 +43,9 @@
 		rgba(197, 245, 197, 0.4),
 		rgba(255, 244, 227, 0.4)
 	);
-
-	--gradient-dark: linear-gradient(
-		70deg,
-		rgba(37, 30, 24, 0.4),
-		rgba(26, 25, 23, 0.4),
-		rgba(19, 32, 19, 0.4),
-		rgba(19, 32, 19, 0.4),
-		rgba(26, 25, 23, 0.4)
-	);
-
-	--card: rgb(33, 36, 38);
-	--card-dark: rgb(33, 36, 38);
-	--card-light: #c9e6b3;
-
-	--bg: #181a1b;
-	--bg-light: rgb(247, 238, 230);
-	--bg-dark: rgb(24, 26, 27);
-
-	--box-shadow: #696867;
-	--box-shadow-light: #c9e6b3;
-	--box-shadow-dark: rgb(35, 52, 44);
-
-	--text: #ffe9d6ff;
-	--text-light: #000000;
-	--text-dark: #ffe9d6ff;
-
-    --text-placeholder: rgb(184, 180, 180);
-    --text-placeholder-light: #696867;
-    --text-placeholder-dark:  rgb(184, 180, 180);
+	--card: #c9e6b3;
+	--bg: rgb(247, 238, 230);
+	--box-shadow: #c9e6b3;
+	--text: #000000;
+	--text-placeholder: #696867;
 }
