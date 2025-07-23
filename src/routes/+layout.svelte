@@ -122,7 +122,7 @@
 <Footer />
 
 <style>
-	:global(body) {
+	:global(html) {
 		overflow-x: hidden;
 	}
 
