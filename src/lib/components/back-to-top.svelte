@@ -32,7 +32,7 @@
 	#back-to-top {
 		all: unset;
 		cursor: pointer;
-		color: var(--text-light);
+		color: black;
 		position: fixed;
 		display: none;
 		right: 24px;
