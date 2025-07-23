@@ -102,3 +102,33 @@
 		scale: 1.1;
 	}
 }
+
+@media screen and (max-width: 512px) {
+	.card {
+		padding: 0;
+		height: auto;
+
+		.card-content {
+			position: relative;
+			height: auto;
+
+			p::after {
+				background: none;
+			}
+
+			.prog-lang-container {
+				padding: 16px 0;
+			}
+		}
+
+		.card-image {
+			position: relative;
+			 
+			img {
+				width: 100%;
+			height: auto;
+			}
+
+		}
+	}
+}

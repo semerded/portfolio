@@ -117,4 +117,21 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 1023px) {
+		#contact {
+			#contact-container {
+				flex-wrap: wrap;
+			}
+		}
+    }
+
+	@media screen and (max-width: 480px) {
+		#contact {
+			.glossy-tile {
+				margin: 16px 0;
+				padding: 8px;
+			}
+		}
+	}
 </style>
