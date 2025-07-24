@@ -52,7 +52,7 @@
 		overflow: hidden;
 		position: relative;
 		width: 30%;
-		min-width: 300px;
+		min-width: 400px;
 		height: 600px;
 
 		padding: 16px;
@@ -154,5 +154,20 @@
 				transform: translateY(8px);
 			}
 		}
+	}
+
+	@media screen and (max-width: 1023px) {
+		a.offer {
+			width: 45%;
+			min-width: 300px;
+			height: auto;
+
+			.icon-holder {
+				z-index: -1;
+				opacity: 0.2;
+			}
+
+		}
+		
 	}
 </style>
