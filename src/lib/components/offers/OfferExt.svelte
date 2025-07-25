@@ -17,10 +17,10 @@
 		'multi-page-website',
 		'dynamic-multi-page-website',
 		'custom-website'
-	]
+	];
 </script>
 
-<section class="offerExt glossy-tile" id="{ids[index]}">
+<section class="offerExt glossy-tile" id={ids[index]}>
 	<div>
 		<div class="head">
 			<h3>{title}</h3>
@@ -30,9 +30,10 @@
 			<div class="description">
 				<p>{description}</p>
 				<div>
-
 					<p>{slot}</p>
-					<button on:click={() => buttonCallback()}><span>{$_('offer-structure.button')}</span></button>
+					<button on:click={() => buttonCallback()}
+						><span>{$_('offer-structure.button')}</span></button
+					>
 				</div>
 			</div>
 			<img src={`/icons/offers/${ids[index]}.svg`} alt="icon" />
@@ -107,8 +108,9 @@
 					position: relative;
 					border-radius: 8px;
 					bottom: -10%;
-					width: 30%;
+					/* width: 30%; */
 					height: 130%;
+					aspect-ratio: 9/16;
 					margin-left: 8px;
 					opacity: 0.2;
 					transform: rotateZ(-15deg) scale(1.2);
@@ -152,8 +154,16 @@
 				}
 			}
 		}
+	}
 
-		&:hover {
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		/* strange glitch where "this one fits me best" button disappears */
+		
+	}
+
+	@media screen and (min-width: 1024px) {
+		.offerExt {
+			&:hover {
 			> div {
 				.body {
 					img {
@@ -166,6 +176,47 @@
 					}
 				}
 			}
+		}
+		}
+	}
+
+	@media screen and (max-width: 1023px) {
+		.offerExt {
+			grid-template-columns: repeat(1, 1fr);
+			padding-bottom: 3rem !important;
+			> div {
+				.body {
+					.description {
+						width: 100%;
+
+						button {
+							position: absolute;
+							bottom: 0;
+							left: 24px;
+						}
+					}
+
+					img {
+						position: absolute;
+						width: 50%;
+						height: 50%;
+						right: 20px;
+					}
+				}
+			}
+
+			li {
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		.offerExt {
+			margin: 16px 0;
+			padding: 4px;
 		}
 	}
 </style>
