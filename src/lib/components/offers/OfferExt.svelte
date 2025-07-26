@@ -59,6 +59,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		height: 100%;
+		min-width: 300px;
 
 		> div {
 			width: 100%;
@@ -210,6 +211,13 @@
 					display: none;
 				}
 			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.offerExt {
+			height: auto;
+			margin: 16px 8px 0 8px !important;
 		}
 	}
 

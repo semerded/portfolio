@@ -54,16 +54,19 @@
 
 <main>
 	<Container id="offers">
-		{#each offers as offer, index}
-			<OfferExt
-				{...offer}
-				{index}
-				buttonCallback={() => {
-					document.getElementById('form')!.scrollIntoView();
-					setOffer(index + 1);
-				}}
-			/>
-		{/each}
+		<div id="offer-container">
+			{#each offers as offer, index}
+				<OfferExt
+					{...offer}
+					{index}
+					buttonCallback={() => {
+						document.getElementById('form')!.scrollIntoView();
+						setOffer(index + 1);
+					}}
+				/>
+			{/each}
+		</div>
+
 		<div class="glossy-tile" id="cant-choose">
 			<h2>{$t('cant-choose.title')}</h2>
 			<h3>{$t('cant-choose.subtitle')}</h3>
@@ -114,7 +117,11 @@
 		</div>
 	</Container>
 	<Container id="form">
-		<SectionHeader title={$t('offer-form.title')} subtitle={$t('offer-form.subtitle')} marginTop="200px" />
+		<SectionHeader
+			title={$t('offer-form.title')}
+			subtitle={$t('offer-form.subtitle')}
+			marginTop="200px"
+		/>
 		<div class="glossy-tile" id="offer-form">
 			<div>
 				<p class="bold">{$t('offer-form.bold-description')}</p>
@@ -136,7 +143,7 @@
 		p.price-info {
 			margin: auto;
 			text-align: center;
-			width: 60%;
+			width: min(100%, 800px);
 		}
 	}
 
@@ -173,6 +180,25 @@
 
 			p {
 				padding: 8px 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		main {
+			#offer-container {
+				display: flex;
+				overflow-x: scroll;
+
+			}
+
+			#cant-choose {
+				margin: 8px 0;
+				padding: 8px;
+
+				h3 {
+					font-size: 1rem;
+				}
 			}
 		}
 	}
