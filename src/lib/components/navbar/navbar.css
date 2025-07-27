@@ -80,6 +80,7 @@ nav.navbar {
 		display: flex;
 		flex-direction: column;
 		padding-left: 16px;
+		padding-top: 50px;
 
 		a {
 			padding: 8px 0;
@@ -89,10 +90,9 @@ nav.navbar {
 			height: 30px;
 			width: 100%;
 			display: flex;
-			justify-content: space-evenly;
 			position: absolute;
-			top: calc(100svh - var(--navbar-height) - 30px - 8px);
-			padding-right: 16px;
+			top: 0;
+			padding: 10px 16px 10px 0;
 		}
 	}
 }

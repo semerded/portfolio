@@ -22,13 +22,8 @@
 	import { beforeNavigate } from '$app/navigation';
 
 	import { navRoutes } from '$lib/routes';
-	import { darkMode } from '$stores/light-dark-mode.store';
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
-
-
-	export let data;
-	darkMode.set(data.theme === 'dark');
 
 	// Configurable transition speed (in milliseconds)
 	const transitionSpeed = 200; // Change this value to adjust speed
@@ -38,10 +33,6 @@
 	let oldContent: HTMLElement | null = null;
 	let currentPath = $page.url.pathname;
 
-
-
-	$: theme = $darkMode ? 'dark' : 'light';
-	
 	beforeNavigate(({ from }) => {
 		if (from) {
 			oldContent = document.getElementById('current-content')?.cloneNode(true) as HTMLElement;
@@ -51,8 +42,8 @@
 			}
 		}
 	});
-	
-	$: {		
+
+	$: {
 		if ($page.url.pathname !== currentPath) {
 			const currentIndex = navRoutes.indexOf($page.url.pathname);
 			const prevIndex = navRoutes.indexOf(currentPath);
@@ -83,19 +74,10 @@
 <Navbar />
 <BackToTop />
 
-{#if theme === 'dark'}
-	<DynamicBackground image="/images/bg/bg-dark.jpg" />
-	<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
-		Photo by Daniel Cid from Pexels
-	</a>
-{:else}
-	<DynamicBackground image="/images/bg/bg-light.jpg" />
-	<a class="bg-credits" href="https://www.pexels.com/photo/verkoudheid-verkoudheidsvirus-koud-kou-11011919/">
-		Photo by Josh Meeder from Pexels 
-	</a>
-{/if}
-
-
+<DynamicBackground image="/images/bg/bg-dark.jpg" />
+<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
+	Photo by Daniel Cid from Pexels
+</a>
 
 <div class="transition-container">
 	<!-- Old content layer -->

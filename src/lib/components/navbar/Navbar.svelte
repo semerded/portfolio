@@ -2,7 +2,6 @@
 	import './navbar.css';
 	import './hamburger_icon.css';
 	import { page } from '$app/state';
-	import LightDarkModeSwitch from '$lib/components/light-dark-mode-switch.svelte';
 	import ToggleLanguage from '../ToggleLanguage.svelte';
 	import { _ } from 'svelte-i18n';
 
@@ -56,17 +55,11 @@
 				</div>
 			</label>
 		</div>
-
-		<!-- {#if hamburgerMenuVisible}
-		<div class="hamburger-menu">
-			
-		</div>
-		{/if} -->
 	{/if}
 	{#if !showHamburgerOption || (showHamburgerOption && hamburgerMenuVisible)}
 		<div
 			class="navbar-buttons-cosmetics"
-			class:navbar-buttons={!showHamburgerOption && !hamburgerMenuVisible}
+			class:navbar-buttons={!showHamburgerOption}
 			class:hamburger-menu={showHamburgerOption && hamburgerMenuVisible}
 		>
 			<a href="/website-offers"
@@ -90,7 +83,6 @@
 				></a
 			>
 			<div>
-				<LightDarkModeSwitch></LightDarkModeSwitch>
 				<ToggleLanguage></ToggleLanguage>
 			</div>
 		</div>
