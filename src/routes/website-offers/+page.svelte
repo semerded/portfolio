@@ -5,7 +5,6 @@
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import SideBar from '$lib/components/sidebar.svelte';
 	import { onMount } from 'svelte';
-	import './website-offers.css';
 
 	import { json, t } from 'svelte-i18n';
 	import OfferForm from '$lib/components/form/OfferForm.svelte';
@@ -147,12 +146,6 @@
 		}
 	}
 
-	.wyg-additional {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
 	#cant-choose {
 		display: flex;
 		flex-direction: column;
@@ -165,6 +158,52 @@
 		button {
 			padding: 8px 16px;
 			z-index: 2;
+		}
+	}
+
+	:global(#wyg) {
+		.wyg-icon {
+			transition: transform 500ms;
+			width: 20%;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translate(20%, 20%) rotate(-10deg) scale(1);
+			filter: invert(1);
+		}
+
+		.tiled-container {
+			width: 100%;
+			flex-wrap: nowrap;
+			.glossy-tile {
+				width: 100%;
+				padding: 16px;
+
+				&:hover .wyg-icon {
+					transition: transform 500ms;
+					transform: rotate(0deg) scale(1.3) translate(13%, 13%);
+
+					filter: invert(80%) sepia(36%) saturate(704%) hue-rotate(41deg) brightness(90%)
+						contrast(87%);
+				}
+
+				h3 {
+					margin: 16px 0px 8px 0px;
+				}
+
+				ul {
+					margin-bottom: 8px;
+				}
+
+				.button {
+					max-width: 200px;
+				}
+			}
+		}
+		.wyg-additional {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 	}
 
@@ -189,7 +228,6 @@
 			#offer-container {
 				display: flex;
 				overflow-x: scroll;
-
 			}
 
 			#cant-choose {
@@ -199,6 +237,28 @@
 				h3 {
 					font-size: 1rem;
 				}
+			}
+
+			:global(#wyg) { 
+				.tiled-container {
+					flex-wrap: wrap;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		main {
+			:global(#wyg) {
+				.tiled-container {
+					.glossy-tile {
+						margin: 8px 0;
+					}
+				}
+			}
+
+			#offer-form {
+				margin: 8px 0;
 			}
 		}
 	}

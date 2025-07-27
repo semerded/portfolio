@@ -249,6 +249,7 @@
 		article#about-container {
 			section {
 				min-width: fit-content;
+				margin: 8px 0;
 				i {
 					color: rgba(128, 128, 128, 0.39);
 				}

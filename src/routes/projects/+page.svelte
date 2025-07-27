@@ -15,7 +15,7 @@
 
 <Hero title={$t('title')} description={$t('description')} leading="{$t('leading')}" buttonText={[$t('button')]} buttonLink={['https://github.com/dotsem?tab=repositories']} height="50lvh" />
 
-<Container>
+<Container containerFrom={768}>
 	<main class="tiled-container">
 		{#each projects as project}
 			<div class="tiled-item glossy-tile project">

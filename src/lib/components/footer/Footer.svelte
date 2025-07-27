@@ -115,4 +115,17 @@
 			}
 		}
 	}
+
+	@media only screen and (max-width: 899px) {
+		footer {
+			> div {
+				padding-bottom: 16px;
+
+				&:last-child {
+					border-bottom: 3px solid var(--primary);
+				}
+			}
+
+		}
+	}
 </style>
