@@ -75,7 +75,7 @@
 		buttonText={$t('website-offers.button')}
 		href="/website-offers"
 	/>
-	<div class="tiled-container">
+	<div class="tiled-container attention-scroll-track">
 		{#each offers as offer, index}
 			<OfferTile
 				title={offer.title}
@@ -85,8 +85,8 @@
 				{index}
 			/>
 		{/each}
-		<p style="color: white;">* {$t('website-offers.additional')}</p>
 	</div>
+	<p style="color: white;">* {$t('website-offers.additional')}</p>
 </Container>
 
 </main>
@@ -95,5 +95,38 @@
 	main {
 			position: relative;
 		z-index: 1;
+	}
+
+	@media screen and (max-width: 650px) {
+		main {
+			:global(#project-container) {
+				padding: 8px 0;
+			}
+
+			:global(#profile-container) {
+				padding: 8px 0;
+
+				:global(.glossy-tile) {
+					padding: 8px 0;
+				}
+			}
+
+			:global(#offers) {
+				.tiled-container {
+					flex-wrap: nowrap;
+					overflow-x: scroll;
+					justify-content: unset;
+
+					:global(>*) {
+						margin: 0 8px;
+
+					}
+				}
+
+				p {
+					text-align: center;
+				}
+			}
+		}
 	}
 </style>

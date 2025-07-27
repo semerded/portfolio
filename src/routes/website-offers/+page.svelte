@@ -53,7 +53,7 @@
 
 <main>
 	<Container id="offers">
-		<div id="offer-container">
+		<div id="offer-container" class="attention-scroll-track">
 			{#each offers as offer, index}
 				<OfferExt
 					{...offer}

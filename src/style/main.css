@@ -54,6 +54,10 @@ body {
 	flex-wrap: wrap;
 }
 
+.attention-scroll-track {
+	scrollbar-color: var(--primary) var(--bg);
+}
+
 button {
 	all: unset;
 	cursor: pointer;
