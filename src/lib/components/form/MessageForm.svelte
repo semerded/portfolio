@@ -34,31 +34,28 @@
 	async function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
 		if (validForm) {
-			
 			const formData = new FormData(event.target as HTMLFormElement);
 			try {
 				console.log(emailLink);
 				console.log(formData);
 				const res = await fetch(emailLink, {
-				method: 'POST',
-				body: formData,
-				headers: {
-    Accept: 'application/json'
-  }
-			});
+					method: 'POST',
+					body: formData,
+					headers: {
+						'Content-Type': 'application/json',
+						    'Access-Control-Allow-Origin':'*'
+					}
+				});
 
-			if (res.ok) {
-				alert('Message sent successfully');
-			
-			} else {
-				throw new Error('Failed to send message');
-			}
+				if (res.ok) {
+					alert('Message sent successfully');
+				} else {
+					throw new Error('Failed to send message');
+				}
 			} catch (e: any) {
 				alert(e.message);
 			}
-			
 		}
-		
 	}
 </script>
 
@@ -68,7 +65,7 @@
 			type="text"
 			bind:value={name}
 			placeholder={$t('form.placeholder.name')}
-			minlength="{minNameLength}"
+			minlength={minNameLength}
 			required
 			on:input={() => validateName(name)}
 		/>
@@ -101,7 +98,7 @@
 			type="text"
 			bind:value={concept}
 			placeholder={$t('form.placeholder.concept')}
-			minlength="{minConceptLength}"
+			minlength={minConceptLength}
 			required
 			on:input={() => validateConcept(concept)}
 		/>
@@ -117,7 +114,7 @@
 		<textarea
 			bind:value={message}
 			placeholder={$t('form.placeholder.message')}
-			minlength="{minMessageLength}"
+			minlength={minMessageLength}
 			required
 			on:input={() => validateMessage(message)}
 		></textarea>
@@ -129,14 +126,13 @@
 		></i>
 	</div>
 
-	<input type="hidden" name="_autoresponse" value="Thank you for your message, I will get back to you as soon as possible">
+	<input
+		type="hidden"
+		name="_autoresponse"
+		value="Thank you for your message, I will get back to you as soon as possible"
+	/>
 	<div>
-		<button
-			type="submit"
-			class="button"
-			disabled={!validForm}
-			>{$t('form.button')}</button
-		>
+		<button type="submit" class="button" disabled={!validForm}>{$t('form.button')}</button>
 	</div>
 </form>
 
