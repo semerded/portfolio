@@ -1,0 +1,1 @@
+export const emailLink = "https://formsubmit.co/el/nehare";

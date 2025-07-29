@@ -1,37 +1,69 @@
 <script lang="ts">
 	import { t } from 'svelte-i18n';
+	import { emailLink } from '$stores/email';
 
 	let name = '';
 	let email = '';
 	let concept = '';
 	let message = '';
+	const minNameLength = 2;
+	const minConceptLength = 2;
+	const minMessageLength = 10;
+	const emailPattern: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 	let validFormPart = { name: false, email: false, concept: false, message: false };
 	$: validForm = Object.values(validFormPart).every(Boolean);
 
 	function validateName(val: string) {
-		validFormPart.name = val.trim().length > 1;
+		validFormPart.name = val.trim().length >= minNameLength;
 	}
 
 	function validateEmail(val: string) {
 		// Simple email regex
-		validFormPart.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+		validFormPart.email = emailPattern.test(val);
 	}
 
 	function validateConcept(val: string) {
-		validFormPart.concept = val.trim().length > 1;
+		validFormPart.concept = val.trim().length >= minConceptLength;
 	}
 
 	function validateMessage(val: string) {
-		validFormPart.message = val.trim().length > 10;
+		validFormPart.message = val.trim().length >= minMessageLength;
+	}
+
+	async function handleSubmit(event: SubmitEvent) {
+		event.preventDefault();
+		if (validForm) {
+			
+			const formData = new FormData(event.target as HTMLFormElement);
+			try {
+				const res = await fetch(emailLink, {
+				method: 'POST',
+				body: formData
+			});
+
+			if (res.ok) {
+				alert('Message sent successfully');
+			
+			} else {
+				throw new Error('Failed to send message');
+			}
+			} catch (e: any) {
+				alert(e.message);
+			}
+			
+		}
+		
 	}
 </script>
 
-<form>
+<form on:submit={handleSubmit}>
 	<div>
 		<input
 			type="text"
 			bind:value={name}
 			placeholder={$t('form.placeholder.name')}
+			minlength={minNameLength}
 			required
 			on:input={() => validateName(name)}
 		/>
@@ -48,6 +80,7 @@
 			type="text"
 			bind:value={email}
 			placeholder={$t('form.placeholder.email')}
+			pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
 			required
 			on:input={() => validateEmail(email)}
 		/>
@@ -63,6 +96,7 @@
 			type="text"
 			bind:value={concept}
 			placeholder={$t('form.placeholder.concept')}
+			minlength={minConceptLength}
 			required
 			on:input={() => validateConcept(concept)}
 		/>
@@ -78,6 +112,7 @@
 		<textarea
 			bind:value={message}
 			placeholder={$t('form.placeholder.message')}
+			minlength={minMessageLength}
 			required
 			on:input={() => validateMessage(message)}
 		></textarea>
@@ -89,13 +124,13 @@
 		></i>
 	</div>
 
+	<input type="hidden" name="_autoresponse" value="Thank you for your message, I will get back to you as soon as possible">
 	<div>
 		<button
+			type="submit"
 			class="button"
 			disabled={!validForm}
-			on:click={() => {
-				console.log('send data');
-			}}>{$t('form.button')}</button
+			>{$t('form.button')}</button
 		>
 	</div>
 </form>
