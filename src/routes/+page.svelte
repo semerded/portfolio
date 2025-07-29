@@ -6,7 +6,7 @@
 	import Container from '$lib/components/container/container.svelte';
 	import Card from '$lib/components/card/card.svelte';
 	import Profile from '$lib/components/profile/profile.svelte';
-	import SideBar from '$lib/components/sidebar.svelte';
+	// import SideBar from '$lib/components/sidebar.svelte';
 	import OfferTile from '$lib/components/offers/OfferTile.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 
@@ -27,7 +27,7 @@
 
 </script>
 
-<SideBar
+<!-- <SideBar
 	links={[
 		{ name: 'Welcome', link: '#welcome' },
 		{ name: 'My Profile', link: '#my-profile' },
@@ -35,7 +35,7 @@
 		{ name: 'Website Offers', link: '#offers' },
 		{ name: 'Quality of work', link: '#qos' }
 	]}
-/>
+/> -->
 
 
 <main>

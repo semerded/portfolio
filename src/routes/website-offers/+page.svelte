@@ -3,7 +3,7 @@
 	import Hero from '$lib/components/hero.svelte';
 	import OfferExt from '$lib/components/offers/OfferExt.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
-	import SideBar from '$lib/components/sidebar.svelte';
+	// import SideBar from '$lib/components/sidebar.svelte';
 	import { onMount } from 'svelte';
 
 	import { json, t } from 'svelte-i18n';
@@ -36,13 +36,13 @@
 	}
 </script>
 
-<SideBar
+<!-- <SideBar
 	links={[
 		{ name: 'Pick an offer', link: '#offers' },
 		{ name: 'What you get', link: '#wyg' },
 		{ name: 'Fill in the form', link: '#form' }
 	]}
-/>
+/> -->
 
 <Hero
 	title={$t('title')}
