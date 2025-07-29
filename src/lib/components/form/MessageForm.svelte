@@ -37,9 +37,14 @@
 			
 			const formData = new FormData(event.target as HTMLFormElement);
 			try {
+				console.log(emailLink);
+				console.log(formData);
 				const res = await fetch(emailLink, {
 				method: 'POST',
-				body: formData
+				body: formData,
+				headers: {
+    Accept: 'application/json'
+  }
 			});
 
 			if (res.ok) {
@@ -63,7 +68,7 @@
 			type="text"
 			bind:value={name}
 			placeholder={$t('form.placeholder.name')}
-			minlength={minNameLength}
+			minlength="{minNameLength}"
 			required
 			on:input={() => validateName(name)}
 		/>
@@ -96,7 +101,7 @@
 			type="text"
 			bind:value={concept}
 			placeholder={$t('form.placeholder.concept')}
-			minlength={minConceptLength}
+			minlength="{minConceptLength}"
 			required
 			on:input={() => validateConcept(concept)}
 		/>
@@ -112,7 +117,7 @@
 		<textarea
 			bind:value={message}
 			placeholder={$t('form.placeholder.message')}
-			minlength={minMessageLength}
+			minlength="{minMessageLength}"
 			required
 			on:input={() => validateMessage(message)}
 		></textarea>
