@@ -1,6 +1,15 @@
 <script lang="ts">
 	import { t } from 'svelte-i18n';
-	import { emailLink } from '$stores/email';
+	import { accessKey, emailUrl } from '$stores/email';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+    const script = document.createElement('script');
+    script.src = 'https://web3forms.com/client/script.js';
+    script.async = true;
+	script.defer = true;
+    document.body.appendChild(script);
+  });
 
 	let name = '';
 	let email = '';
@@ -31,37 +40,73 @@
 		validFormPart.message = val.trim().length >= minMessageLength;
 	}
 
-	async function handleSubmit(event: SubmitEvent) {
-		event.preventDefault();
-		if (validForm) {
-			const formData = new FormData(event.target as HTMLFormElement);
-			try {
-				console.log(emailLink);
-				console.log(formData);
-				const res = await fetch(emailLink, {
-					method: 'POST',
-					body: formData,
-					headers: {
-						'Content-Type': 'application/json',
-						    'Access-Control-Allow-Origin':'*'
-					}
-				});
+	const handleSubmit = async (data: { currentTarget: HTMLFormElement | undefined }) => {
+		// status = 'Submitting...';
+		const formData = new FormData(data.currentTarget);
+		const object = Object.fromEntries(formData);
+		const json = JSON.stringify(object);
 
-				if (res.ok) {
-					alert('Message sent successfully');
-				} else {
-					throw new Error('Failed to send message');
-				}
-			} catch (e: any) {
-				alert(e.message);
-			}
+		const response = await fetch(emailUrl, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: json
+		});
+		const result = await response.json();
+		if (result.success) {
+			console.log(result);
+			// status = result.message || 'Success';
 		}
-	}
+	};
+
+// 	const form = document.getElementById('messageForm') as HTMLFormElement;
+
+// form.addEventListener('submit', function(e) {
+
+//     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')!;
+
+//     if (!hCaptcha) {
+//         e.preventDefault();
+//         alert("Please fill out captcha field")
+//         return
+//     }
+// });
+
+	// async function handleSubmit(event: SubmitEvent) {
+	// 	event.preventDefault();
+	// 	if (validForm) {
+	// 		const formData = new FormData(event.target as HTMLFormElement);
+	// 		try {
+	// 			console.log(formData);
+	// 			const res = await fetch(emailUrl, {
+	// 				method: 'POST',
+	// 				body: json,
+	// 				headers: {
+	// 					'Content-Type': 'application/json',
+	// 					Accept: 'application/json'
+	// 				}
+	// 			});
+
+	// 			if (res.ok) {
+	// 				alert('Message sent successfully');
+	// 			} else {
+	// 				throw new Error('Failed to send message');
+	// 			}
+	// 		} catch (e: any) {
+	// 			alert(e.message);
+	// 		}
+	// 	}
+	// }
 </script>
 
-<form on:submit={handleSubmit}>
+<form on:submit|preventDefault={handleSubmit} id="messageFrom">
+	<input type="hidden" name="access_key" value="{accessKey}">
+	<input type="hidden" name="subject" value="Site Message: {concept}">
 	<div>
 		<input
+			name="name"
 			type="text"
 			bind:value={name}
 			placeholder={$t('form.placeholder.name')}
@@ -79,6 +124,7 @@
 
 	<div>
 		<input
+			name="email"
 			type="text"
 			bind:value={email}
 			placeholder={$t('form.placeholder.email')}
@@ -95,6 +141,7 @@
 	</div>
 	<div>
 		<input
+			name="concept"
 			type="text"
 			bind:value={concept}
 			placeholder={$t('form.placeholder.concept')}
@@ -112,6 +159,7 @@
 
 	<div>
 		<textarea
+			name="message"
 			bind:value={message}
 			placeholder={$t('form.placeholder.message')}
 			minlength={minMessageLength}
@@ -125,12 +173,7 @@
 			class:fa-circle-xmark={!validFormPart.message}
 		></i>
 	</div>
-
-	<input
-		type="hidden"
-		name="_autoresponse"
-		value="Thank you for your message, I will get back to you as soon as possible"
-	/>
+	<div class="h-captcha" data-captcha="true" data-theme="dark"></div>
 	<div>
 		<button type="submit" class="button" disabled={!validForm}>{$t('form.button')}</button>
 	</div>
@@ -161,6 +204,11 @@
 					color: yellowgreen;
 				}
 			}
+		}
+
+		.h-captcha {
+			margin: 4px 24px;
+			
 		}
 
 		button {
