@@ -1,15 +1,8 @@
 <script lang="ts">
 	import { t } from 'svelte-i18n';
 	import { accessKey, emailUrl } from '$stores/email';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-    const script = document.createElement('script');
-    script.src = 'https://web3forms.com/client/script.js';
-    script.async = true;
-	script.defer = true;
-    document.body.appendChild(script);
-  });
+	import { env } from '$env/dynamic/public';
+	import enhance from 'svelte-captcha-enhance';
 
 	let name = '';
 	let email = '';
@@ -40,12 +33,13 @@
 		validFormPart.message = val.trim().length >= minMessageLength;
 	}
 
-	const handleSubmit = async (data: { currentTarget: HTMLFormElement | undefined }) => {
+
+	async function handleSubmit(formData: FormData) {
 		// status = 'Submitting...';
-		const formData = new FormData(data.currentTarget);
 		const object = Object.fromEntries(formData);
 		const json = JSON.stringify(object);
-
+		console.log("busy");
+		
 		const response = await fetch(emailUrl, {
 			method: 'POST',
 			headers: {
@@ -58,21 +52,12 @@
 		if (result.success) {
 			console.log(result);
 			// status = result.message || 'Success';
+		} else {
+			console.log("nope didn't went trough", result);
 		}
 	};
 
-// 	const form = document.getElementById('messageForm') as HTMLFormElement;
-
-// form.addEventListener('submit', function(e) {
-
-//     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')!;
-
-//     if (!hCaptcha) {
-//         e.preventDefault();
-//         alert("Please fill out captcha field")
-//         return
-//     }
-// });
+	
 
 	// async function handleSubmit(event: SubmitEvent) {
 	// 	event.preventDefault();
@@ -101,7 +86,16 @@
 	// }
 </script>
 
-<form on:submit|preventDefault={handleSubmit} id="messageFrom">
+<svelte:head>
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</svelte:head>	
+
+<form method="POST" use:enhance={{
+	type: "hcaptcha",
+	submit: ({ formData}) => {
+		handleSubmit(formData);
+	}
+}}  id="messageFrom">
 	<input type="hidden" name="access_key" value="{accessKey}">
 	<input type="hidden" name="subject" value="Site Message: {concept}">
 	<div>
@@ -173,7 +167,7 @@
 			class:fa-circle-xmark={!validFormPart.message}
 		></i>
 	</div>
-	<div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+	<div class="h-captcha" data-sitekey={env.PUBLIC_HCAPTCHA_SITE_KEY}></div>
 	<div>
 		<button type="submit" class="button" disabled={!validForm}>{$t('form.button')}</button>
 	</div>
