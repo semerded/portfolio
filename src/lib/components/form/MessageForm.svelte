@@ -3,6 +3,7 @@
 	import { accessKey, emailUrl } from '$stores/email';
 	import { env } from '$env/dynamic/public';
 	import enhance from 'svelte-captcha-enhance';
+	import FormPopup from './FormPopup.svelte';
 
 	let name = '';
 	let email = '';
@@ -56,34 +57,6 @@
 			console.log("nope didn't went trough", result);
 		}
 	};
-
-	
-
-	// async function handleSubmit(event: SubmitEvent) {
-	// 	event.preventDefault();
-	// 	if (validForm) {
-	// 		const formData = new FormData(event.target as HTMLFormElement);
-	// 		try {
-	// 			console.log(formData);
-	// 			const res = await fetch(emailUrl, {
-	// 				method: 'POST',
-	// 				body: json,
-	// 				headers: {
-	// 					'Content-Type': 'application/json',
-	// 					Accept: 'application/json'
-	// 				}
-	// 			});
-
-	// 			if (res.ok) {
-	// 				alert('Message sent successfully');
-	// 			} else {
-	// 				throw new Error('Failed to send message');
-	// 			}
-	// 		} catch (e: any) {
-	// 			alert(e.message);
-	// 		}
-	// 	}
-	// }
 </script>
 
 <svelte:head>
@@ -91,7 +64,7 @@
 </svelte:head>	
 
 <form method="POST" use:enhance={{
-	type: "hcaptcha",
+	type: "bypass",
 	submit: ({ formData}) => {
 		handleSubmit(formData);
 	}
@@ -172,6 +145,8 @@
 		<button type="submit" class="button" disabled={!validForm}>{$t('form.button')}</button>
 	</div>
 </form>
+
+<FormPopup visible={true} message="Your message has been sent" onClose={() => {}} />
 
 <style>
 	form {
