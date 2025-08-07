@@ -1,8 +1,11 @@
 <script lang="ts">
 	import Container from '$lib/components/container/container.svelte';
+	import Profile from '$lib/components/profile/profile.svelte';
 
 	import { t } from 'svelte-i18n';
 </script>
+
+<Profile />
 
 <Container>
 	<div class="hero">

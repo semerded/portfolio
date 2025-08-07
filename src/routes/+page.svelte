@@ -9,6 +9,7 @@
 	// import SideBar from '$lib/components/sidebar.svelte';
 	import OfferTile from '$lib/components/offers/OfferTile.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
+	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 
 	$: offers = $json('website-offers.offers') as {
 		title: string;
@@ -38,9 +39,15 @@
 /> -->
 
 
+<!-- <DynamicBackground image="/images/bg/bg-dark.jpg" />
+<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
+	Photo by Daniel Cid from Pexels
+</a> -->
+
 <main>
 	<Hero
 	title="Sem Van Broekhoven"
+	image="images/index/hero.png"
 	description={$t('hero.subtitle')}
 	leading="<i class='fa-solid fa-location-dot'></i> {$t('hero.country')}"
 	buttonText={[$t('hero.button'), $t('hero.offer-button')]}
@@ -48,7 +55,20 @@
 
 	id="welcome"
 />
-<Profile />
+
+<Container>
+	<h2>
+		A website is the face of your business. <br />
+		I can help you design it.
+	</h2>
+	<p>
+		I offer an affordable and high quality website for your business. If you need a website from scratch or you are not happy with your current website, I will make sure that you get a high quality website that fits your needs and represents your business in the best possible way.
+	</p>
+
+	<h2>Q&A</h2>
+	
+</Container>
+
 <Container minHeight="100svh" id="my-projects">
 	<SectionHeader
 		title={$t('projects-highlight.title')}
@@ -95,6 +115,15 @@
 	main {
 			position: relative;
 		z-index: 1;
+	}
+
+	.bg-credits {
+		position: fixed;
+		bottom: 10px;
+		left: 10px;
+		color: #fff;
+		font-size: 10px;
+		z-index: 100;
 	}
 
 	@media screen and (max-width: 650px) {

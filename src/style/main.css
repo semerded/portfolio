@@ -31,7 +31,7 @@
 
 body {
 	color: var(--text);
-	background-color: var(--bg);
+	background: var(--bg);
 }
 
 .unselectable {

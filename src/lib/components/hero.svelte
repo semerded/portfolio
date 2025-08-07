@@ -37,17 +37,17 @@
 			class="unselectable"
 			use:scrollRange={{
 				start: 0,
-				end: '100svh',
+				end: '95lvh',
 				property: '--backgroundColorAlpha',
-				min: 0.5,
-				max: 1.005
+				min: 0.8,
+				max: 0
 			}}
 			use:scrollRange={{
 				start: 0,
 				end: '100svh',
 				property: '--backgroundYPosition',
 				min: 1,
-				max: 1.1
+				max: 1.2
 				// valueCSSunit: 'px'
 			}}
 		/>
@@ -86,9 +86,12 @@
 			object-fit: var(--image-fit);
 			width: 100%;
 			height: 100%;
+			padding-top: var(--navbar-height);
+			opacity: var(--backgroundColorAlpha);
+			object-position: bottom right;
 			transform: scale(var(--backgroundYPosition));
 			transition: 50ms;
-			position: fixed;
+			display: flex;
 		}
 
 		.hero-text {
@@ -98,9 +101,9 @@
 			align-items: center;
 			position: absolute;
 			top: 0;
-			left: 0;
+			right: 500px;
 			text-align: center;
-			width: 100%;
+			width: fit-content;
 			height: 100%;
 
 			h1 {
