@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { scrollRange } from '$lib/actions/change_background_color_linear';
 	import Button from '$lib/components/button.svelte';
+	import { onMount } from 'svelte';
 
 	export let id: string | null = null;
 	export let title: string;
@@ -14,43 +15,45 @@
 	export let height: string = '100lvh';
 
 	let foreignLink: boolean[] = [];
-
 	buttonLink.forEach((link) => {
 		if (link.startsWith('http')) {
 			foreignLink.push(true);
 		} else {
 			foreignLink.push(false);
 		}
-	})
+	});
 
 	if (buttonText.length !== buttonLink.length) {
 		throw new Error('buttonText and buttonLink must be the same length');
 	}
 </script>
 
-<div class="hero-container" {id} style="height: {height}">
+<div class="hero-container" {id} style="--height: calc({height} + 20lvh)">
 	{#if image}
-		<img
-			src={image}
-			alt="hero for {title}"
-			style={imageStyle}
-			class="unselectable"
-			use:scrollRange={{
-				start: 0,
-				end: '95lvh',
-				property: '--backgroundColorAlpha',
-				min: 0.8,
-				max: 0
-			}}
-			use:scrollRange={{
-				start: 0,
-				end: '100svh',
-				property: '--backgroundYPosition',
-				min: 1,
-				max: 1.2
-				// valueCSSunit: 'px'
-			}}
-		/>
+		<div class="image-container">
+			<img
+				src={image}
+				alt="hero for {title}"
+				class="unselectable"
+				style="{imageStyle}"
+				use:scrollRange={{
+					start: 0,
+					end: height,
+					property: '--backgroundColorAlpha',
+					min: 0.8,
+					max: 0
+				}}
+				use:scrollRange={{
+					start: 0,
+					end: height,
+					property: '--backgroundYPosition',
+					min: 1,
+					max: 1.3
+					// valueCSSunit: 'px'
+				}}
+			/>
+		</div>
+		<div class="image-fade"></div>
 	{/if}
 	<div class="hero-text">
 		{#if leading}
@@ -63,9 +66,11 @@
 		<div class="button-container">
 			{#each buttonText as buttonText, index}
 				{#if index === primaryButton}
-				<Button href={buttonLink[index]} primary={true} newTab={foreignLink[index]} >{buttonText}</Button>
+					<Button href={buttonLink[index]} primary={true} newTab={foreignLink[index]}
+						>{buttonText}</Button
+					>
 				{:else}
-				<Button href={buttonLink[index]}>{buttonText}</Button>
+					<Button href={buttonLink[index]}>{buttonText}</Button>
 				{/if}
 			{/each}
 		</div>
@@ -78,30 +83,45 @@
 	}
 
 	.hero-container {
+		height: var(--height);
 		width: 100%;
 		position: relative;
-		overflow: hidden;
 
-		img {
-			object-fit: var(--image-fit);
+		.image-container {
+			overflow: hidden;
+			position: sticky;
+			top: 0;
+			height: calc(var(--height) - 20lvh);
 			width: 100%;
-			height: 100%;
-			padding-top: var(--navbar-height);
-			opacity: var(--backgroundColorAlpha);
-			object-position: bottom right;
-			transform: scale(var(--backgroundYPosition));
-			transition: 50ms;
-			display: flex;
+
+			img {
+				object-fit: var(--image-fit);
+				width: 100%;
+				height: 100%;
+				padding-top: var(--navbar-height);
+				opacity: var(--backgroundColorAlpha);
+				object-position: top center;
+				transform: scale(var(--backgroundYPosition));
+				transition: 50ms;
+				display: flex;
+			}
+		}
+
+		.image-fade {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 20lvh;
+			background: linear-gradient(to bottom, transparent, var(--bg));
 		}
 
 		.hero-text {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
 			position: absolute;
-			top: 0;
-			right: 500px;
+			top: calc(50lvh - var(--navbar-height));
+			right: 42%;
 			text-align: center;
 			width: fit-content;
 			height: 100%;

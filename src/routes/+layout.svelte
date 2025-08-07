@@ -99,9 +99,6 @@
 <Footer />
 
 <style>
-	:global(html) {
-		overflow-x: hidden;
-	}
 
 	.transition-container {
 		position: relative;
