@@ -48,12 +48,6 @@ body {
 	-o-user-drag: none;
 }
 
-.tiled-container {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
 .attention-scroll-track {
 	scrollbar-color: var(--primary) var(--bg);
 }
