@@ -53,23 +53,22 @@
 		buttonLink={['#my-profile', '/website-offers']}
 		id="welcome"
 	/>
-
+	<Tile alignY="center" alignX="center" paddingY="4rem">
+		<h2 id="punchline">
+			A website is the face of your business. <br />
+		</h2>
+		<a id="punchline-button" class="button" href="/website-offers">Help me design a website</a>
+	</Tile>
+	<Tile alignX="center" alignY="center">
+		<p id="punchline-description">
+			If you need a website for your business or organization, whether you are starting from scratch
+			or you are not happy with your current website, I will make sure that you get a high quality
+			website that fits your needs and represents your business in the best possible way for an
+			affordable price.
+		</p>
+	</Tile>
 	<Container>
-		<TiledContainer>
-			<Tile>
-				<h2>
-					A website is the face of your business. <br />
-					I can help you design it.
-				</h2>
-			</Tile>
-			<Tile>
-				<p>
-				I offer an affordable and high quality website for your business. If you need a website from
-				scratch or you are not happy with your current website, I will make sure that you get a high
-				quality website that fits your needs and represents your business in the best possible way.
-			</p>
-			</Tile>
-		</TiledContainer>
+		<TiledContainer wrapAt={750} paddingY={'4rem'}></TiledContainer>
 
 		<h2>Q&A</h2>
 	</Container>
@@ -119,16 +118,31 @@
 	main {
 		position: relative;
 		z-index: 1;
+
+		#punchline {
+			font-size: 4rem;
+			line-height: 5rem;
+		}
+
+		#punchline-button {
+			max-width: 300px;
+			z-index: 2;
+		}
+
+		#punchline-description {
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+		}
 	}
 
-	.bg-credits {
+	/* .bg-credits {
 		position: fixed;
 		bottom: 10px;
 		left: 10px;
 		color: #fff;
 		font-size: 10px;
 		z-index: 100;
-	}
+	} */
 
 	@media screen and (max-width: 650px) {
 		main {

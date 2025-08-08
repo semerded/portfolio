@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	export let wrapAt: number = 468;
+	export let paddingY: string = "0";
 	let wrap = false;
 
     let container: HTMLElement;
@@ -25,7 +26,7 @@
 	bind:this={container}
 
 	class="tiled-container"
-	style="flex-wrap: {wrap ? 'wrap' : 'nowrap'}"
+	style="flex-wrap: {wrap ? 'wrap' : 'nowrap'}; padding: {paddingY} 0;"
 >
 	<slot />
 </section>
@@ -34,7 +35,9 @@
 	.tiled-container {
 		display: flex;
 		justify-content: center;
-		gap: 1rem;
+		align-items: center;
+		/* gap: 1rem; */
 		width: 100%;
+		height: 100%;
 	}
 </style>

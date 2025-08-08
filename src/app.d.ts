@@ -8,6 +8,9 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	type AlignX = 'left' | 'center' | 'right' | 'space-between' | 'space-around' | 'space-evenly';
+	type AlignY = 'top' | 'center' | 'bottom' | 'space-between' | 'space-around' | 'space-evenly';
 }
 
 export {};

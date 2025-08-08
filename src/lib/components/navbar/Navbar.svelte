@@ -3,6 +3,8 @@
 	import './hamburger_icon.css';
 	import { page } from '$app/state';
 	import ToggleLanguage from '../ToggleLanguage.svelte';
+		import LightDarkModeSwitch from '$lib/components/light-dark-mode-switch.svelte';
+
 	import { _ } from 'svelte-i18n';
 
 	import { onMount, onDestroy } from 'svelte';
@@ -84,6 +86,7 @@
 			>
 			<div>
 				<ToggleLanguage></ToggleLanguage>
+				<LightDarkModeSwitch></LightDarkModeSwitch>
 			</div>
 		</div>
 	{/if}
