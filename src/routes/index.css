@@ -34,9 +34,3 @@ blockquote {
 	}
 }
 
-#benefits-container {
-	padding: 8px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}

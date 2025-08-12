@@ -39,7 +39,7 @@
 
 	.card-content {
 
-		--blur: 3px;
+		--blur: 2px;
 		/* background-color: rgb(59, 53, 53); */
 		overflow: hidden;
 		box-shadow: 0 -6px 8px -6px rgb(59, 53, 53);
