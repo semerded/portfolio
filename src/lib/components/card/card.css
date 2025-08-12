@@ -45,6 +45,7 @@
 		box-shadow: 0 -6px 8px -6px rgb(59, 53, 53);
 		border-radius: 8px;
 		height: 100%;
+		width: 100%;
 		padding: 4px;
 
 		background-color: color-mix(in srgb, var(--bg) 70%, transparent);
@@ -63,7 +64,7 @@
 
 		transition: 400ms;
 
-		h2 {
+		h3 {
 			text-align: center;
 			padding: 12px 0;
 			height: fit-content;

@@ -19,6 +19,7 @@
 	);
 	--card: rgb(33, 36, 38);
 	--bg: rgb(24, 26, 27);
+	--bg-alt: rgb(33, 36, 38);
 	--box-shadow: rgb(35, 52, 44);
 	--text: #ffe9d6ff;
 	--text-placeholder: rgb(184, 180, 180);
@@ -45,7 +46,8 @@
 	);
 	--card: #c9e6b3;
 	--bg: rgb(247, 238, 230);
+	--bg-alt: rgb(255, 255, 255);
 	--box-shadow: #c9e6b3;
-	--text: #000000;
+	--text: #111827;
 	--text-placeholder: #696867;
 }

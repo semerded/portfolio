@@ -13,6 +13,8 @@
 	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
 	import Tile from '$lib/components/tiles/Tile.svelte';
 	import Subtitle from '$lib/components/Subtitle.svelte';
+	import Button from '$lib/components/button.svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	$: offers = $json('website-offers.offers') as {
 		title: string;
@@ -27,6 +29,32 @@
 		description: string;
 		// img: string;
 	}[];
+
+	let exampleLength = 0;
+	let exampleContainer: HTMLElement;
+
+	let observer: ResizeObserver;
+
+	function updateLength() {
+		if (exampleContainer) {
+			exampleLength = Math.floor(exampleContainer.clientWidth / 400);
+		}
+	}
+
+	onMount(() => {
+		observer = new ResizeObserver(updateLength);
+		if (exampleContainer) {
+			observer.observe(exampleContainer);
+		}
+	});
+
+	onDestroy(() => {
+		if (observer && exampleContainer) {
+			observer.unobserve(exampleContainer);
+		}
+	});
+
+	//
 </script>
 
 <!-- <SideBar
@@ -45,6 +73,7 @@
 </a> -->
 
 <main>
+	<!-- Hero -->
 	<Hero
 		title="Sem Van Broekhoven"
 		image="images/index/hero.png"
@@ -65,13 +94,13 @@
 				{$t('why-a-website.punchline.description')}
 			</p>
 		</Tile>
-		<Tile alignX="center" alignY="center" paddingY="2rem">
-			<a id="punchline-button" class="button" href="/website-offers"
-				>{$t('why-a-website.punchline.button')}</a
-			>
+		<Tile alignX="center" alignY="center" paddingY="4rem">
+			<Button href="/">{$t('why-a-website.punchline.button')}</Button>
 		</Tile>
-
 	</Container>
+
+	<!-- Benefits -->
+
 	<Subtitle text="Why a website?" color="var(--primary)" />
 	<div id="benefits-container">
 		{#each benefits as benefit}
@@ -84,14 +113,29 @@
 		{/each}
 	</div>
 
-	<Container minHeight="100svh" id="my-projects">
-		<SectionHeader
-			title={$t('projects-highlight.title')}
-			subtitle={$t('projects-highlight.subtitle')}
-			buttonText={$t('projects-highlight.button')}
-			href="/projects"
-		/>
-	</Container>
+	<!-- Examples -->
+	<div id="examples" class="slanted">
+		<Container>
+			<Tile alignX="center">
+				<h2>{$t('examples.title')}</h2>
+				<p>{$t('examples.filler')}</p>
+			</Tile>
+			<div id="example-container" bind:this={exampleContainer}>
+				{#each Array(exampleLength) as _}
+					<Card
+						title={$t('examples.card.title')}
+						description={$t('examples.card.description')}
+						icon="fa-question"
+						maxWidth="400px"
+					></Card>
+				{/each}
+			</div>
+			<Tile alignX="center" paddingY="4rem">
+				<Button href="/">{$t('examples.button')}</Button>
+			</Tile>
+		</Container>
+	</div>
+
 	<Container id="offers" marginBottom="5rem" containerFrom={768}>
 		<SectionHeader
 			title={$t('website-offers.title')}
@@ -133,6 +177,24 @@
 		#punchline-description {
 			font-size: 1.2rem;
 			line-height: 1.5rem;
+		}
+
+		#benefits-container {
+			padding: 8px;
+			display: flex;
+			margin-bottom: 8rem;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+
+		#examples {
+			background: var(--bg-alt);
+
+			#example-container {
+				display: flex;
+				justify-content: space-evenly;
+				gap: 1rem;
+			}
 		}
 	}
 

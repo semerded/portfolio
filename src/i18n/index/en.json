@@ -32,6 +32,15 @@
 			]
 		}
 	},
+	"examples": {
+		"title": "Examples",
+		"filler": "I haven't made any websites yet for customers, do you want to set a milestone and be the first?",
+		"button": "Let's make something great together!",
+		"card": {
+			"title": "Fill me!",
+			"description": "Be the first to be proudly displayed on my portfolio!"
+		}
+	},
 	"profile": {
 		"title": "My digital profile",
 		"description": "I'm 18 years old and have found love in programming. I've been experimenting with technology from a young age. Currently I like to make projects with a variety of programming languages.",

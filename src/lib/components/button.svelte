@@ -2,6 +2,7 @@
 	export let href: string;
 	export let newTab: boolean = false;
 	export let primary: boolean = false;
+	export let flex: boolean = false;
 </script>
 
 <a
@@ -10,6 +11,7 @@
 	class="button"
 	class:primary
 	rel="noopener noreferrer"
+	style="width: {flex ? '100%' : 'fit-content'};"
 >
 	<span><slot /></span>
 </a>
@@ -23,7 +25,7 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 8px;
-		padding: 8px;
+		padding: 8px 1.2rem;
 		margin: 8px;
 		background-color: var(--secondary);
 		color: white;
