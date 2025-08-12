@@ -2,8 +2,35 @@
 	"hero": {
 		"country": "Belgium",
 		"subtitle": "Web-design with a passion",
-		"button": "View my profile",
-		"offer-button": "Let me create a website for you!"
+		"website-button": "Let me create a website for you!",
+		"portfolio-button": "Check out my portfolio!"
+	},
+	"why-a-website": {
+		"punchline": {
+			"title": "A website is the face of your business...",
+			"description": "If you need a website for your business or organization, whether you are starting from scratch or you are not happy with your current website, I will make sure that you get a high quality website that fits your needs and represents your business in the best possible way for an affordable price.",
+			"button": "Help me design a website"
+		},
+		"benefits": {
+			"title": "Benefits of a good designed website",
+			"content": [
+				{
+					"title": "Reach More Customers Than Ever",
+					"icon": "fa-globe",
+					"description": "Your website is like an always-open storefront visible to anyone searching online, letting you attract people far beyond your local area."
+				},
+				{
+					"title": "Build Instant Credibility",
+					"icon": "fa-user-tie",
+					"description": "A modern, well-structured website shows professionalism, makes a great first impression, and reassures customers they can trust you."
+				},
+				{
+					"title": "Showcase What Makes You the Best",
+					"icon": "fa-thumbs-up",
+					"description": " With clear information, photos, reviews, and easy navigation, you control the story and highlight why customers should choose you over competitors."
+				}
+			]
+		}
 	},
 	"profile": {
 		"title": "My digital profile",
@@ -34,7 +61,9 @@
 		},
 		"hs": {
 			"title": "High School",
-			"content": ["High School diploma in Industrial IT"]
+			"content": [
+				"High School diploma in Industrial IT"
+			]
 		},
 		"uni": {
 			"title": "University",
@@ -54,19 +83,27 @@
 				"title": "PLNM",
 				"description": "A user-friendly cross-platform planning app with tons of features. It includes a note page, task manager and a project manager. Everything is saved in the cloud using the users Google Drive account for maximum privacy and no costs at all.",
 				"img": "images/projects/PLNM/logo.png",
-				"proglang": ["dart", "flutter"]
+				"proglang": [
+					"dart",
+					"flutter"
+				]
 			},
 			{
 				"title": "Pyrogine",
 				"description": "A highly optimized and fast 2D game engine written in Python. It features a high-level API for creating apps and games with minimal code while being highly performant.",
 				"img": "images/projects/Pyrogine/logo.png",
-				"proglang": ["py", "openGL"]
-			}, 
+				"proglang": [
+					"py",
+					"openGL"
+				]
+			},
 			{
 				"title": "Insanthon",
 				"description": "A picture based story game with a long walkthrough and multiple endings.",
 				"img": "images/projects/Insanthon/logo.png",
-				"proglang": ["py"]
+				"proglang": [
+					"py"
+				]
 			}
 		]
 	},
@@ -171,7 +208,5 @@
 			}
 		],
 		"additional": "Only available for small/medium scale websites"
-
-		
 	}
 }

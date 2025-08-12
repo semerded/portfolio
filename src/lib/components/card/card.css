@@ -1,9 +1,10 @@
 .card {
 	margin: 8px;
-	background: var(--gradient);
-	box-shadow: 2px 2px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent);
+	background: var(--bg);
+	/* box-shadow: 0px 4px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent); */
 	width: 100%;
-	height: 400px;
+	aspect-ratio: 1/1;
+	/* height: 400px; */
 	position: relative;
 	cursor: pointer;
 	border-radius: 8px;
@@ -11,47 +12,54 @@
 	border: none;
 	color: var(--text);
 	overflow: hidden;
+	padding: 0;
 
 
-	.card-image {
+	.card-icon {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		width: 100%;
 
 		border-radius: 8px;
-		img {
+		i {
 			transition: 400ms;
 			width: 100%;
-			height: 390px;
+			height: 100%;
 			object-position: top;
 			object-fit: cover;
 			border-radius: 8px;
+			font-size: min(var(--size), 80vw);
+			color: var(--secondary);
+			text-align: center;
+			transform: rotateZ(0deg);
 		}
-		position: absolute;
-		top: 0;
-		left: 0;
+		
 	}
 
 	.card-content {
+
+		--blur: 3px;
 		/* background-color: rgb(59, 53, 53); */
 		overflow: hidden;
 		box-shadow: 0 -6px 8px -6px rgb(59, 53, 53);
 		border-radius: 8px;
+		height: 100%;
+		padding: 4px;
 
 		background-color: color-mix(in srgb, var(--bg) 70%, transparent);
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(var(--blur));
+		-webkit-backdrop-filter: blur(var(--blur));
 		border: 1px solid rgba(255, 255, 255, 0.2);
 
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		height: 100px;
 
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
+		justify-content: end;
 
 		transition: 400ms;
 
@@ -69,13 +77,13 @@
 		}
 
 		p::after {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 0;
 			width: 100%;
 			height: 2em;
-			background: linear-gradient(to bottom, transparent, rgb(59, 53, 53));
+			/* background: linear-gradient(to bottom, transparent, rgb(59, 53, 53)); */
 			transition: opacity 400ms;
 			pointer-events: none;
 		}
@@ -89,21 +97,29 @@
 		}
 	}
 
-	&:hover .card-content {
-		height: 240px;
+	&:hover {
+		background-color: initial !important;
+		.card-content {
+
+			p::after {
+				opacity: 0;
+			}
+		}
+		.card-icon i {
+			opacity: 0.5;
+			scale: 1.1;
+			transform: rotateZ(5deg);
+
+		}
 	}
 
-	&:hover .card-content p::after {
-		opacity: 0;
-	}
+	overflow: visible;
 
-	&:hover .card-image img {
-		opacity: 0.5;
-		scale: 1.1;
-	}
+
+
 }
 
-@media screen and (max-width: 512px) {
+/* @media screen and (max-width: 512px) {
 	.card {
 		padding: 0;
 		height: auto;
@@ -121,14 +137,13 @@
 			}
 		}
 
-		.card-image {
+		.card-icon {
 			position: relative;
-			 
+
 			img {
 				width: 100%;
-			height: auto;
+				height: auto;
 			}
-
 		}
 	}
-}
+} */

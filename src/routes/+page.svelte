@@ -12,6 +12,7 @@
 	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
 	import Tile from '$lib/components/tiles/Tile.svelte';
+	import Subtitle from '$lib/components/Subtitle.svelte';
 
 	$: offers = $json('website-offers.offers') as {
 		title: string;
@@ -20,11 +21,11 @@
 		benefits: string[];
 	}[];
 
-	$: projectsHighlight = $json('projects-highlight.content') as {
+	$: benefits = $json('why-a-website.benefits.content') as {
 		title: string;
+		icon: string;
 		description: string;
-		img: string;
-		proglang: string[];
+		// img: string;
 	}[];
 </script>
 
@@ -49,29 +50,39 @@
 		image="images/index/hero.png"
 		description={$t('hero.subtitle')}
 		leading="<i class='fa-solid fa-location-dot'></i> {$t('hero.country')}"
-		buttonText={[$t('hero.button'), $t('hero.offer-button')]}
-		buttonLink={['#my-profile', '/website-offers']}
+		buttonText={[$t('hero.website-button'), $t('hero.portfolio-button')]}
+		buttonLink={['#why-a-website', '/about']}
 		id="welcome"
 	/>
-	<Tile alignY="center" alignX="center" paddingY="4rem">
-		<h2 id="punchline">
-			A website is the face of your business. <br />
-		</h2>
-		<a id="punchline-button" class="button" href="/website-offers">Help me design a website</a>
-	</Tile>
-	<Tile alignX="center" alignY="center">
-		<p id="punchline-description">
-			If you need a website for your business or organization, whether you are starting from scratch
-			or you are not happy with your current website, I will make sure that you get a high quality
-			website that fits your needs and represents your business in the best possible way for an
-			affordable price.
-		</p>
-	</Tile>
-	<Container>
-		<TiledContainer wrapAt={750} paddingY={'4rem'}></TiledContainer>
+	<Container id="why-a-website">
+		<Tile alignY="center" alignX="center" paddingY="2rem">
+			<h2 id="punchline">
+				{$t('why-a-website.punchline.title')}
+			</h2>
+		</Tile>
+		<Tile alignX="center" alignY="center">
+			<p id="punchline-description">
+				{$t('why-a-website.punchline.description')}
+			</p>
+		</Tile>
+		<Tile alignX="center" alignY="center" paddingY="2rem">
+			<a id="punchline-button" class="button" href="/website-offers"
+				>{$t('why-a-website.punchline.button')}</a
+			>
+		</Tile>
 
-		<h2>Q&A</h2>
 	</Container>
+	<Subtitle text="Why a website?" color="var(--primary)" />
+	<div id="benefits-container">
+		{#each benefits as benefit}
+			<Card
+				title={benefit.title}
+				description={benefit.description}
+				icon={benefit.icon}
+				maxWidth="400px"
+			/>
+		{/each}
+	</div>
 
 	<Container minHeight="100svh" id="my-projects">
 		<SectionHeader
@@ -80,17 +91,6 @@
 			buttonText={$t('projects-highlight.button')}
 			href="/projects"
 		/>
-		<div id="project-container">
-			{#each projectsHighlight as project}
-				<Card
-					title={project.title}
-					description={project.description}
-					image={project.img}
-					href="/projects/{project.title}"
-					progLangs={project.proglang}
-				/>
-			{/each}
-		</div>
 	</Container>
 	<Container id="offers" marginBottom="5rem" containerFrom={768}>
 		<SectionHeader
@@ -122,6 +122,7 @@
 		#punchline {
 			font-size: 4rem;
 			line-height: 5rem;
+			width: 100%;
 		}
 
 		#punchline-button {
