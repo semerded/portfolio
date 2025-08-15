@@ -5,7 +5,6 @@
 
 	export let center: boolean = true;
 	export let minHeight: string | null = null;
-	export let id: string | null = null;
 	export let marginBottom: string | null = null;
 	export let containerFrom: number | null = null;
 	export let containerUntil: number | null = null;
@@ -26,7 +25,7 @@
 </script>
 
 <div
-	{id}
+	id={$$restProps.id}
 	class:container-wrapper={matches}
 	style="{minHeight ? `min-height: ${minHeight}` : ''}; {marginBottom
 		? `margin-bottom: ${marginBottom}`
