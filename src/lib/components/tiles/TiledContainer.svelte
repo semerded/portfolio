@@ -1,18 +1,25 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	export let wrapAt: number = 468;
-	export let paddingY: string = "0";
-	let wrap = false;
+	export let wrapAt: number | null = 468;
+	export let wrapFrom: number | null = null;
+	export let wrap: boolean = false;
+	export let paddingY: string = '0';
+	let isWrapping = false;
 
-    let container: HTMLElement;
+	let container: HTMLElement;
 
 	function updateWrap() {
-         console.log("Width: ", window.innerWidth, wrapAt);
-         if(container!) {
-
-             wrap = (container.clientWidth < wrapAt);
-         }
+		console.log('Width: ', window.innerWidth, wrapAt);
+		if (container!) {
+			if (wrap) {
+				isWrapping = wrap;
+			} else if (wrapFrom !== null) {
+				isWrapping = container.clientWidth > wrapFrom;
+			} else if (wrapAt !== null) {
+				isWrapping = container.clientWidth < wrapAt;
+			}
+		}
 	}
 
 	onMount(() => {
@@ -24,9 +31,9 @@
 
 <section
 	bind:this={container}
-
-	class="tiled-container"
-	style="flex-wrap: {wrap ? 'wrap' : 'nowrap'}; padding: {paddingY} 0;"
+	class="tiled-container {$$restProps.class}"
+	id="{$$restProps.id}"
+	style="flex-wrap: {isWrapping ? 'wrap' : 'nowrap'}; padding: {paddingY} 0; {$$restProps.style}"
 >
 	<slot />
 </section>

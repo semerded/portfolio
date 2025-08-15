@@ -10,16 +10,20 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	line-height: 1.2;
 }
 
 h2 {
@@ -37,9 +41,8 @@ h3 {
 }
 
 .slanted {
-		clip-path: polygon(0 calc(1vw + 8px), 100% 0, 100% calc(100% - (1vw + 8px)), 0 100%);
-		padding: calc(1vw + 24px);
-
+	clip-path: polygon(0 calc(1vw + 8px), 100% 0, 100% calc(100% - (1vw + 8px)), 0 100%);
+	padding: calc(1vw + 24px);
 }
 
 .glossy-tile {
@@ -75,6 +78,10 @@ body {
 
 .attention-scroll-track {
 	scrollbar-color: var(--primary) var(--bg);
+}
+
+.bg-alt {
+	background: var(--bg-alt);
 }
 
 .bold {

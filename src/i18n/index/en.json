@@ -41,6 +41,11 @@
 			"description": "Be the first to be proudly displayed on my portfolio!"
 		}
 	},
+	"process": {
+		"title": "How our cooperation will look like"
+	},
+
+
 	"profile": {
 		"title": "My digital profile",
 		"description": "I'm 18 years old and have found love in programming. I've been experimenting with technology from a young age. Currently I like to make projects with a variety of programming languages.",
@@ -116,15 +121,15 @@
 			}
 		]
 	},
-	"website-offers": {
-		"title": "Website offers",
+	"website-packages": {
+		"title": "Website packages",
 		"subtitle": "Let me create a website for you!",
 		"button": "Tell me more!",
-		"offer-structure": {
+		"packages-structure": {
 			"features": "Included features",
 			"benefits": "Why choose this option?"
 		},
-		"offers": [
+		"packages": [
 			{
 				"title": "Single Page Website",
 				"price": "Starting from €75",
@@ -143,8 +148,7 @@
 				"title": "Dynamic Single Page Website",
 				"price": "Starting from €150",
 				"features": [
-					"Fast loading design",
-					"Free & Lightweight deployment*",
+					"All features of a single page website +", 
 					"Dynamic content",
 					"Customer friendly contact form",
 					"Free database and API*"
@@ -189,17 +193,13 @@
 				"title": "Dynamic Multi-page Website",
 				"price": "Starting from €250",
 				"features": [
-					"Modern navigation menu",
-					"Fast loading design",
-					"Free & Lightweight deployment*",
+					"All features of a multi-page website +",
 					"Dynamic content",
 					"Customer friendly contact form",
 					"Free database and API*"
 				],
 				"benefits": [
-					"Highlight projects, articles and more",
-					"Improve the outreach of your website",
-					"Industry standard",
+					"All benefits of a multi-page website +",
 					"Dynamically show content"
 				]
 			},

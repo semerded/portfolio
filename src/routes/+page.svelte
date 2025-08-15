@@ -15,8 +15,9 @@
 	import Subtitle from '$lib/components/Subtitle.svelte';
 	import Button from '$lib/components/button.svelte';
 	import { onDestroy, onMount } from 'svelte';
+	import Process from './Process.svelte';
 
-	$: offers = $json('website-offers.offers') as {
+	$: offers = $json('website-packages.packages') as {
 		title: string;
 		price: string;
 		features: string[];
@@ -114,7 +115,7 @@
 	</div>
 
 	<!-- Examples -->
-	<div id="examples" class="slanted">
+	<div id="examples" class="slanted bg-alt">
 		<Container>
 			<Tile alignX="center">
 				<h2>{$t('examples.title')}</h2>
@@ -135,15 +136,14 @@
 			</Tile>
 		</Container>
 	</div>
+	<Container>
+		<Process />
+	</Container>
 
+	<!-- Packages-->
+	<Subtitle text={$t('website-packages.title')} color="var(--primary)"></Subtitle>
 	<Container id="offers" marginBottom="5rem" containerFrom={768}>
-		<SectionHeader
-			title={$t('website-offers.title')}
-			subtitle={$t('website-offers.subtitle')}
-			buttonText={$t('website-offers.button')}
-			href="/website-offers"
-		/>
-		<div class="tiled-container attention-scroll-track">
+		<TiledContainer wrapFrom={670} class="attention-scroll-track" id="package-container">
 			{#each offers as offer, index}
 				<OfferTile
 					title={offer.title}
@@ -153,9 +153,13 @@
 					{index}
 				/>
 			{/each}
-		</div>
+		</TiledContainer>
 		<p style="color: white;">* {$t('website-offers.additional')}</p>
 	</Container>
+
+	<div class="bg-alt slanted">
+		
+	</div>
 </main>
 
 <style>
@@ -167,11 +171,6 @@
 			font-size: 4rem;
 			line-height: 5rem;
 			width: 100%;
-		}
-
-		#punchline-button {
-			max-width: 300px;
-			z-index: 2;
 		}
 
 		#punchline-description {
@@ -187,14 +186,10 @@
 			justify-content: space-evenly;
 		}
 
-		#examples {
-			background: var(--bg-alt);
-
-			#example-container {
-				display: flex;
-				justify-content: space-evenly;
-				gap: 1rem;
-			}
+		#example-container {
+			display: flex;
+			justify-content: space-evenly;
+			gap: 1rem;
 		}
 	}
 
@@ -209,31 +204,12 @@
 
 	@media screen and (max-width: 650px) {
 		main {
-			:global(#project-container) {
-				padding: 8px 0;
-			}
+			:global(#package-container) {
+				overflow-x: scroll;
+				justify-content: unset;
 
-			:global(#profile-container) {
-				padding: 8px 0;
-
-				:global(.glossy-tile) {
-					padding: 8px 0;
-				}
-			}
-
-			:global(#offers) {
-				.tiled-container {
-					flex-wrap: nowrap;
-					overflow-x: scroll;
-					justify-content: unset;
-
-					:global(> *) {
-						margin: 0 8px;
-					}
-				}
-
-				p {
-					text-align: center;
+				:global(> *) {
+					margin: 0 8px;
 				}
 			}
 		}
