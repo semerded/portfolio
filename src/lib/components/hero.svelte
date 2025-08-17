@@ -28,7 +28,7 @@
 	}
 </script>
 
-<div class="hero-container" {id} style="--height: calc({height} + 20lvh)">
+<div class="hero-container bg" {id} style="--height: calc({height} + 20lvh)">
 	{#if image}
 		<div class="image-container">
 			<img
@@ -40,7 +40,7 @@
 					start: 0,
 					end: height,
 					property: '--backgroundColorAlpha',
-					min: 0.8,
+					min: 0.7,
 					max: 0
 				}}
 				use:scrollRange={{
@@ -145,14 +145,40 @@
 		}
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1150px) {
 		.hero-container {
 			.hero-text {
+				right: 35%;
+				h1 {
+					font-size: 5svw;
+					
+				}
+				h2 {
+					font-size: 3svw;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.hero-container {
+			.image-container {
+				img {
+					object-position: calc(100% + 300px);
+				}
+			}
+			.hero-text {
+				width: 100%;
+				right: 0;
 				h1 {
 					font-size: 8svw;
 				}
 				h2 {
-					font-size: 3svw;
+					font-size: max(3svw, 1.5rem);
+				}
+
+				h3 {
+					font-size: 1.2rem;
 				}
 			}
 		}

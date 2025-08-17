@@ -129,6 +129,7 @@
 			"features": "Included features",
 			"benefits": "Why choose this option?"
 		},
+		"scroll-info": "Scroll right to see all packages",
 		"packages": [
 			{
 				"title": "Single Page Website",

@@ -16,6 +16,7 @@
 	import Button from '$lib/components/button.svelte';
 	import { onDestroy, onMount } from 'svelte';
 	import Process from './Process.svelte';
+	import StaticBgContainer from '$lib/components/StaticBgContainer.svelte';
 
 	$: offers = $json('website-packages.packages') as {
 		title: string;
@@ -38,7 +39,7 @@
 
 	function updateLength() {
 		if (exampleContainer) {
-			exampleLength = Math.floor(exampleContainer.clientWidth / 400);
+			exampleLength = Math.max(Math.floor(exampleContainer.clientWidth / 400), 1);
 		}
 	}
 
@@ -84,7 +85,7 @@
 		buttonLink={['#why-a-website', '/about']}
 		id="welcome"
 	/>
-	<Container id="why-a-website">
+	<Container id="why-a-website" class="bg">
 		<Tile alignY="center" alignX="center" paddingY="2rem">
 			<h2 id="punchline">
 				{$t('why-a-website.punchline.title')}
@@ -113,6 +114,12 @@
 			/>
 		{/each}
 	</div>
+
+	<StaticBgContainer imageUrl="/images/index/idk.jpg" >
+		<h2>
+			First impressions happen online — make them count!
+		</h2>
+	</StaticBgContainer>
 
 	<!-- Examples -->
 	<div id="examples" class="slanted bg-alt">
@@ -143,6 +150,7 @@
 	<!-- Packages-->
 	<Subtitle text={$t('website-packages.title')} color="var(--primary)"></Subtitle>
 	<Container id="offers" marginBottom="5rem" containerFrom={768}>
+		<p id="package-scroll-info">{$t('website-packages.scroll-info')}</p>
 		<TiledContainer wrapFrom={670} class="attention-scroll-track" id="package-container">
 			{#each offers as offer, index}
 				<OfferTile
@@ -158,7 +166,7 @@
 	</Container>
 
 	<div class="bg-alt slanted">
-		
+
 	</div>
 </main>
 
@@ -191,6 +199,10 @@
 			justify-content: space-evenly;
 			gap: 1rem;
 		}
+
+		#package-scroll-info {
+			display: none;
+		}
 	}
 
 	/* .bg-credits {
@@ -202,7 +214,7 @@
 		z-index: 100;
 	} */
 
-	@media screen and (max-width: 650px) {
+	@media screen and (max-width: 670px) {
 		main {
 			:global(#package-container) {
 				overflow-x: scroll;
@@ -212,6 +224,17 @@
 					margin: 0 8px;
 				}
 			}
+
+			#punchline {
+				font-size: 2rem;
+				line-height: 2.5rem;
+			}
+
+			#punchline-description {
+				font-size: 1rem;
+				line-height: 1.2rem;
+			}
+			
 		}
 	}
 </style>

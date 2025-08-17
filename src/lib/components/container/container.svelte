@@ -27,6 +27,7 @@
 <div
 	id={$$restProps.id}
 	class:container-wrapper={matches}
+	class={$$restProps.class}
 	style="{minHeight ? `min-height: ${minHeight}` : ''}; {marginBottom
 		? `margin-bottom: ${marginBottom}`
 		: ''}"
