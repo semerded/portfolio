@@ -3,11 +3,12 @@
 	import { onMount } from 'svelte';
 	let width = 0;
 
-	export let center: boolean = true;
 	export let minHeight: string | null = null;
-	export let marginBottom: string | null = null;
+	export let marginTop: string | null = "0";
+	export let marginBottom: string | null = "0";
 	export let containerFrom: number | null = null;
 	export let containerUntil: number | null = null;
+	export let bg: string = 'var(--bg)';
 	const updateWidth = () => {
 		width = window.innerWidth;
 	};
@@ -28,9 +29,7 @@
 	id={$$restProps.id}
 	class:container-wrapper={matches}
 	class={$$restProps.class}
-	style="{minHeight ? `min-height: ${minHeight}` : ''}; {marginBottom
-		? `margin-bottom: ${marginBottom}`
-		: ''}"
+	style="{minHeight ? `min-height: ${minHeight}` : ''}; margin-bottom: {marginBottom}; margin-top: {marginTop}; background: {bg}"
 >
 	<article class:container={matches}>
 		<slot />

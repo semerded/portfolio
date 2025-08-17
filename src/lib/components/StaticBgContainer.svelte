@@ -1,8 +1,13 @@
 <script lang="ts">
 	export let imageUrl: string;
+	export let paddingY: string = '4rem';
 </script>
 
-<div id={$$restProps.id} class="static-bg-container {$$restProps.class}">
+<div
+	id={$$restProps.id}
+	class="static-bg-container {$$restProps.class}"
+	style="padding-top: {paddingY}; padding-bottom: {paddingY};"
+>
 	<div class="image-container">
 		<img src={imageUrl} alt="static background" />
 	</div>
@@ -12,16 +17,22 @@
 <style>
 	.static-bg-container {
 		position: relative;
+		top: 2rem;
+		text-align: center;
 
 		.image-container {
 			position: fixed;
 			inset: 0;
-			z-index: -1;
+			z-index: -2;
+			/* background: black; */
 
-			-webkit-mask: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* visible area */
-			-webkit-mask-repeat: no-repeat;
-			-webkit-mask-size: cover;
-			mask: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				background: var(--gradient);
+			}
 
 			img {
 				width: 100%;

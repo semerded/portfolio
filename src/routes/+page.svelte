@@ -85,7 +85,7 @@
 		buttonLink={['#why-a-website', '/about']}
 		id="welcome"
 	/>
-	<Container id="why-a-website" class="bg">
+	<Container id="why-a-website">
 		<Tile alignY="center" alignX="center" paddingY="2rem">
 			<h2 id="punchline">
 				{$t('why-a-website.punchline.title')}
@@ -101,29 +101,36 @@
 		</Tile>
 	</Container>
 
+	
+
 	<!-- Benefits -->
 
-	<Subtitle text="Why a website?" color="var(--primary)" />
-	<div id="benefits-container">
-		{#each benefits as benefit}
-			<Card
-				title={benefit.title}
-				description={benefit.description}
-				icon={benefit.icon}
-				maxWidth="400px"
-			/>
-		{/each}
-	</div>
+	<article class="bg">
+		<Subtitle text="Why a website?" color="var(--primary)" />
+		<div id="benefits-container">
+			{#each benefits as benefit}
+				<Card
+					title={benefit.title}
+					description={benefit.description}
+					icon={benefit.icon}
+					maxWidth="400px"
+				/>
+			{/each}
+		</div>
+	</article>
 
-	<StaticBgContainer imageUrl="/images/index/idk.jpg" >
-		<h2>
+
+	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="6rem" >
+		<h2 >
 			First impressions happen online — make them count!
 		</h2>
 	</StaticBgContainer>
 
+	
+
 	<!-- Examples -->
 	<div id="examples" class="slanted bg-alt">
-		<Container>
+		<Container bg="var(--bg-alt)" marginTop={"4rem"}>
 			<Tile alignX="center">
 				<h2>{$t('examples.title')}</h2>
 				<p>{$t('examples.filler')}</p>

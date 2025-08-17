@@ -12,7 +12,6 @@
 		text-align: center;
 		width: 100%;
 		padding: 4rem 1rem;
-		margin: 1rem 0;
 		background: var(--bg);
 	}
 </style>
