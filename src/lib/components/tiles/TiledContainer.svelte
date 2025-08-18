@@ -10,7 +10,6 @@
 	let container: HTMLElement;
 
 	function updateWrap() {
-		console.log('Width: ', window.innerWidth, wrapAt);
 		if (container!) {
 			if (wrap) {
 				isWrapping = wrap;
