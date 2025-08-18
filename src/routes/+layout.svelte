@@ -69,6 +69,7 @@
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
 	/>
+	<meta name="theme-color" content="#132013" />
 </svelte:head>
 
 <Navbar />
@@ -99,7 +100,6 @@
 <Footer />
 
 <style>
-
 	.transition-container {
 		position: relative;
 		width: 100%;

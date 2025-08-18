@@ -142,3 +142,8 @@ button {
 	background: var(--primary);
 	border-radius: 10px;
 }
+
+::selection {
+	background-color: var(--primary);
+	color: var(--text);
+}
