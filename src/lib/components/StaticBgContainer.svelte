@@ -39,6 +39,7 @@
 
 		.image-container {
 			position: fixed;
+			height: 100lvh;
 			inset: 0;
 			z-index: -2;
 			/* background: black; */
