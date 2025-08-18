@@ -19,22 +19,31 @@
 				<a href="https://github.com/dotsem" target="_blank" aria-label="Github"
 					><i class="fa-brands fa-github"></i></a
 				>
-				<a href="https://www.linkedin.com/in/sem-van-broekhoven/" target="_blank" aria-label="LinkedIn"
-					><i class="fa-brands fa-linkedin"></i></a
+				<a
+					href="https://www.linkedin.com/in/sem-van-broekhoven/"
+					target="_blank"
+					aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a
 				>
-				<a href="https://www.instagram.com/sem_van_broekhoven/" target="_blank" aria-label="Instagram"
-					><i class="fa-brands fa-instagram"></i></a
+				<a
+					href="https://www.instagram.com/sem_van_broekhoven/"
+					target="_blank"
+					aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a
 				>
-				<a href="https://www.facebook.com/profile.php?id=100089528472654" target="_blank" aria-label="Facebook"
-					><i class="fa-brands fa-facebook"></i></a
+				<a
+					href="https://www.facebook.com/profile.php?id=100089528472654"
+					target="_blank"
+					aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a
 				>
 			</div>
 		</div>
 	{/if}
+
+	<div id="footer-filler" class="slanted"></div>
 </footer>
 
 <style>
 	footer {
+		position: relative;
 		padding: 48px 2rem;
 		width: 100%;
 		background: var(--nav);
@@ -114,6 +123,17 @@
 				}
 			}
 		}
+
+		#footer-filler {
+			position: absolute;
+			top: 0;
+			transform: translate(0, -2rem);
+			left: 0;
+			width: 100%;
+			height: 24px;
+			background: var(--nav);
+			border: none;
+		}
 	}
 
 	@media only screen and (max-width: 899px) {
@@ -125,7 +145,6 @@
 					border-bottom: 3px solid var(--primary);
 				}
 			}
-
 		}
 	}
 </style>
