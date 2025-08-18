@@ -67,7 +67,8 @@
 		.price {
 			transition: transform 500ms;
 			display: block;
-			background-color: var(--secondary);
+			background-color: var(--primary);
+			font-weight: 600;
 			width: fit-content;
 			padding: 8px;
 			border-radius: 8px;
