@@ -28,7 +28,7 @@
 		<input
 			type="text"
 			bind:value={name}
-			placeholder={$t('offer-form.placeholder.name')}
+			placeholder={$t('package-form.placeholder.name')}
 			required
 			on:input={() => validateName(name)}
 		/>
@@ -44,7 +44,7 @@
 		<input
 			type="text"
 			bind:value={email}
-			placeholder={$t('offer-form.placeholder.email')}
+			placeholder={$t('package-form.placeholder.email')}
 			required
 			on:input={() => validateEmail(email)}
 		/>
@@ -65,11 +65,11 @@
 			bind:value={offer}
 			on:change={() => validateOffer(offer)}
 		>
-			<option value={-1} disabled selected hidden>{$t('offer-form.placeholder.offer')}</option>
+			<option value={-1} disabled selected hidden>{$t('package-form.placeholder.package')}</option>
 			{#each offers as title, index}
 				<option value={index}>{title}</option>
 			{/each}
-			<option value={-2}>{$t('offer-form.cant-decide')}</option>
+			<option value={-2}>{$t('package-form.cant-decide')}</option>
 		</select>
 		<i
 			class="fa-solid form-checkmark"
@@ -80,7 +80,7 @@
 	</div>
 
 	<div>
-		<textarea name="" placeholder={$t('offer-form.placeholder.message')} id="form-message"
+		<textarea name="" placeholder={$t('package-form.placeholder.message')} id="form-message"
 		></textarea>
 	</div>
 
@@ -90,7 +90,7 @@
 			disabled={!validForm}
 			on:click={() => {
 				console.log('send data');
-			}}>{$t('offer-form.button')}</button
+			}}>{$t('package-form.button')}</button
 		>
 	</div>
 </form>
@@ -113,7 +113,7 @@
 				--fa-animation-iteration-count: 1;
 				position: absolute;
 				font-size: var(--size);
-				right: calc((4px) * -1);
+				right: 1px;
 				color: red;
 
 				&.fa-check-circle {
@@ -125,7 +125,7 @@
 		button {
 			width: 100%;
 			font-weight: 600;
-			margin: 0 24px;
+			margin: 0 28px;
 
 			&:disabled {
 				opacity: 0.5;
@@ -138,14 +138,15 @@
 		input,
 		textarea,
 		select {
+			font-family: 'Lato', sans-serif;
 			width: 100%;
 			padding: 8px 4px;
 			background-color: transparent;
-			border: 2px solid var(--secondary);
 			border-radius: 8px;
-			margin: 0 24px;
+			margin: 0 28px;
 			font-size: 1.1rem;
 			color: var(--text);
+			border: 1px solid rgba(255, 255, 255, 0.2);
 
 			&::placeholder,
 			&.placeholder {
@@ -155,15 +156,11 @@
 
 			&:focus {
 				outline: unset;
-				box-shadow: 0px 0px 16px 0px var(--secondary);
+				border: 1px solid var(--secondary);
 
 				&[required] {
-					box-shadow: 0px 0px 16px 0px var(--primary);
+					border: 1px solid var(--primary);
 				}
-			}
-
-			&[required] {
-				border: 2px solid var(--primary);
 			}
 		}
 

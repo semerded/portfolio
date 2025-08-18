@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Container from '$lib/components/container/container.svelte';
 	import Hero from '$lib/components/hero.svelte';
-	import OfferExt from '$lib/components/offers/OfferExt.svelte';
+	import OfferExt from '$lib/components/packages/OfferExt.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	// import SideBar from '$lib/components/sidebar.svelte';
 	import { onMount } from 'svelte';
 
 	import { json, t } from 'svelte-i18n';
-	import OfferForm from '$lib/components/form/OfferForm.svelte';
+	import OfferForm from '$lib/components/form/PackageForm.svelte';
 
 	$: offers = $json('offers') as {
 		title: string;

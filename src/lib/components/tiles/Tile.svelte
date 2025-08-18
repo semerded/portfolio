@@ -1,5 +1,4 @@
 <script lang="ts">
-	export let id: string | null = null;
 	export let alignX: AlignX = 'left';
 	export let alignY: AlignY = 'top';
 	export let paddingX: string = '0';
@@ -9,14 +8,15 @@
 </script>
 
 <div
-	class="tile"
-	id={id ?? undefined}
+	class="tile {$$restProps.class}"
+	id={$$restProps.id}
 	style="
 		justify-content: {alignY};
 		align-items: {alignX};
 		--background: {backgroundColor ?? 'unset'};
 		min-height: {minHeight ?? 'unset'};
 		padding: {paddingY} {paddingX};
+		{$$restProps.style}
 	"
 >
 	<slot />

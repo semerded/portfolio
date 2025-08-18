@@ -29,7 +29,7 @@
 	id={$$restProps.id}
 	class:container-wrapper={matches}
 	class={$$restProps.class}
-	style="{minHeight ? `min-height: ${minHeight}` : ''}; margin-bottom: {marginBottom}; margin-top: {marginTop}; background: {bg}"
+	style="{minHeight ? `min-height: ${minHeight}` : ''}; margin-bottom: {marginBottom}; margin-top: {marginTop}; background: {bg}; {$$restProps.style};"
 >
 	<article class:container={matches}>
 		<slot />

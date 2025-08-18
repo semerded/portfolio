@@ -52,7 +52,7 @@
 		position: relative;
 		width: 30%;
 		min-width: 400px;
-		min-height: 600px;
+		min-height: 550px;
 
 		padding: 16px;
 

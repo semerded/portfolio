@@ -5,7 +5,7 @@
 	import Hero from '$lib/components/hero.svelte';
 	import Container from '$lib/components/container/container.svelte';
 	import Card from '$lib/components/card/card.svelte';
-	import OfferTile from '$lib/components/offers/OfferTile.svelte';
+	import OfferTile from '$lib/components/packages/PackageTile.svelte';
 	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
 	import Tile from '$lib/components/tiles/Tile.svelte';
 	import Subtitle from '$lib/components/Subtitle.svelte';
@@ -13,7 +13,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import Process from './Process.svelte';
 	import StaticBgContainer from '$lib/components/StaticBgContainer.svelte';
-	import OfferForm from '$lib/components/form/OfferForm.svelte';
+	import PackageForm from '$lib/components/form/PackageForm.svelte';
 
 	$: offers = $json('website-packages.packages') as {
 		title: string;
@@ -33,9 +33,6 @@
 		description: string;
 		price: string;
 	}[];
-
-	
-	
 
 	let exampleLength = 0;
 	let exampleContainer: HTMLElement;
@@ -61,8 +58,14 @@
 		}
 	});
 
-	const benefitIcons: string[] = ["fa-globe", "fa-user-tie", "fa-thumbs-up"];
-	const additionalPackagesIcons: string[] = ["fa-face-smile", "fa-address-card", "fa-camera", "fa-crosshairs", "fa-language"];
+	const benefitIcons: string[] = ['fa-globe', 'fa-user-tie', 'fa-thumbs-up'];
+	const additionalPackagesIcons: string[] = [
+		'fa-face-smile',
+		'fa-address-card',
+		'fa-camera',
+		'fa-crosshairs',
+		'fa-language'
+	];
 </script>
 
 <main>
@@ -88,7 +91,8 @@
 			</p>
 		</Tile>
 		<Tile alignX="center" alignY="center" paddingY="2rem">
-			<Button href="/">{$t('why-a-website.punchline.button')}</Button> <!-- TODO href -->
+			<Button href="/">{$t('why-a-website.punchline.button')}</Button>
+			<!-- TODO href -->
 		</Tile>
 	</Container>
 
@@ -130,7 +134,8 @@
 				{/each}
 			</div>
 			<Tile alignX="center" paddingY="4rem">
-				<Button href="/">{$t('examples.button')}</Button> <!-- TODO href -->
+				<Button href="/">{$t('examples.button')}</Button>
+				<!-- TODO href -->
 			</Tile>
 		</Container>
 	</div>
@@ -145,7 +150,8 @@
 			<Tile paddingY="0.5rem" paddingX="8px">
 				<p>{$t('website-packages.description')}</p>
 			</Tile>
-			<Button href="/">{$t('website-packages.button')}</Button> <!-- TODO href -->
+			<Button href="/">{$t('website-packages.button')}</Button>
+			<!-- TODO href -->
 		</Tile>
 		<p id="package-scroll-info">{$t('website-packages.scroll-info')}</p>
 		<TiledContainer wrapFrom={670} class="attention-scroll-track" id="package-container">
@@ -174,7 +180,6 @@
 		<h2>{$t('quotes.2')}</h2>
 	</StaticBgContainer>
 
-
 	<!-- Additional packages -->
 	<Container class="slanted">
 		<Tile paddingY="1rem">
@@ -197,14 +202,16 @@
 		</TiledContainer>
 	</Container>
 
-
 	<!-- Contact Form -->
-	<div class="bg-alt slanted">
-		
-		<Tile alignX="center">
-			<OfferForm offers={offers.map((offer) => offer.title)} />
-		</Tile>
-	</div>
+		<TiledContainer wrapAt={768} paddingY="4rem" class="slanted bg-alt" >
+			<Tile class="package-form-tile">
+				<h2>{$t('package-form.title')}</h2>
+				<p>{$t('package-form.subtitle')}</p>
+			</Tile>
+				<Tile style="border-left: 1px solid rgba(255, 255, 255, 0.2);" class="package-form-tile">
+					<PackageForm offers={offers.map((offer) => offer.title)} />
+				</Tile>
+		</TiledContainer>
 </main>
 
 <style>
@@ -242,6 +249,15 @@
 			text-align: center;
 			font-size: 1.2rem;
 			line-height: 2rem;
+		}
+
+		:global(.package-form-tile) {
+			width: 100%;
+			text-align: right;
+
+			h2, p {
+				margin-right: 32px;
+			}
 		}
 	}
 
