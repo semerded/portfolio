@@ -87,7 +87,7 @@
 				{$t('why-a-website.punchline.description')}
 			</p>
 		</Tile>
-		<Tile alignX="center" alignY="center" paddingY="4rem">
+		<Tile alignX="center" alignY="center" paddingY="2rem">
 			<Button href="/">{$t('why-a-website.punchline.button')}</Button> <!-- TODO href -->
 		</Tile>
 	</Container>
@@ -108,7 +108,7 @@
 		</div>
 	</article>
 
-	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="6rem">
+	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="8rem">
 		<h2>{$t('quotes.1')}</h2>
 	</StaticBgContainer>
 
@@ -170,7 +170,7 @@
 		</Tile>
 	</Container>
 
-	<StaticBgContainer imageUrl="/images/index/bg-light_4.jpg" class="slanted" paddingY="6rem">
+	<StaticBgContainer imageUrl="/images/index/bg-light_4.jpg" class="slanted" paddingY="8rem">
 		<h2>{$t('quotes.2')}</h2>
 	</StaticBgContainer>
 
@@ -190,6 +190,8 @@
 					description={singlePackage.description}
 					maxWidth="400px"
 					icon={additionalPackagesIcons[index]}
+					price={singlePackage.price}
+					textPosition="end"
 				></Card>
 			{/each}
 		</TiledContainer>

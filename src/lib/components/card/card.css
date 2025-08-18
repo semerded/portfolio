@@ -14,6 +14,17 @@
 	overflow: hidden;
 	padding: 0;
 
+	.price {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		background-color: var(--primary);
+		font-weight: 600;
+		width: fit-content;
+		padding: 8px;
+		border-radius: 8px;
+	}
+
 
 	.card-icon {
 		display: flex;
@@ -22,6 +33,7 @@
 		width: 100%;
 
 		border-radius: 8px;
+
 		i {
 			transition: 400ms;
 			width: 100%;
@@ -34,12 +46,11 @@
 			text-align: center;
 			transform: rotateZ(0deg);
 		}
-		
+
 	}
 
 	.card-content {
 
-		--blur: 1px;
 		overflow: hidden;
 		box-shadow: 0 -6px 8px -6px rgb(59, 53, 53);
 		border-radius: 8px;
@@ -48,24 +59,22 @@
 		padding: 4px;
 
 		background-color: color-mix(in srgb, var(--bg) 70%, transparent);
-		backdrop-filter: blur(var(--blur));
-		-webkit-backdrop-filter: blur(var(--blur));
 		border: 1px solid rgba(255, 255, 255, 0.2);
 
 		position: absolute;
-		bottom: 0;
 		left: 0;
-
-		overflow: hidden;
+		bottom: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: end;
+		/* justify-content: end; */
 
 		transition: 400ms;
 
 		h3 {
+			transition: color 400ms;
 			text-align: center;
-			padding: 12px 0;
+			padding: 0;
+			color: var(--text);
 			height: fit-content;
 		}
 
@@ -76,45 +85,33 @@
 			text-align: left;
 		}
 
-		p::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 2em;
-			transition: opacity 400ms;
-			pointer-events: none;
-		}
-
-		.prog-lang-container {
-			display: flex;
-			padding: 4px;
-			height: 100%;
-			align-items: center;
-			justify-content: center;
-		}
+	
 	}
 
 	&:hover {
 		background-color: initial !important;
+
 		.card-content {
 
 			p::after {
 				opacity: 0;
 			}
+
+			h3 {
+				transition: color 400ms;
+				color: var(--secondary);
+			}
 		}
+
 		.card-icon i {
-			opacity: 0.5;
+			opacity: 0.3;
 			scale: 1.1;
 			transform: rotateZ(5deg);
 
 		}
 	}
 
-	overflow: visible;
 
 
 
 }
-

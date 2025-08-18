@@ -58,7 +58,8 @@ p {
 
 .slanted {
 	clip-path: polygon(0 calc(1vw + 8px), 100% 0, 100% calc(100% - (1vw + 8px)), 0 100%);
-	padding: calc(1vw + 24px);
+	padding-top: calc(1vw + 24px);;
+	padding-bottom: calc(1vw + 24px);;
 }
 
 .glossy-tile {
