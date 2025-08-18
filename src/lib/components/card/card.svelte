@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import './card.css';
 
 	export let title: string;
@@ -7,12 +6,10 @@
 	export let icon: string;
 	export let maxWidth: string = '400px';
 	export let textPosition: string = 'end';
-
 	export let price: string | null = null;
 </script>
 
-<button class="card" style="max-width: {maxWidth}">
-	<div>
+<div class="card" style="max-width: {maxWidth}">
 		<div class="card-icon">
 			<i style="--size: calc({maxWidth} / 1.3);" class="fa-solid {icon}"></i>
 		</div>
@@ -24,5 +21,5 @@
 			<h3>{title}</h3>
 			<p>{description}</p>
 		</div>
-	</div>
-</button>
+	
+</div>
