@@ -129,7 +129,7 @@
 				<p>{$t('offer-form.note')}</p>
 			</div>
 
-			<OfferForm {offers} />
+			<!-- <OfferForm {offers} /> -->
 		</div>
 	</Container>
 </main>

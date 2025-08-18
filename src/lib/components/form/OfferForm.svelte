@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let offers: { title: string; price: string; description: string }[];
+	export let offers: string[];
 
 	import { t } from 'svelte-i18n';
 
@@ -66,8 +66,8 @@
 			on:change={() => validateOffer(offer)}
 		>
 			<option value={-1} disabled selected hidden>{$t('offer-form.placeholder.offer')}</option>
-			{#each offers as offer, index}
-				<option value={index}>{offer.title}</option>
+			{#each offers as title, index}
+				<option value={index}>{title}</option>
 			{/each}
 			<option value={-2}>{$t('offer-form.cant-decide')}</option>
 		</select>

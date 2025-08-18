@@ -11,7 +11,6 @@
 	onMount(() => {
 		observer = new IntersectionObserver((entries) => {
 			visible = entries[0].isIntersecting;
-			console.log(visible);
 		});
 		observer.observe(slitContainer);
 		return () => observer.disconnect();

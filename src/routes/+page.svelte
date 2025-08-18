@@ -5,11 +5,7 @@
 	import Hero from '$lib/components/hero.svelte';
 	import Container from '$lib/components/container/container.svelte';
 	import Card from '$lib/components/card/card.svelte';
-	import Profile from '$lib/components/profile/profile.svelte';
-	// import SideBar from '$lib/components/sidebar.svelte';
 	import OfferTile from '$lib/components/offers/OfferTile.svelte';
-	import SectionHeader from '$lib/components/SectionHeader.svelte';
-	import DynamicBackground from '$lib/components/dynamic-background.svelte';
 	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
 	import Tile from '$lib/components/tiles/Tile.svelte';
 	import Subtitle from '$lib/components/Subtitle.svelte';
@@ -17,6 +13,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import Process from './Process.svelte';
 	import StaticBgContainer from '$lib/components/StaticBgContainer.svelte';
+	import OfferForm from '$lib/components/form/OfferForm.svelte';
 
 	$: offers = $json('website-packages.packages') as {
 		title: string;
@@ -29,8 +26,16 @@
 		title: string;
 		icon: string;
 		description: string;
-		// img: string;
 	}[];
+
+	$: additionalPackages = $json('additional-packages.packages') as {
+		title: string;
+		description: string;
+		price: string;
+	}[];
+
+	
+	
 
 	let exampleLength = 0;
 	let exampleContainer: HTMLElement;
@@ -56,23 +61,9 @@
 		}
 	});
 
-	//
+	const benefitIcons: string[] = ["fa-globe", "fa-user-tie", "fa-thumbs-up"];
+	const additionalPackagesIcons: string[] = ["fa-face-smile", "fa-address-card", "fa-camera", "fa-crosshairs", "fa-language"];
 </script>
-
-<!-- <SideBar
-	links={[
-		{ name: 'Welcome', link: '#welcome' },
-		{ name: 'My Profile', link: '#my-profile' },
-		{ name: 'My projects', link: '#my-projects' },
-		{ name: 'Website Offers', link: '#offers' },
-		{ name: 'Quality of work', link: '#qos' }
-	]}
-/> -->
-
-<!-- <DynamicBackground image="/images/bg/bg-dark.jpg" />
-<a class="bg-credits" href="https://www.pexels.com/photo/stars-in-galaxy-17809421/">
-	Photo by Daniel Cid from Pexels
-</a> -->
 
 <main>
 	<!-- Hero -->
@@ -97,7 +88,7 @@
 			</p>
 		</Tile>
 		<Tile alignX="center" alignY="center" paddingY="4rem">
-			<Button href="/">{$t('why-a-website.punchline.button')}</Button>
+			<Button href="/">{$t('why-a-website.punchline.button')}</Button> <!-- TODO href -->
 		</Tile>
 	</Container>
 
@@ -106,11 +97,11 @@
 	<article class="bg">
 		<Subtitle text="Why a website?" color="var(--primary)" />
 		<div id="benefits-container">
-			{#each benefits as benefit}
+			{#each benefits as benefit, index}
 				<Card
 					title={benefit.title}
 					description={benefit.description}
-					icon={benefit.icon}
+					icon={benefitIcons[index]}
 					maxWidth="400px"
 				/>
 			{/each}
@@ -118,7 +109,7 @@
 	</article>
 
 	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="6rem">
-		<h2>First impressions happen online — make them count!</h2>
+		<h2>{$t('quotes.1')}</h2>
 	</StaticBgContainer>
 
 	<!-- Examples -->
@@ -139,7 +130,7 @@
 				{/each}
 			</div>
 			<Tile alignX="center" paddingY="4rem">
-				<Button href="/">{$t('examples.button')}</Button>
+				<Button href="/">{$t('examples.button')}</Button> <!-- TODO href -->
 			</Tile>
 		</Container>
 	</div>
@@ -149,7 +140,13 @@
 
 	<!-- Packages-->
 	<Subtitle text={$t('website-packages.title')} color="var(--primary)"></Subtitle>
-	<Container id="offers" marginBottom="5rem" containerFrom={768}>
+	<Container id="offers" containerFrom={768}>
+		<Tile alignX="center" paddingY="2rem">
+			<Tile paddingY="0.5rem" paddingX="8px">
+				<p>{$t('website-packages.description')}</p>
+			</Tile>
+			<Button href="/">{$t('website-packages.button')}</Button> <!-- TODO href -->
+		</Tile>
 		<p id="package-scroll-info">{$t('website-packages.scroll-info')}</p>
 		<TiledContainer wrapFrom={670} class="attention-scroll-track" id="package-container">
 			{#each offers as offer, index}
@@ -162,14 +159,50 @@
 				/>
 			{/each}
 		</TiledContainer>
-		<p style="color: white;">* {$t('website-offers.additional')}</p>
+		<Tile alignX="center" paddingX="8px">
+			<p class="text-center">* {$t('website-packages.additional')}</p>
+		</Tile>
+
+		<Tile alignX="center" paddingY="4rem" paddingX="8px">
+			<h3>{$t('website-packages.cant-decide.title')}</h3>
+			<p>{$t('website-packages.cant-decide.description')}</p>
+			<Button href="/">{$t('website-packages.cant-decide.button')}</Button>
+		</Tile>
 	</Container>
 
 	<StaticBgContainer imageUrl="/images/index/bg-light_4.jpg" class="slanted" paddingY="6rem">
-		<h2>&quot;Your vision, my expertise — online together.&quot;</h2>
+		<h2>{$t('quotes.2')}</h2>
 	</StaticBgContainer>
 
-	<div class="bg-alt slanted"></div>
+
+	<!-- Additional packages -->
+	<Container class="slanted">
+		<Tile paddingY="1rem">
+			<h2 class="text-center">{$t('additional-packages.title')}</h2>
+		</Tile>
+		<Tile paddingY="0.5rem">
+			<h4 class="text-center">{$t('additional-packages.description')}</h4>
+		</Tile>
+		<TiledContainer wrap={true}>
+			{#each additionalPackages as singlePackage, index}
+				<Card
+					title={singlePackage.title}
+					description={singlePackage.description}
+					maxWidth="400px"
+					icon={additionalPackagesIcons[index]}
+				></Card>
+			{/each}
+		</TiledContainer>
+	</Container>
+
+
+	<!-- Contact Form -->
+	<div class="bg-alt slanted">
+		
+		<Tile alignX="center">
+			<OfferForm offers={offers.map((offer) => offer.title)} />
+		</Tile>
+	</div>
 </main>
 
 <style>
@@ -204,17 +237,11 @@
 
 		#package-scroll-info {
 			display: none;
+			text-align: center;
+			font-size: 1.2rem;
+			line-height: 2rem;
 		}
 	}
-
-	/* .bg-credits {
-		position: fixed;
-		bottom: 10px;
-		left: 10px;
-		color: #fff;
-		font-size: 10px;
-		z-index: 100;
-	} */
 
 	@media screen and (max-width: 670px) {
 		main {
@@ -225,6 +252,10 @@
 				:global(> *) {
 					margin: 0 8px;
 				}
+			}
+
+			#package-scroll-info {
+				display: block;
 			}
 
 			#punchline {

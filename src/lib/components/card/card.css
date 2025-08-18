@@ -40,7 +40,6 @@
 	.card-content {
 
 		--blur: 1px;
-		/* background-color: rgb(59, 53, 53); */
 		overflow: hidden;
 		box-shadow: 0 -6px 8px -6px rgb(59, 53, 53);
 		border-radius: 8px;
@@ -84,7 +83,6 @@
 			left: 0;
 			width: 100%;
 			height: 2em;
-			/* background: linear-gradient(to bottom, transparent, rgb(59, 53, 53)); */
 			transition: opacity 400ms;
 			pointer-events: none;
 		}
@@ -120,31 +118,3 @@
 
 }
 
-/* @media screen and (max-width: 512px) {
-	.card {
-		padding: 0;
-		height: auto;
-
-		.card-content {
-			position: relative;
-			height: auto;
-
-			p::after {
-				background: none;
-			}
-
-			.prog-lang-container {
-				padding: 16px 0;
-			}
-		}
-
-		.card-icon {
-			position: relative;
-
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
-} */
