@@ -101,8 +101,6 @@
 		</Tile>
 	</Container>
 
-	
-
 	<!-- Benefits -->
 
 	<article class="bg">
@@ -119,18 +117,13 @@
 		</div>
 	</article>
 
-
-	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="6rem" >
-		<h2 >
-			First impressions happen online — make them count!
-		</h2>
+	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="6rem">
+		<h2>First impressions happen online — make them count!</h2>
 	</StaticBgContainer>
-
-	
 
 	<!-- Examples -->
 	<div id="examples" class="slanted bg-alt">
-		<Container bg="var(--bg-alt)" marginTop={"4rem"}>
+		<Container bg="var(--bg-alt)" marginTop={'4rem'}>
 			<Tile alignX="center">
 				<h2>{$t('examples.title')}</h2>
 				<p>{$t('examples.filler')}</p>
@@ -172,9 +165,11 @@
 		<p style="color: white;">* {$t('website-offers.additional')}</p>
 	</Container>
 
-	<div class="bg-alt slanted">
+	<StaticBgContainer imageUrl="/images/index/bg-light_4.jpg" class="slanted" paddingY="6rem">
+		<h2>&quot;Your vision, my expertise — online together.&quot;</h2>
+	</StaticBgContainer>
 
-	</div>
+	<div class="bg-alt slanted"></div>
 </main>
 
 <style>
@@ -241,7 +236,6 @@
 				font-size: 1rem;
 				line-height: 1.2rem;
 			}
-			
 		}
 	}
 </style>

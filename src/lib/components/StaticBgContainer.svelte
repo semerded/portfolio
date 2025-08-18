@@ -11,8 +11,8 @@
 	onMount(() => {
 		observer = new IntersectionObserver((entries) => {
 			visible = entries[0].isIntersecting;
+			console.log(visible);
 		});
-		slitContainer = document.querySelector('.static-bg-container')!;
 		observer.observe(slitContainer);
 		return () => observer.disconnect();
 	});
@@ -20,6 +20,7 @@
 
 <div
 	id={$$restProps.id}
+	bind:this={slitContainer}
 	class="static-bg-container {$$restProps.class}"
 	style="padding-top: {paddingY}; padding-bottom: {paddingY};"
 >
