@@ -79,6 +79,8 @@
 		buttonLink={['#why-a-website', '/about']}
 		id="welcome"
 	/>
+
+	<!-- Why a website -->
 	<Container id="why-a-website">
 		<Tile alignY="center" alignX="center" paddingY="2rem">
 			<h2 id="punchline">
@@ -95,11 +97,10 @@
 			<!-- TODO href -->
 		</Tile>
 	</Container>
+	<Subtitle text="Why a website?" color="var(--primary)" />
 
 	<!-- Benefits -->
-
-	<article class="bg">
-		<Subtitle text="Why a website?" color="var(--primary)" />
+	<Container>
 		<div id="benefits-container">
 			{#each benefits as benefit, index}
 				<Card
@@ -110,7 +111,7 @@
 				/>
 			{/each}
 		</div>
-	</article>
+	</Container>
 
 	<StaticBgContainer imageUrl="/images/index/idk.jpg" class="slanted" paddingY="8rem">
 		<h2>{$t('quotes.1')}</h2>
@@ -146,12 +147,8 @@
 	<!-- Packages-->
 	<Subtitle text={$t('website-packages.title')} color="var(--primary)"></Subtitle>
 	<Container id="offers" containerFrom={768}>
-		<Tile alignX="center" paddingY="2rem">
-			<Tile paddingY="0.5rem" paddingX="8px">
+		<Tile alignX="center" paddingX="8px" paddingY="1rem">
 				<p>{$t('website-packages.description')}</p>
-			</Tile>
-			<Button href="/">{$t('website-packages.button')}</Button>
-			<!-- TODO href -->
 		</Tile>
 		<p id="package-scroll-info">{$t('website-packages.scroll-info')}</p>
 		<TiledContainer wrapFrom={670} class="attention-scroll-track" id="package-container">
@@ -203,15 +200,15 @@
 	</Container>
 
 	<!-- Contact Form -->
-		<TiledContainer wrapAt={768} paddingY="4rem" class="slanted bg-alt" >
-			<Tile class="package-form-tile">
-				<h2>{$t('package-form.title')}</h2>
-				<p>{$t('package-form.subtitle')}</p>
-			</Tile>
-				<Tile style="border-left: 1px solid rgba(255, 255, 255, 0.2);" class="package-form-tile">
-					<PackageForm offers={offers.map((offer) => offer.title)} />
-				</Tile>
-		</TiledContainer>
+	<TiledContainer wrapAt={768} paddingY="4rem" class="slanted bg-alt">
+		<Tile class="package-form-tile">
+			<h2>{$t('package-form.title')}</h2>
+			<p>{$t('package-form.subtitle')}</p>
+		</Tile>
+		<Tile style="border-left: 1px solid rgba(255, 255, 255, 0.2);" class="package-form-tile">
+			<PackageForm offers={offers.map((offer) => offer.title)} />
+		</Tile>
+	</TiledContainer>
 </main>
 
 <style>
@@ -233,7 +230,6 @@
 		#benefits-container {
 			padding: 8px;
 			display: flex;
-			margin-bottom: 8rem;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
 		}
@@ -255,7 +251,8 @@
 			width: 100%;
 			text-align: right;
 
-			h2, p {
+			h2,
+			p {
 				margin-right: 32px;
 			}
 		}
