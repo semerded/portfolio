@@ -4,20 +4,20 @@
 	export let wrapAt: number | null = 468;
 	export let wrapFrom: number | null = null;
 	export let wrap: boolean = false;
+	export let wrapOnDeviceWidth: boolean = false;
 	export let paddingY: string = '0';
 	let isWrapping = false;
 
 	let container: HTMLElement;
 
 	function updateWrap() {
-		if (container!) {
-			if (wrap) {
-				isWrapping = wrap;
-			} else if (wrapFrom !== null) {
-				isWrapping = container.clientWidth > wrapFrom;
-			} else if (wrapAt !== null) {
-				isWrapping = container.clientWidth < wrapAt;
-			}
+		const width = wrapOnDeviceWidth ? window.innerWidth : container?.clientWidth ?? 0;
+		if (wrap) {
+			isWrapping = wrap;
+		} else if (wrapFrom !== null) {
+			isWrapping = width > wrapFrom;
+		} else if (wrapAt !== null) {
+			isWrapping = width < wrapAt;
 		}
 	}
 

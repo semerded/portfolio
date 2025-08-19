@@ -178,7 +178,18 @@
 			}
 		]
 	},
-	
+	   "package-form": {
+        "placeholder": {
+            "name": "What is your name?",
+            "email": "What is your email?",
+            "package": "Pick a package",
+            "message": "Is there anything else you want to add?"
+        },
+        "cant-decide": "I can't decide yet",
+        "button": "Send",
+        "title": "Convinced?",
+        "subtitle": "Fill out the form and I will contact you as soon as possible"
+    },
 
 
 

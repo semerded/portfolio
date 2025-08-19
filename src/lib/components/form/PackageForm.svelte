@@ -113,7 +113,7 @@
 				--fa-animation-iteration-count: 1;
 				position: absolute;
 				font-size: var(--size);
-				right: 1px;
+				right: 2px;
 				color: red;
 
 				&.fa-check-circle {
@@ -143,7 +143,7 @@
 			padding: 8px 4px;
 			background-color: transparent;
 			border-radius: 8px;
-			margin: 0 28px;
+			margin: 0 32px;
 			font-size: 1.1rem;
 			color: var(--text);
 			border: 1px solid rgba(255, 255, 255, 0.2);

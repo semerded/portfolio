@@ -200,7 +200,7 @@
 	</Container>
 
 	<!-- Contact Form -->
-	<TiledContainer wrapAt={768} paddingY="4rem" class="slanted bg-alt">
+	<TiledContainer wrapAt={768} wrapOnDeviceWidth={true} paddingY="4rem" class="slanted bg-alt" id="package-form-container">
 		<Tile class="package-form-tile">
 			<h2>{$t('package-form.title')}</h2>
 			<p>{$t('package-form.subtitle')}</p>
@@ -254,6 +254,23 @@
 			h2,
 			p {
 				margin-right: 32px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		main {
+			:global(#package-form-container) {
+
+				:global(> div) {
+					display: flex;
+					align-items: center;
+
+					:global(> h2, > p) {
+						text-align: center;
+						margin: 0 4px;
+					}
+				}
 			}
 		}
 	}

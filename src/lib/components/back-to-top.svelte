@@ -30,7 +30,6 @@
 				document.getElementById('back-to-top')!.style.display = 'flex';
 
 				document.querySelectorAll('.subtitle-primary-color').forEach((subtitle) => {
-					console.log(isIntersecting(subtitle as HTMLElement, backToTopButton));
 					if (isIntersecting(subtitle as HTMLElement, backToTopButton)) {
 						altBgColor = true;
 					} else if (!altBgColor) {
