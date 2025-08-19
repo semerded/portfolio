@@ -130,7 +130,7 @@
 						title={$t('examples.card.title')}
 						description={$t('examples.card.description')}
 						icon="fa-question"
-						maxWidth="400px"
+						maxWidth="300px"
 					></Card>
 				{/each}
 			</div>

@@ -1,7 +1,7 @@
-export const navRoutes = [
-    '/',
-    '/website-offers',
-    '/about',
-    '/projects',
-    '/contact'
-];
+export const navRoutes: Record<string, string> = {
+    '/': "home",
+    '/webdesign': "webdesign",
+    '/about': "about",
+    '/projects': "projects",
+    '/contact': "contact"
+}

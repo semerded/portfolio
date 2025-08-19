@@ -3,12 +3,13 @@
 	import './hamburger_icon.css';
 	import { page } from '$app/state';
 	import ToggleLanguage from '../ToggleLanguage.svelte';
-		import LightDarkModeSwitch from '$lib/components/light-dark-mode-switch.svelte';
+	import LightDarkModeSwitch from '$lib/components/light-dark-mode-switch.svelte';
 
 	import { _ } from 'svelte-i18n';
 
 	import { onMount, onDestroy } from 'svelte';
 	import { browser } from '$app/environment';
+	import { navRoutes } from '$lib/routes';
 
 	let showHamburgerOption: boolean;
 	let hamburgerMenuVisible: boolean;
@@ -23,19 +24,16 @@
 		onDestroy(() => {
 			window.removeEventListener('resize', updateHamburgerMenu);
 		});
-
-		
 	});
 
 	$: if (browser) {
-	if (hamburgerMenuVisible) {
-		document.body.style.overflow = 'hidden';
-	} else {
-		document.body.style.overflow = 'auto';
+		if (hamburgerMenuVisible) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'auto';
+		}
 	}
-}
 </script>
-
 
 <nav class="navbar">
 	<a href="/"><img src="/logos/logo.webp" alt="logo" /></a>
@@ -64,26 +62,13 @@
 			class:navbar-buttons={!showHamburgerOption}
 			class:hamburger-menu={showHamburgerOption && hamburgerMenuVisible}
 		>
-			<a href="/website-offers"
-				><span class:nav-active={page.url.pathname.toString().includes('/website-offers')}
-					>{$_('navbar.offers')}</span
-				></a
-			>
-			<a href="/about"
-				><span class:nav-active={page.url.pathname.toString().includes('/about')}
-					>{$_('navbar.about')}</span
-				></a
-			>
-			<a href="/projects"
-				><span class:nav-active={page.url.pathname.toString().includes('/projects')}
-					>{$_('navbar.projects')}</span
-				></a
-			>
-			<a href="/contact"
-				><span class:nav-active={page.url.pathname.toString().includes('/contact')}
-					>{$_('navbar.contact')}</span
-				></a
-			>
+			{#each Object.keys(navRoutes) as route}
+				<a href={route}
+					><span class:nav-active={page.url.pathname.toString().includes(navRoutes[route]) || page.url.pathname.toString() === "/" && navRoutes[route] === "home"}
+						>{$_(`navbar.${navRoutes[route]}`)}</span
+					></a
+				>
+			{/each}
 			<div>
 				<ToggleLanguage></ToggleLanguage>
 				<LightDarkModeSwitch></LightDarkModeSwitch>

@@ -1,6 +1,7 @@
 {
     "navbar": {
-        "offers": "Offers",
+        "home": "Home",
+        "webdesign": "Webdesign",
         "about": "About me",
         "projects": "My projects",
         "contact": "Contact"

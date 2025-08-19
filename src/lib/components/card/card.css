@@ -1,13 +1,10 @@
 .card {
 	margin: 8px;
 	background: var(--bg);
-	/* box-shadow: 0px 4px 24px 0px color-mix(in srgb, var(--box-shadow) 30%, transparent); */
 	width: 100%;
 	aspect-ratio: 1/1;
-	/* height: 400px; */
 	position: relative;
 	border-radius: 8px;
-	/* border: 1px solid rgba(255, 255, 255, 0.2); */
 	border: none;
 	color: var(--text);
 	overflow: hidden;
