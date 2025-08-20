@@ -1,4 +1,4 @@
-[data-theme='dark'] {
+:root {
 	--primary: #ff7b00ff;
 	--secondary: #8acf51;
 	--nav: linear-gradient(
@@ -25,29 +25,3 @@
 	--text-placeholder: rgb(184, 180, 180);
 }
 
-[data-theme='light'] {
-	--primary: rgb(255, 152, 56);
-	--secondary: #b3f084;
-	--nav: linear-gradient(
-		to right,
-		rgb(180, 148, 100),
-		rgb(184, 176, 164),
-		rgb(151, 177, 151),
-		rgb(151, 177, 151),
-		rgb(184, 176, 164)
-	);
-	--gradient: linear-gradient(
-		70deg,
-		rgba(253, 215, 157, 0.4),
-		rgba(248, 241, 231, 0.4),
-		rgba(243, 235, 224, 0.4),
-		rgba(197, 245, 197, 0.4),
-		rgba(255, 244, 227, 0.4)
-	);
-	--card: #c9e6b3;
-	--bg: rgb(247, 238, 230);
-	--bg-alt: rgb(255, 255, 255);
-	--box-shadow: #c9e6b3;
-	--text: #111827;
-	--text-placeholder: #696867;
-}
