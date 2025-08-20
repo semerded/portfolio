@@ -2,12 +2,12 @@
     "navbar": {
         "home": "Home",
         "webdesign": "Webdesign",
-        "about": "About me",
-        "projects": "My projects",
+        "customers": "Customers",
+        "portfolio": "Portfolio",
         "contact": "Contact"
     },
     "footer": {
-        "email": "Contact me via email",
+        "email": "Ask me a question",
         "copyright": "Copyright © 2025 Sem Van Broekhoven - All rights reserved",
         "credits": "A website by"
     }
