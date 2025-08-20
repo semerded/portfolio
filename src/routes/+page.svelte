@@ -41,7 +41,7 @@
 
 	function updateLength() {
 		if (exampleContainer) {
-			exampleLength = Math.max(Math.floor(exampleContainer.clientWidth / 400), 1);
+			exampleLength = Math.max(Math.floor(exampleContainer.clientWidth / 400) - 1, 1);
 		}
 	}
 
@@ -125,12 +125,18 @@
 				<p>{$t('examples.filler')}</p>
 			</Tile>
 			<div id="example-container" bind:this={exampleContainer}>
+				<Card
+					title="Bella Cucina"
+					description={$t('examples.bella-cucina')}
+					maxWidth="400px"
+					image="/images/projects/Bella-cucina/logo.png"
+				></Card>
 				{#each Array(exampleLength) as _}
 					<Card
 						title={$t('examples.card.title')}
 						description={$t('examples.card.description')}
 						icon="fa-question"
-						maxWidth="300px"
+						maxWidth="400px"
 					></Card>
 				{/each}
 			</div>
@@ -140,12 +146,9 @@
 			</Tile>
 		</Container>
 	</div>
-	<Container>
-		<Process />
-	</Container>
 
 	<!-- Packages-->
-	<Subtitle text={$t('website-packages.title')} color="var(--primary)"></Subtitle>
+	<Subtitle yCorrection="-2rem" text={$t('website-packages.title')} color="var(--primary)"></Subtitle>
 	<Container id="offers" containerFrom={768}>
 		<Tile alignX="center" paddingX="8px" paddingY="1rem">
 				<p>{$t('website-packages.description')}</p>
@@ -190,7 +193,7 @@
 				<Card
 					title={singlePackage.title}
 					description={singlePackage.description}
-					maxWidth="400px"
+					maxWidth="350px"
 					icon={additionalPackagesIcons[index]}
 					price={singlePackage.price}
 					textPosition="end"
