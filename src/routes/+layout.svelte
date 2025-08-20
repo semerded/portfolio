@@ -45,8 +45,8 @@
 
 	$: {
 		if ($page.url.pathname !== currentPath) {
-			const currentIndex = navRoutes.indexOf($page.url.pathname);
-			const prevIndex = navRoutes.indexOf(currentPath);
+			const currentIndex = Object.keys(navRoutes).indexOf($page.url.pathname);
+			const prevIndex = Object.keys(navRoutes).indexOf(currentPath);
 			direction = currentIndex > prevIndex ? 'left' : 'right';
 			currentPath = $page.url.pathname;
 
@@ -75,7 +75,7 @@
 <Navbar />
 <BackToTop />
 
-<div class="transition-container">
+<div class="transition-container" style="{transitioning ? 'overflow: hidden;' : ''}">
 	<!-- Old content layer -->
 	{#if transitioning && oldContent}
 		<div
