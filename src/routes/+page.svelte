@@ -93,8 +93,7 @@
 			</p>
 		</Tile>
 		<Tile alignX="center" alignY="center" paddingY="2rem">
-			<Button href="/">{$t('why-a-website.punchline.button')}</Button>
-			<!-- TODO href -->
+			<Button href="#plan-a-meeting">{$t('why-a-website.punchline.button')}</Button>
 		</Tile>
 	</Container>
 	<Subtitle text="Why a website?" color="var(--primary)" />
@@ -130,6 +129,7 @@
 					description={$t('examples.bella-cucina')}
 					maxWidth="400px"
 					image="/images/projects/Bella-cucina/logo.png"
+					href="/projects/bella-cucina"
 				></Card>
 				{#each Array(exampleLength) as _}
 					<Card
@@ -137,12 +137,12 @@
 						description={$t('examples.card.description')}
 						icon="fa-question"
 						maxWidth="400px"
+						href="#plan-a-meeting"
 					></Card>
 				{/each}
 			</div>
 			<Tile alignX="center" paddingY="4rem">
-				<Button href="/">{$t('examples.button')}</Button>
-				<!-- TODO href -->
+				<Button href="#plan-a-meetingk">{$t('examples.button')}</Button>
 			</Tile>
 		</Container>
 	</div>
@@ -203,7 +203,7 @@
 	</Container>
 
 	<!-- Contact Form -->
-	<TiledContainer wrapAt={768} wrapOnDeviceWidth={true} paddingY="4rem" class="slanted bg-alt" id="package-form-container">
+	<TiledContainer wrapAt={768} wrapOnDeviceWidth={true} paddingY="4rem" class="slanted bg-alt" id="plan-a-meeting">
 		<Tile class="package-form-tile">
 			<h2>{$t('package-form.title')}</h2>
 			<p>{$t('package-form.subtitle')}</p>
@@ -263,7 +263,7 @@
 
 	@media screen and (max-width: 767px) {
 		main {
-			:global(#package-form-container) {
+			:global(#plan-a-meeting) {
 
 				:global(> div) {
 					display: flex;
