@@ -5,7 +5,7 @@ import { lang } from '$stores/lang.store';
 
 export function load() {
   lang.subscribe(value => {
-    loadTranslations(value, 'website-offers');
+    loadTranslations(value, 'webdesign');
   });
   return {};
 }

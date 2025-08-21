@@ -8,6 +8,7 @@
 
 	import { json, t } from 'svelte-i18n';
 	import OfferForm from '$lib/components/form/PackageForm.svelte';
+	import WebdesignHero from './WebdesignHero.svelte';
 
 	$: offers = $json('offers') as {
 		title: string;
@@ -44,14 +45,11 @@
 	]}
 /> -->
 
-<Hero
-	title={$t('title')}
-	description={$t('subtitle')}
-	buttonText={[$t('button'), $t('cant-choose.button')]}
-	buttonLink={['#offers', '#form']}
-/>
+
 
 <main>
+	<WebdesignHero/>
+
 	<Container id="offers">
 		<div id="offer-container" class="attention-scroll-track">
 			{#each offers as offer, index}
