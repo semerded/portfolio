@@ -9,6 +9,8 @@
 	import { json, t } from 'svelte-i18n';
 	import OfferForm from '$lib/components/form/PackageForm.svelte';
 	import WebdesignHero from './WebdesignHero.svelte';
+	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
+	import Tile from '$lib/components/tiles/Tile.svelte';
 
 	$: offers = $json('offers') as {
 		title: string;
@@ -37,18 +39,24 @@
 	}
 </script>
 
-<!-- <SideBar
-	links={[
-		{ name: 'Pick an offer', link: '#offers' },
-		{ name: 'What you get', link: '#wyg' },
-		{ name: 'Fill in the form', link: '#form' }
-	]}
-/> -->
-
-
+<svelte:head>
+	<title>{$t('webdesign.title')}</title>
+</svelte:head>
 
 <main>
-	<WebdesignHero/>
+	<WebdesignHero />
+	<Container>
+		<h2>{$t('why-a-website.title')}</h2>
+		<TiledContainer id="why-a-website">
+			<Tile><img src="/images/webdesign/mockup.png" alt="mockup" /></Tile>
+			<Tile
+				><p>
+					{$t('why-a-website.description')}
+				</p>
+				<p>{$t('why-a-website.description-2')}</p></Tile
+			>
+		</TiledContainer>
+	</Container>
 
 	<Container id="offers">
 		<div id="offer-container" class="attention-scroll-track">
@@ -141,6 +149,17 @@
 			margin: auto;
 			text-align: center;
 			width: min(100%, 800px);
+		}
+	}
+
+	:global(#why-a-website) {
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		p {
+			padding: 16px 8px;
 		}
 	}
 
@@ -237,7 +256,7 @@
 				}
 			}
 
-			:global(#wyg) { 
+			:global(#wyg) {
 				.tiled-container {
 					flex-wrap: wrap;
 				}

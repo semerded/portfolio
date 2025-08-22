@@ -75,7 +75,7 @@
 <Navbar />
 <BackToTop />
 
-<div class="transition-container" style="{transitioning ? 'overflow: hidden;' : ''}">
+<div class="transition-container" style={transitioning ? 'overflow: hidden;' : ''}>
 	<!-- Old content layer -->
 	{#if transitioning && oldContent}
 		<div

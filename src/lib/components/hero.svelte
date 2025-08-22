@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { scrollRange } from '$lib/actions/change_background_color_linear';
-	import Button from '$lib/components/button.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import { onMount } from 'svelte';
 
 	export let id: string | null = null;

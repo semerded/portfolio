@@ -9,7 +9,7 @@
 	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
 	import Tile from '$lib/components/tiles/Tile.svelte';
 	import Subtitle from '$lib/components/Subtitle.svelte';
-	import Button from '$lib/components/button.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import { onDestroy, onMount } from 'svelte';
 	import Process from './Process.svelte';
 	import StaticBgContainer from '$lib/components/StaticBgContainer.svelte';

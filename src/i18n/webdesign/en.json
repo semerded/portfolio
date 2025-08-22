@@ -1,8 +1,19 @@
 {
 	"webdesign-hero": {
-		"title": "Make your website stand",
+		"title-part1": "Make your",
+		"title-part2": "stand",
+		"title-cycle": [
+			"website",
+			"business",
+			"brand"
+		],
 		"title-highlight": "out",
-		"subtitle": "Create a website that represents your business in the best possible way."
+		"button": "Tell me more!"
+	},
+	"why-a-website": {
+		"title": "Your business deserves something unique",
+		"description": "A website is not only a display of your products or services, but also a way to connect with your audience. It's a powerful tool that can help you stand out from the competition, attract new customers, and drive growth.",
+		"description-2": "A modern and user-friendly website design for your business can create a strong online presence that will set you apart from the competition."
 	},
 	"title": "Which website fits you best?",
 	"subtitle": "Every business is unique — pick what fits your goals.",
@@ -97,7 +108,6 @@
 		"button": "Plan our first meeting"
 	},
 	"price-info": "Prices vary based on various factors, including the number of pages, features, and complexity. The given prices are minimum prices. The final price is negotiated during the first meeting",
-
 	"wyg": {
 		"title": "What You Get",
 		"subtitle": "My work is guaranteed to be of the highest quality",
@@ -143,9 +153,9 @@
 		"button": "Send",
 		"bold-description": "Time and date for our first meeting will be planned via mail.",
 		"description": "Please fill out the form below with your information so I can reach back to you. Keep an eye out for an email from me. Also check your spam folder.",
-        "optional": "Any useful information like: possible dates, interested packages, questions, etc... Write it in the \"optional message\" field.",
+		"optional": "Any useful information like: possible dates, interested packages, questions, etc... Write it in the \"optional message\" field.",
 		"note": "Note: If you don't know which offer you wan't, please select \"I can't decide yet\". We will then discuss your needs and find the fitting package at our first meeting.",
-        "placeholder": {
+		"placeholder": {
 			"name": "Your name",
 			"email": "Your email",
 			"offer": "Pick an offer",

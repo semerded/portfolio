@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { t } from 'svelte-i18n';
-	import Button from '../button.svelte';
+	import Button from '../Button.svelte';
 
 	import { page } from '$app/stores';
 
