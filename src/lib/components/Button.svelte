@@ -8,10 +8,10 @@
 <a
 	{href}
 	target={newTab ? '_blank' : ''}
-	class="button"
-	class:primary
+	id="{$$restProps.id}"
+	class="button {primary ? 'primary' : ''} {$$props.class}"
 	rel="noopener noreferrer"
-	style="width: {flex ? '100%' : 'fit-content'};"
+	style="width: {flex ? '100%' : 'fit-content'}; {$$restProps.style}"
 >
 	<span><slot /></span>
 </a>
