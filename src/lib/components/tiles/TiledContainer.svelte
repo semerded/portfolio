@@ -6,8 +6,10 @@
 	export let wrap: boolean = false;
 	export let wrapOnDeviceWidth: boolean = false;
 	export let paddingY: string = '0';
-	let isWrapping = false;
+	export let reverse: boolean = false;
+	export let gap: string = '0';
 
+	let isWrapping = false;
 	let container: HTMLElement;
 
 	function updateWrap() {
@@ -32,7 +34,7 @@
 	bind:this={container}
 	class="tiled-container {$$restProps.class}"
 	id="{$$restProps.id}"
-	style="flex-wrap: {isWrapping ? 'wrap' : 'nowrap'}; padding: {paddingY} 0; {$$restProps.style}"
+	style="flex-wrap: {isWrapping ? (reverse ? 'wrap-reverse' : 'wrap') : 'nowrap'}; padding: {paddingY} 0; gap: {gap}; {$$restProps.style}"
 >
 	<slot />
 </section>
@@ -42,7 +44,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/* gap: 1rem; */
 		width: 100%;
 		height: 100%;
 	}
