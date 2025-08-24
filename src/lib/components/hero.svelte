@@ -28,6 +28,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
 <div class="hero-container bg" {id} style="--height: calc({height} + 20lvh)">
 	{#if image}
 		<div class="image-container">
@@ -78,6 +82,13 @@
 </div>
 
 <style>
+
+	@font-face {
+		font-family: "Gliker";
+		src: url("/fonts/Gliker-Black.woff2") format("woff2");
+		src: url("/fonts/Gliker-Black.woff") format("woff");
+		src: url("/fonts/Gliker-Black.ttf") format("truetype");
+	}
 	:root {
 		--image-fit: cover;
 	}
@@ -128,6 +139,7 @@
 
 			h1 {
 				font-size: 4rem;
+				font-family: "Gliker", sans-serif;
 				color: var(--primary);
 			}
 

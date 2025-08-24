@@ -1,4 +1,5 @@
 {
+	"head-title": "WebDesign by Sem",
 	"webdesign-hero": {
 		"title-part1": "Make your",
 		"title-part2": "stand",
@@ -15,14 +16,17 @@
 		"description": "A website is not only a display of your products or services, but also a way to connect with your audience. It's a powerful tool that can help you stand out from the competition, attract new customers, and drive growth.",
 		"description-2": "A modern and user-friendly website design for your business can create a strong online presence that will set you apart from the competition. Show your skills, services, and products to potential customers and make a lasting impression."
 	},
-	"title": "Which website fits you best?",
-	"subtitle": "Every business is unique — pick what fits your goals.",
-	"button": "Pick your offer",
-	"offer-structure": {
-		"why": "Why businesses love",
-		"button": "This one fits me best"
+	"quotes": {
+		"1": "\"Professional design, built around your business goals.\""
 	},
-	"offers": [
+	"offers": {
+		"title": "Pick the best fitting offer",
+		"description": "Each offer is tailored for specific needs. The differences are mostly in the size (number of pages) and the ability to show dynamic content on the website. The price varies on the size & complexity of the site, and the given price is a minimum price. The final price is negotiated during the first meeting.",
+		"structure": {
+			"button": "This one fits me best!",
+			"why": "Why choose the"
+		},
+		"content": [
 		{
 			"title": "Single-Page Website",
 			"price": "Starting from €75",
@@ -101,7 +105,9 @@
 			"perfectFor": "Perfect for businesses or individuals who need something truly unique or have specific functional or design requirements.",
 			"slot": "If you want a website that doesn't just fit your brand but defines it—a custom-built website gives you full creative and technical freedom."
 		}
-	],
+	]
+	},
+	
 	"cant-choose": {
 		"title": "Can't decide?",
 		"subtitle": "We can discuss your needs and find the fitting package at our first meeting.",

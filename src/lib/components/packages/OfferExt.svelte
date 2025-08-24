@@ -32,7 +32,7 @@
 				<div>
 					<p>{slot}</p>
 					<button on:click={() => buttonCallback()}
-						><span>{$_('offer-structure.button')}</span></button
+						><span>{$_('offers.structure.button')}</span></button
 					>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 		</div>
 	</div>
 	<div>
-		<h4>&#9989; {$_('offer-structure.why')} {title.toLocaleLowerCase()}</h4>
+		<h4>&#9989; {$_('offers.structure.why')} {title.toLocaleLowerCase()}</h4>
 		<ul>
 			{#each Object.entries(why) as [key, value]}
 				<li>

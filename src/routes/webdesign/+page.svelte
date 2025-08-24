@@ -12,8 +12,9 @@
 	import TiledContainer from '$lib/components/tiles/TiledContainer.svelte';
 	import Tile from '$lib/components/tiles/Tile.svelte';
 	import StaticBgContainer from '$lib/components/StaticBgContainer.svelte';
+	import Subtitle from '$lib/components/Subtitle.svelte';
 
-	$: offers = $json('offers') as {
+	$: offers = $json('offers.content') as {
 		title: string;
 		price: string;
 		description: string;
@@ -41,12 +42,12 @@
 </script>
 
 <svelte:head>
-	<title>{$t('webdesign.title')}</title>
+	<title>{$t('head-title')}</title>
 </svelte:head>
 
 <main>
 	<WebdesignHero />
-	<Container>
+	<Container class="slanted" bg="var(--bg-alt)">
 		<TiledContainer gap="1rem" id="why-a-website" reverse={true} paddingY="4rem">
 			<Tile alignX="center"><img src="/images/webdesign/mockup.png" alt="mockup" /></Tile>
 			<Tile>
@@ -59,11 +60,13 @@
 		</TiledContainer>
 	</Container>
 
-	<StaticBgContainer imageUrl="/images/index/bg-light_4.jpg" class="slanted" paddingY="8rem">
-		<h2>{$t('offers.title')}</h2>
+	<StaticBgContainer offset="-2rem" imageUrl="/images/index/bg-light_4.jpg" class="slanted" paddingY="8rem">
+		<h2>{$t('quotes.1')}</h2>
 	</StaticBgContainer>
 
 	<Container id="offers">
+		<h2 class="text-center">{$t('offers.title')}</h2>
+		<p class="text-center">{$t('offers.description')}</p>
 		<div id="offer-container" class="attention-scroll-track">
 			{#each offers as offer, index}
 				<OfferExt

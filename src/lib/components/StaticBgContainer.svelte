@@ -3,6 +3,7 @@
 
 	export let imageUrl: string;
 	export let paddingY: string = '4rem';
+	export let offset: string = '2rem';
 
 	let observer: IntersectionObserver;
 	let visible: boolean = true;
@@ -21,7 +22,7 @@
 	id={$$restProps.id}
 	bind:this={slitContainer}
 	class="static-bg-container {$$restProps.class}"
-	style="padding-top: {paddingY}; padding-bottom: {paddingY};"
+	style="padding-top: {paddingY}; padding-bottom: {paddingY}; top: {offset}"
 >
 	{#if visible}
 		<div class="image-container">
@@ -34,7 +35,6 @@
 <style>
 	.static-bg-container {
 		position: relative;
-		top: 2rem;
 		text-align: center;
 
 		.image-container {
