@@ -71,7 +71,7 @@
 <main>
 	<!-- Hero -->
 	<Hero
-		title="Sem Van Broekhoven"
+		title="Designem"
 		image="images/index/hero.png"
 		description={$t('hero.subtitle')}
 		leading="<i class='fa-solid fa-location-dot'></i> {$t('hero.country')}"
