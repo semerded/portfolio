@@ -34,7 +34,7 @@
 </script>
 
 <nav class="navbar">
-	<a href="/"><img src="/logos/logo.webp" alt="logo" /></a>
+	<a href="/"><img src="/logos/logo-small.webp" alt="logo" /></a>
 	{#if showHamburgerOption}
 		<div class="hamburger-menu-button">
 			<input
