@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+	import Button from '../Button.svelte';
 
 	export let title: string;
 	export let price: string;
@@ -21,22 +22,22 @@
 </script>
 
 <section class="offerExt glossy-tile" id={ids[index]}>
+	<div class="head">
+		<h3>{title}</h3>
+		<span class="price">{price}</span>
+		<h4 class="text-center">{perfectFor}</h4>
+		<Button  on:click={() => buttonCallback()}><span>{$_('offers.structure.button')}</span></Button>
+	</div>
+
 	<div>
-		<div class="head">
-			<h3>{title}</h3>
-			<span class="price">{price}</span>
-		</div>
 		<div class="body">
 			<div class="description">
 				<p>{description}</p>
 				<div>
 					<p>{slot}</p>
-					<button on:click={() => buttonCallback()}
-						><span>{$_('offers.structure.button')}</span></button
-					>
 				</div>
 			</div>
-			<img src={`/icons/offers/${ids[index]}.svg`} alt="icon" />
+			<!-- <img src={`/icons/offers/${ids[index]}.svg`} alt="icon" /> -->
 		</div>
 	</div>
 	<div>
@@ -49,17 +50,30 @@
 				</li>
 			{/each}
 		</ul>
-		<p>{perfectFor}</p>
 	</div>
 </section>
 
 <style>
 	.offerExt {
 		padding: 1rem;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		height: 100%;
 		min-width: 300px;
+		max-width: 400px;
+		width: 100%;
+
+		.head {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: fit-content;
+			.price {
+				background-color: var(--primary);
+				padding: 4px 8px;
+				border-radius: 8px;
+				display: inline-block;
+				margin: 8px 0;
+			}
+		}
 
 		> div {
 			width: 100%;
@@ -80,13 +94,6 @@
 				flex-wrap: wrap;
 
 				flex: 0 0 auto;
-				.price {
-					background-color: var(--secondary);
-					padding: 4px 8px;
-					border-radius: 8px;
-					display: inline-block;
-					margin: 8px 0px;
-				}
 			}
 
 			h4 {
@@ -159,25 +166,24 @@
 
 	@media screen and (min-width: 1024px) and (max-width: 1280px) {
 		/* strange glitch where "this one fits me best" button disappears */
-		
 	}
 
 	@media screen and (min-width: 1024px) {
 		.offerExt {
 			&:hover {
-			> div {
-				.body {
-					img {
-						transition:
-							transform 500ms,
-							opacity 500ms;
+				> div {
+					.body {
+						img {
+							transition:
+								transform 500ms,
+								opacity 500ms;
 
-						opacity: 1;
-						transform: rotateZ(0deg) scale(1);
+							opacity: 1;
+							transform: rotateZ(0deg) scale(1);
+						}
 					}
 				}
 			}
-		}
 		}
 	}
 
