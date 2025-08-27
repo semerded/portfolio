@@ -1,23 +1,34 @@
 <script lang="ts">
-	export let href: string;
+	export let href: string | null = null;
 	export let newTab: boolean = false;
 	export let primary: boolean = false;
 	export let flex: boolean = false;
 </script>
 
-<a
-	{href}
-	target={newTab ? '_blank' : ''}
-	id="{$$restProps.id}"
-	class="button {primary ? 'primary' : ''} {$$props.class}"
-	rel="noopener noreferrer"
-	style="width: {flex ? '100%' : 'fit-content'}; {$$restProps.style}"
->
-	<span><slot /></span>
-</a>
+{#if href}
+	<a
+		{href}
+		target={newTab ? '_blank' : ''}
+		id={$$restProps.id}
+		class="button {primary ? 'primary' : ''} {$$props.class}"
+		rel="noopener noreferrer"
+		style="width: {flex ? '100%' : 'fit-content'}; {$$restProps.style}"
+	>
+		<span><slot /></span>
+	</a>
+{:else}
+	<button
+		id={$$restProps.id}
+		class="button {primary ? 'primary' : ''} {$$props.class}"
+		style="width: {flex ? '100%' : 'fit-content'}; {$$restProps.style}"
+	>
+		<span><slot /></span>
+	</button>
+{/if}
 
 <style>
-	a.button {
+	.button {
+		all: unset;
 		transition: box-shadow 400ms;
 		min-width: 200px;
 		min-height: 40px;
@@ -27,6 +38,7 @@
 		border-radius: 8px;
 		padding: 8px 1.2rem;
 		margin: 8px;
+		cursor: pointer;
 		background-color: var(--secondary);
 		color: white;
 		text-decoration: none;
